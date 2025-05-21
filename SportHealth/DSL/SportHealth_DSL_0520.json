@@ -1,0 +1,562 @@
+{
+  "system_description": "目标软件为一个运动健康app，主要用途为用户管理、运动记录、饮食管理、运动设备管理等",
+  "actors": [
+    {
+      "actor": "普通用户",
+      "description": "使用该应用使用登录、注册等功能的人。",
+      "user_stories": [
+        {
+          "user_story": "作为一个普通用户，我想要注册一个账户，以便于能够个性化管理我的运动和健康数据。前置条件：用户在注册页面且无账户。后置条件：账户成功创建并能够登录。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[用户1]普通用户访问注册页面",
+            "[系统1]显示注册表单",
+            "[用户2]普通用户填写注册信息，包括用户名和密码",
+            "[用户3]提交注册表单",
+            "[系统2]验证输入的注册信息",
+            "[系统3]检查用户名是否已存在",
+            "[系统4]创建新的用户账户",
+            "[系统5]确认账户创建成功并显示登录选项",
+            "[用户4]普通用户可以使用新账户登录"
+          ]
+        },
+        {
+          "user_story": "作为一个普通用户，我希望能够登录我的账户，以便于访问和管理我的运动记录和健康数据。前置条件：用户已有账户信息。后置条件：用户成功登录并进入主页。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[用户1]输入账户信息，包括用户名和密码",
+            "[系统1]验证用户输入的账户信息",
+            "[系统2]如果账户信息正确，系统将用户重定向到主页",
+            "[系统3]在主页上显示用户的运动记录和健康数据",
+            "[用户2]可以访问并管理自己的运动记录和健康数据"
+          ]
+        },
+        {
+          "user_story": "作为一名普通用户，我希望能够发布帖子在我的圈子，以便于向好友分享我的运动体验。前置条件：用户登录账户并进入圈子页面。后置条件：用户成功发布帖子。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[系统1]首先确保用户已登录并进入圈子页面",
+            "[用户1]在圈子页面选择创建新的帖子",
+            "[用户2]编辑帖子内容并附加相关运动体验",
+            "[系统2]提供发布按钮供用户提交帖子",
+            "[用户3]点击发布按钮以分享帖子到圈子",
+            "[系统2]验证帖子完整性并处理上传",
+            "[系统3]将帖子发布到用户的圈子页面可被好友查看"
+          ]
+        },
+        {
+          "user_story": "作为一个普通用户，我希望能够进行关键字搜索，以便于找到相关内容。前置条件：用户在搜索框键入了关键字。后置条件：页面显示查询结果。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[系统1]首先显示搜索框供用户输入关键字",
+            "[用户1]在搜索框中键入关键字",
+            "[系统2]接收输入的关键字并进行搜索",
+            "[系统3]检索相关内容并生成查询结果",
+            "[系统4]在页面上显示查询结果，供用户查看"
+          ]
+        },
+        {
+          "user_story": "作为一名普通用户，我希望能够查看我的成就，以便于评估我的用户表现。前置条件：用户登录并进入成就页面。后置条件：用户查看每一个成就项。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[系统1]首先验证用户登录状态",
+            "[用户1]用户进入成就页面",
+            "[系统2]显示当前用户的所有成就项",
+            "[用户2]用户查看每一个成就项的详细信息",
+            "[系统3]支持用户对成就进行评价或分享"
+          ]
+        }
+      ]
+    },
+    {
+      "actor": "运动爱好者",
+      "description": "进行运动记录、制定运动计划、观看运动教程的人。",
+      "user_stories": [
+        {
+          "user_story": "作为一个运动爱好者，我想要记录我的每日运动数据，以便于跟踪并提高我的运动表现。前置条件：用户已登录并连接到运动监测设备。后置条件：运动数据被成功记录并可视化分析。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[用户1]运动爱好者使用已登录的账号登录运动健康app",
+            "[用户2]运动爱好者点击运动记录按钮进入数据表单",
+            "[用户3]运动爱好者在系统上填写每日运动数据表单",
+            "[系统1]系统接收并保存用户提交的运动数据表单",
+            "[系统2]系统提供运动数据的可视化分析功能",
+            "[用户4]运动爱好者查看并分析其运动数据和表现"
+          ]
+        },
+        {
+          "user_story": "作为一个运动爱好者，我希望能够制定个性化运动计划，以便于系统化地提升我的健康水平。前置条件：用户登录并输入个人健康数据。后置条件：生成并保存了一份符合用户需求的运动计划。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[系统1]用户登录并输入个人健康数据。",
+            "[用户1]作为运动爱好者，我希望能够看到可选择的运动项目列表。",
+            "[系统2]根据用户的健康数据生成个性化的运动计划建议。",
+            "[用户2]用户选择一个或多个运动项目并设定目标和偏好。",
+            "[系统3]生成详细的运动计划，并根据用户选择进行调整。",
+            "[用户3]用户查看生成的运动计划，并可以对其进行微调。",
+            "[系统4]保存最终个性化的运动计划供以后参考和调整。"
+          ]
+        },
+        {
+          "user_story": "作为一个运动爱好者，我希望可以查看多种运动教程视频，以便于学习并练习新的运动技巧。前置条件：用户已经登录并选择类型或难度的运动教程。后置条件：教程视频被成功加载并且记录观看进度。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[系统1]在用户登录后显示运动教程的类型和难度选择界面",
+            "[用户1]选择希望查看的运动教程类型和难度",
+            "[系统2]根据用户选择加载对应的运动教程视频列表",
+            "[用户2]从列表中选择一个具体的教程视频",
+            "[系统3]加载并播放用户选定的教程视频",
+            "[系统4]记录用户的观看进度，以便于下次继续观看"
+          ]
+        },
+        {
+          "user_story": "作为一个运动爱好者，我希望记录自己的身体数据，以便于进行身体数据的监测。前置条件：用户登录并进入身体数据页。后置条件：页面显示用户身体数据。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[系统1]用户系统首先验证用户身份并登录",
+            "[系统2]系统导航用户进入身体数据页",
+            "[系统3]显示用户的过去身体数据记录"
+          ]
+        },
+        {
+          "user_story": "作为一个运动爱好者，我希望能够查看收藏的课程列表，以便于快速打开运动课程。前置条件：用户登录并进入收藏课程页。后置条件：页面显示用户收藏的课程。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": []
+        }
+      ]
+    },
+    {
+      "actor": "饮食管理人员",
+      "description": "通过该软件进行个性化饮食管理的人。",
+      "user_stories": [
+        {
+          "user_story": "作为一个饮食管理人员，我想要创建和编辑个性化的饮食计划，以便于提供更精准的营养指导。前置条件：用户已登录且访问饮食管理页面。后置条件：饮食计划被成功保存并更新至用户的档案中。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[系统1]首先显示饮食管理页面包含的所有饮食计划选项",
+            "[用户1]饮食管理人员选择一个饮食计划进行创建或编辑",
+            "[系统2]显示选定饮食计划的详细设定参数",
+            "[用户2]饮食管理人员根据需求填写或修改饮食计划参数",
+            "[系统3]系统对饮食计划进行验证并提示任何不符合要求的参数",
+            "[用户3]饮食管理人员确认并提交饮食计划",
+            "[系统4]饮食计划被成功保存并更新至用户的档案中"
+          ]
+        },
+        {
+          "user_story": "作为一个饮食管理人员，我想要查看用户过去的饮食记录，以便于分析饮食习惯和调整营养建议。前置条件：用户已登录且授权访问饮食记录。后置条件：饮食记录清单被展示并可用于分析。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[系统1]首先验证用户的登录状态和授权访问饮食记录的权限",
+            "[系统2]系统展示用户过去的饮食记录清单",
+            "[用户1]饮食管理人员查看饮食记录清单",
+            "[用户2]饮食管理人员分析用户的饮食习惯和营养摄入情况",
+            "[系统3]记录分析结果以供进一步的营养建议调整"
+          ]
+        },
+        {
+          "user_story": "作为一个饮食管理人员，我想要记录我的今日饮食，以便于跟踪营养摄入和健康状况。前置条件：用户进入饮食记录页。后置条件：今日饮食记录存储到系统并可供日后查看和分析。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[系统1]首先显示饮食记录页面，提示用户记录今日饮食",
+            "[用户1]在系统上输入并确认今日的饮食信息",
+            "[系统2]接收并分析饮食信息，以便评估营养摄入情况",
+            "[系统3]将今日饮食记录存储到用户的饮食记录数据库中",
+            "[用户2]可以在系统中查看并分析日后的饮食历史记录"
+          ]
+        }
+      ]
+    },
+    {
+      "actor": "运动设备使用者",
+      "description": "使用运动设备连接的用户。",
+      "user_stories": [
+        {
+          "user_story": "作为一个运动设备使用者，我想要能够连接和配置我的运动设备，以便于实时跟踪我的运动数据。前置条件：设备已开启并支持与应用连接。后置条件：设备成功连接，运动数据可以实时同步到应用。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[用户1]进入设备连接页。",
+            "[系统1]检测并展示可连接的运动设备列表。",
+            "[用户2]选择要连接的运动设备。",
+            "[系统2]提示用户进行设备配置。",
+            "[用户3]根据提示完成设备配置。",
+            "[系统3]尝试连接用户选择的运动设备。",
+            "[系统4]确认设备连接状态。",
+            "[系统5]开始实时跟踪用户的运动数据。",
+            "[系统6]实时同步运动数据到应用中。"
+          ]
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity": "用户",
+      "attributes": [
+        {
+          "type": "string",
+          "content": "用户名"
+        },
+        {
+          "type": "string",
+          "content": "密码"
+        },
+        {
+          "type": "date",
+          "content": "注册日期"
+        }
+      ]
+    },
+    {
+      "entity": "运动数据",
+      "attributes": [
+        {
+          "type": "date",
+          "content": "记录日期"
+        },
+        {
+          "type": "float",
+          "content": "运动时长"
+        },
+        {
+          "type": "int",
+          "content": "卡路里消耗"
+        }
+      ]
+    },
+    {
+      "entity": "饮食计划",
+      "attributes": [
+        {
+          "type": "string",
+          "content": "计划名称"
+        },
+        {
+          "type": "date",
+          "content": "创建日期"
+        },
+        {
+          "type": "string",
+          "content": "营养信息"
+        }
+      ]
+    },
+    {
+      "attributes": [
+        {
+          "type": "string",
+          "content": "计划名称"
+        },
+        {
+          "type": "string",
+          "content": "计划内容"
+        }
+      ],
+      "entity": "运动计划"
+    },
+    {
+      "attributes": [
+        {
+          "type": "string",
+          "content": "设备名称"
+        },
+        {
+          "type": "resource",
+          "content": "设备图片"
+        },
+        {
+          "type": "bool",
+          "content": "连接状态"
+        }
+      ],
+      "entity": "设备"
+    },
+    {
+      "attributes": [
+        {
+          "type": "float",
+          "content": "体重"
+        },
+        {
+          "type": "float",
+          "content": "身高"
+        },
+        {
+          "type": "float",
+          "content": "BMI"
+        },
+        {
+          "type": "int",
+          "content": "年龄"
+        },
+        {
+          "type": "string",
+          "content": "性别"
+        }
+      ],
+      "entity": "用户身体数据"
+    },
+    {
+      "attributes": [
+        {
+          "type": "string",
+          "content": "成就名称"
+        },
+        {
+          "type": "string",
+          "content": "成就描述"
+        },
+        {
+          "type": "date",
+          "content": "获取日期"
+        }
+      ],
+      "entity": "成就"
+    }
+  ],
+  "gui_requirements": [
+    {
+      "user_interaction": "[用户]填写注册信息，包括用户名和密码；[系统]确认账户创建成功并显示登录选项。",
+      "user_interface": "[用户]通过文本输入框填写注册信息，包括用户名和密码；[系统]显示账户创建成功的消息，并提供登录按钮。"
+    },
+    {
+      "user_interaction": "[用户]输入账户信息，包括用户名和密码；[系统]验证账户信息并重定向至主页。",
+      "user_interface": "[用户]通过登录表单输入用户名和密码；[系统]在验证成功后，重定向用户到主页。"
+    },
+    {
+      "user_interaction": "[用户]连接运动设备并记录每日运动数据；[系统]保存运动数据并提供可视化分析。",
+      "user_interface": "[用户]通过设备连接页面选择并连接运动设备；[系统]通过数据输入表单接收运动数据，并将其保存后提供图表分析功能。"
+    },
+    {
+      "user_interaction": "[用户]输入个人健康数据并制定个性化运动计划；[系统]生成和保存运动计划。",
+      "user_interface": "[用户]通过数据输入框填写健康数据并选择运动项目；[系统]显示生成的个性化运动计划，并保存到用户档案。"
+    },
+    {
+      "user_interaction": "[用户]选择运动教程视频类型和难度；[系统]加载并记录观看进度。",
+      "user_interface": "[用户]通过选择菜单选择运动教程类型和难度；[系统]播放运动教程并显示观看进度条。"
+    },
+    {
+      "user_interaction": "[用户]创建和编辑饮食计划；[系统]保存饮食计划至用户档案中。",
+      "user_interface": "[用户]通过编辑界面输入饮食计划参数；[系统]验证并提示用户，成功后保存饮食计划。"
+    },
+    {
+      "user_interaction": "[用户]查看过去饮食记录；[系统]展示饮食记录清单进行分析。",
+      "user_interface": "[用户]通过过滤器和列表查看过去的饮食记录；[系统]显示饮食记录清单，并提供分析按钮。"
+    },
+    {
+      "user_interaction": "[用户]记录今日饮食信息；[系统]分析并存储饮食记录。",
+      "user_interface": "[用户]通过数据输入框输入今日饮食信息；[系统]存储信息并提供分析结果页面。"
+    },
+    {
+      "user_interaction": "[用户]连接并配置运动设备；[系统]确认设备连接状态并实时同步数据。",
+      "user_interface": "[用户]通过设备连接页面选择并配置设备；[系统]显示连接状态并在图表中实时显示运动数据。"
+    },
+    {
+      "user_interaction": "[用户]发布帖子到圈子页面；[系统]验证并展示用户发布的帖子。",
+      "user_interface": "[用户]通过圈子页面输入框填写帖子内容并点击发布按钮；[系统]在圈子页面展示已发布的帖子。"
+    },
+    {
+      "user_interaction": "[用户]查看收藏的课程列表；[系统]展示收藏的课程。",
+      "user_interface": "[用户]通过收藏课程页面查看课程列表；[系统]显示收藏的课程，并提供快速访问按钮。"
+    },
+    {
+      "user_interaction": "[用户]查看个人身体数据；[系统]展示身体数据。",
+      "user_interface": "[用户]通过个人档案页面查看身体数据；[系统]显示用户的体重、身高、BMI、年龄和性别信息。"
+    },
+    {
+      "user_interaction": "[用户]查看已生成的运动计划；[系统]展示运动计划的详细信息。",
+      "user_interface": "[用户]通过运动计划页面查看生成的运动计划；[系统]显示运动计划的名称、内容和设定的目标。"
+    },
+    {
+      "user_interaction": "[用户]查看成就页面；[系统]展示成就项。",
+      "user_interface": "[用户]通过成就页面查看所有成就项；[系统]显示成就名称、描述和获取日期。"
+    }
+  ],
+  "gui_design": [
+    {
+      "components": "[主页] 用到了[标题栏]、[搜索框]、[图片展示区]、[按钮展示区]、[列表展示区]、[导航栏]。",
+      "description": "主页包括了标题栏、搜索框、图片展示区、按钮展示区、列表展示区以及底部导航栏。页面顶部添加了一个标题“运动健康”。",
+      "style": "[主页] 使用[Scroll容器组件]实现页面滚动，确保底部的[导航栏]固定在页面底部不被滚动。整体页面背景颜色为浅灰色#E0E0E0。[标题栏] 高度为30px，背景色为#FFFFFF，字体大小为20px，颜色#333333，文本为“运动健康”，左对齐显示，位置调整至页面左上侧，水平内边距为10px。[搜索框] 紧随[标题栏]居中显示，高度40px，宽度95%，背景色为#E0E0E0，圆角效果为5px，输入框颜色为#333333，附带[搜索图标]，图标为$r('app.media.search')$。用户通过点击[搜索图标]后弹出[搜索结果模态框]，该模态框可以滚动查看搜索结果，用户可以通过点击列表项查看详细搜索结果。[图片展示区] 使用[Swiper组件]实现图片轮播，宽度为95%，高度为150px，[图片]的宽度为100%，圆角效果为10px，展示$r('app.media.fig1')$和$r('app.media.fig2')$。[按钮展示区] 宽度为95%，高度为100px，横向排列四个[图标按钮]：$r('app.media.target')$、$r('app.media.record')$、$r('app.media.circle')$、$r('app.media.favorite')$，每个图标宽度和高度均为50px，上方是[图片]，下方是[文字]，居中排列，点击[图标按钮]时跳转至对应的页面。[列表展示区] 使用[Grid布局]，包含四个栅格，在顶部加入一个居左对齐的[标题]“列表”，字体大小为15px，栅格分别展示[图片]: $r('app.media.band')$、$r('app.media.found')$、$r('app.media.new')$、$r('app.media.top')$，[图片标题]移至图片底部，黑色字体大小为14px，分别为轻松燃脂、增肌塑形、无伤畅跑、健康养生，栅格点击后可查看详细内容。[导航栏] 高度为60px，背景色为#F1F1F1，包含[图标]分别为[主页图标按钮](资源: $r('app.media.home')$)、[饮食管理图标按钮](资源: $r('app.media.diet')$)、[设备连接图标按钮](资源: $r('app.media.device')$)、[用户管理图标按钮](资源: $r('app.media.user')$)，图标尺寸为24px，横向排列，图标颜色为#333333，每个[图标按钮]点击后进行页面跳转至对应功能页面。[组件交互事件]: 整个视觉媒介基于[滚动机制]，而[导航栏]则通过[固定布局机制]确保其一直处于页面底部，无法通过滚动操作隐藏。[图标按钮]之间采用水平排列以提供对功能的快速访问，每个交互按钮设计为确保点击事件实时触发相应页面的加载和显示。在页面中的交互点击事件中，用户可从[搜索框]中输入关键字并点击[搜索图标]来在[弹出搜索结果模态框]查看搜索结果。用户可以在[图片展示区]、[按钮展示区]和[列表展示区]进行点击操作以进行页面跳转和访问相关功能。页面布局中，各个区域通过自然的滚动逻辑连接，确保流畅且直观的用户体验。",
+      "title": "主页(Index)"
+    },
+    {
+      "components": "[饮食管理页] 用到了[页面标题]、[滚动容器]、[饮食记录列表]、[饮食记录添加按钮]、[饮食建议模块]、[详情展开图标按钮]和[返回按钮]。",
+      "description": "饮食管理页面展示用户的饮食记录，并提供添加、查看和编辑饮食记录的功能。用户可以查看饮食建议并跳转到记录添加页面。",
+      "style": "[饮食管理页] 布局采用垂直列布局，包含[页面标题]、[滚动容器]和右上角的[返回按钮]。 [页面标题] 展示在页面顶部左侧，高度为50px，宽度为100%，背景色为#FFFFFF，字体为20px加粗，文本为'饮食管理'。 [滚动容器] 支持纵向滚动，确保所有内容可见，内部包含[饮食记录列表]和[饮食建议模块]。 [饮食记录列表] 每项采用单行展示，项高度为50px，内边距为10px，字体大小为14px，包含[日期标签]和[总卡路里]，背景色为浅灰，边框颜色为#BDBDBD，圆角为8px，支持点击展开详细信息。详细信息的展开通过点击[展开图标按钮]实现，[图标按钮] 位于每项记录的末尾，包含向下箭头图标$r('app.media.ic_public_arrow_down')$，展开后变为向上箭头图标$r('app.media.ic_public_arrow_up')$。 [饮食记录添加按钮] 位置固定在页面底部，高度为40px，宽度为100%，背景色为#FFC107。 [饮食建议模块] 展示为卡片样式，高度为120px，宽度为100%，内边距为10px，内容包括营养推荐和健康建议，支持自定义配置，边框圆角为8px。所有组件边距为10px，确保页面布局美观一致。 [返回按钮] 位于页面右上角，高度为30px，宽度为30px，背景为图标$r('app.media.return')$。",
+      "title": "饮食管理页(DietManagementPage)"
+    },
+    {
+      "components": "[设备管理页] 用到了[设备列表]、[运动设备展示卡片]、[返回主页按钮]。",
+      "description": "设备管理页用于连接和配置运动设备，提供设备连接功能，并在页面上展示运动设备信息。",
+      "style": "[设备管理页]通过栅格布局展示所有内容，页面顶部是[设备管理页标题]，字体颜色为黑色，背景色为透明。[设备列表]以栅格形式展示每个设备，卡片内边距为10px，背景色为#F5F5F5，边框为#BDBDBD，[手表图片]通过$r('app.media.machine_1')$展示，[手环图片]通过$r('app.media.machine_2')$展示，[设备名称]下方显示[连接状态]和一个[链接按钮]，[链接按钮]颜色为#2196F3，连接成功后状态变为已连接。[返回主页按钮]位于页面右上角，使用$r('app.media.return')$作为图标，大小为30x30px，点击返回到主页。[运动设备展示卡片]背景色为灰色，布局固定，[图片]在上，[名称]在下，[文字内边距]为5px，整体居中对齐，连接后状态变为已连接，并可通过[修改配置按钮]修改配置。",
+      "title": "设备管理页(DeviceManagementPage)"
+    },
+    {
+      "components": "[用户信息管理页] 用到了[用户信息展示区]、[返回主页按钮]、[跳转按钮到登录页面]、[跳转按钮到注册页面]、[个人信息编辑表单]和[用户头像图标]。",
+      "description": "此页面展示用户信息，并提供登录和注册页面的跳转按钮。用户可以在此管理个人账户信息，支持从此页面跳转到登录页面和注册页面。",
+      "style": "[用户信息管理页]通过垂直列布局，页面内包括[用户信息展示区]，展示区为单张[卡片]，固定高度为100px，背景色为#E0E0E0，边框圆角8px，边线颜色为#BDBDBD，字体颜色为#333，内容包含[用户名]、[邮箱]，有[用户头像图标]$r('app.media.account')$居中于卡片上；在[用户信息展示区]下方增加一个[设置区]，采用[列表布局]，每个项目包括[图标]和[文本信息]，图标在最左侧，包括[分享图标]$r('app.media.share')$、[设置图标]$r('app.media.setting')$、[清理加速图标]$r('app.media.clear')$、[反馈中心图标]$r('app.media.feedback')$, [身体数据图标]$r('app.media.data')$、[成就图标]$r('app.media.favorite')$，点击[身体数据图标]跳转到身体数据页面，最右侧使用一个[箭头图标]$r('app.media.arrow')$作为操作指示；中间是[设置项文本]。[返回主页按钮]位于页面右上角，点击返回主页页面，使用$r('app.media.return')$作为图标，[图标大小]为20px x 20px；下方为[跳转按钮]，矩形按钮填充#FFC107，[字体颜色]为白色，点击事件关联到[注册页面]和[登录页面]跳转，包含点击后逐渐变为50%透明度的互动效果；[个人信息编辑表单]包含显示逻辑，初始状态显示一个[小型固定按钮]，点击展示[输入框]和[提交按钮]，[输入框]和[提交按钮]色彩分别为#FFFFFF和#4CAF50，用于用户信息更新，点击提交按钮后通过[模态框]弹出保存提示，[提示框]圆角3px配合半透明背景，以确保用户的操作反馈清晰，带有[收起按钮]可收起输入框和提交按钮；所有组件在可滚动的[Scroll容器]中支持垂直滚动。[单页面布局]采用垂直列布局，上部为[用户信息展示区]，中部为[设置区]和[跳转按钮]，底部为[个人信息编辑表单]，[返回主页按钮]浮动显示于页面右上角。\n[组件交互事件]点击[身体数据图标]后跳转到身体数据页面；点击[返回主页按钮]后跳转到主页；点击[注册按钮]和[登录按钮]后逐渐变为50%透明度，并跳转到相应页面；点击[提交按钮]后弹出保存提示模态框，提示用户信息已更新，带有[收起按钮]功能，确保交互顺畅。",
+      "title": "用户信息管理页(UserManagementPage)"
+    },
+    {
+      "components": "[运动记录添加页面] 用到了[运动数据输入表单]、[提交按钮]、[目标达成进度条]、[结果确认消息弹窗]、[图片组件]。",
+      "description": "在该页面用户可以填写并提交每日运动数据，同时进行数据提交后可视化分析。",
+      "style": "[运动记录添加页面] 使用[Scroll容器组件]与垂直布局安排组件，确保小屏幕设备上可滚动显示所有组件。[顶部图片组件]用于装饰及导向辅助，资源路径为$r('app.media.img')$。[运动数据输入表单]呈田字形网格布置，[输入框]宽度100%，背景色#FFFFFF，边框色#BDBDBD，用于填写项目、时间、强度。[提交按钮]位于页面底部，并且可以滚动至视图底部，与底部对齐，按钮颜色为#4CAF50，点击后触发数据验证、保存逻辑，并弹出[结果确认消息弹窗]。[目标达成进度条]分为标题与内容，两部分，标题为“今日运动进度”，上方显示，[圆环进度条]位于下方左侧，显示运动进度比例，[右侧]显示今日运动量/目标运动量，单位为千卡。[结果确认消息弹窗]位于提交后的页面中央，背景为半透明黑色，文本为白色，显示操作结果，并提供[返回主页面]和[留在当前页面]两个选择。[组件交互事件] [提交按钮]点击触发数据验证和保存逻辑，成功则展示[结果确认消息弹窗]，用户可选择[返回主页]或[留在当前页面]继续数据添加。其中，图表分析功能与数据同步在后台执行。",
+      "title": "运动记录添加页面(ExerciseRecordAddPage)"
+    },
+    {
+      "components": "[饮食记录添加页面] 用到了[饮食信息输入框]、[分析结果展示区]、[提交按钮]。",
+      "description": "用户可以在此页面记录每日饮食信息，系统将通过分析和存储饮食记录，提供饮食分析功能。",
+      "style": "[饮食记录添加页面] 使用可滚动的[Scroll容器组件]实现整体布局，容器内包含三个主要组件，采用垂直列布局确保清晰的交互路径。 [饮食信息输入框] 设计为多行文本框，固定高度80px，背景色#FFFFFF，边框色#BDBDBD，文本内边距10px，用户在此输入每日饮食信息，放置在页面顶部。 [分析结果展示区] 设计为横向展示4个小型[卡片]，分别为蛋白(g)、碳水(g)、脂肪(g)、饮水(ml)，卡片背景色对应为灰黄色、灰蓝色、灰红色、灰绿色。卡片上中部显示标题，中部为加粗字体显示今日摄入量，中下部显示摄入量百分比。每个[卡片]固定高度80px，宽度80px。 [提交按钮] 固定在页面底部，设计为圆角矩形，固定高度40px，颜色#009688，用户点击后触发数据提交动作，确保显著易于操作。组件间的布局间距设定为5px，以确保界面布局井然有序。 [组件交互事件] 用户点击[提交按钮]后，[系统]将记录用户的饮食信息并进行分析，成功提交后弹窗提示用户“提交成功”，并返回页面等待用户的进一步操作。弹窗使用[$r(\"app.media.default_dialog\")]默认对话框样式，持续时间为2秒后自动消失。",
+      "title": "饮食记录添加页面(DietRecordAddPage)"
+    },
+    {
+      "components": "[登录页面] 用到了登录表单、用户名输入框、密码输入框、登录按钮、跳转按钮到注册页面。",
+      "description": "用户在此页面通过登录表单输入用户名和密码，并登录到系统。在登录成功后，用户会被重定向到主页。",
+      "style": "[登录页面]通过垂直列布局，将[登录表单]布置在页面中央，样式简明，含有[用户名输入框]、[密码输入框]，统一框高40px，背景色为#FFFFFF，边框为#BDBDBD。登录过程链接至[主页]，[按钮]色彩力求醒目，#2196F3，底部[跳转按钮到注册页面]直观可操作，与注册表单以弹窗动态带出，强调吸引按钮状态，周围可点击相领部分。",
+      "title": "登录页面(LoginPage)"
+    },
+    {
+      "components": "[注册页面] 用到了[注册表单]、[用户名输入框]、[密码输入框]、[注册按钮]及[确认注册成功的消息]。",
+      "description": "用户在此页面通过注册表单输入用户名和密码，并创建账户。在账户创建成功后，用户可以登录到系统。",
+      "style": "[注册页面]通过[垂直列布局]将组件整合，[注册表单]居于页面中央，突出用户输入机制：[用户名输入框]与[密码输入框]，40px高，背景为白色，边框为灰色，界面统一性。下方搭配[注册按钮]，采用平台色彩#4CAF50，引导用户行为；反馈通过[系统浮层]展示，显示账户创建成功的消息并连接至[登录页面]，顺序逻辑确保界面跳转流畅，强调交互的标准化与动态响应。",
+      "title": "注册页面(RegisterPage)"
+    },
+    {
+      "components": "[圈子页面] 用到了返回主页按钮、页面标题、用户图标、帖子创建区域、帖子列表。",
+      "description": "在圈子页面中，用户可以发布帖子，分享运动体验，并与其他用户互动。",
+      "style": "[圈子页面] 布局采用垂直列布局，页面内各个组件垂直排列且间距均匀。[返回主页按钮] 高度和宽度为40px，图标为$r('app.media.return')$；[页面标题] 文本为‘圈子’，使用加黑风格字体显示，文字大小为20px。[用户图标] 位于页面顶部右侧，高度和宽度都是30px，显示为$r('app.media.account')$。[帖子创建区域] 包含[输入框]和[帖子发布按钮]，[输入框]高度为60px，背景色为#FFFFFF，边框色为#BDBDBD；[帖子发布按钮]位于[输入框]右侧，背景为蓝色，字体为白色。[帖子创建区域的交互事件] 1. [输入框]获取用户输入内容；2. [帖子发布按钮]点击后，系统验证输入内容，当输入有效时生成新帖子并添加到[帖子列表]中，并在页面上方弹出一个成功发布的提示框，若输入无效则在输入框下方显示错误信息；3. [用户图标]点击会跳转到个人资料页面，通过弹出一个新页面展示个人资料。[帖子列表] 各列表项高度为100px，内边距10px，背景色#f6f6f6，边框颜色#BDBDBD，每个列表项可点击，点击[用户头像]会展示该用户的详细资料，通过弹出窗口形式展现。",
+      "title": "圈子页面(CirclePage)"
+    },
+    {
+      "components": "[收藏课程页面] 用到了[页面标题]、[课程列表]、[快速访问按钮]、[返回主页按钮]。",
+      "description": "在该页面中，用户可以查看他们收藏的课程列表，并快速访问课程内容。",
+      "style": "[收藏课程页面]使用垂直布局，顶部左侧是一个[返回主页按钮]，资源为$r('app.media.return')$，右侧是[页面标题]，标题为'收藏课程'，字体大小为20px，加粗，颜色为#333333。\n\n[页面标题]文字位置在返回主页按钮右侧，并未垂直居中，背景色为透明。\n\n[返回主页按钮]图标宽高为40px，背景透明，边距设置为16px。\n\n下部是一个[课程列表]，列表由多个[课程项]构成。每个[课程项]包括[标题]和[图片资源]，例如‘跑步专项’，使用图片资源$r('app.media.exercise_tutorials_1')$；‘睡前轻松练’使用图片资源$r('app.media.exercise_tutorials_2')$；‘养生必练’使用图片资源$r('app.media.exercise_tutorials_3')$。\n\n[课程项]图片宽度为100%，高度为150px，卡片采用圆角效果，背景色为#FFFFFF，框线颜色为#BDBDBD。\n\n[课程项][标题]旁显示一个[右箭头图标]arrow.png，箭头图标宽度为14px，高度垂直居中。\n\n[快速访问按钮]位于每个[课程项]右侧，高度为30px，颜色为#FFC107，有点击交互事件，点击后进入课程详情页面。\n\n[单页面布局]- 底部按钮区单独分隔，与其他元素对齐。\n- 全页面的边距设定，页面内间距为16px。\n\n[页面交互事件]:\n- [返回主页按钮]具有点击交互事件，点击后返回到主页。\n- [课程项]的[快速访问按钮]点击后进入相应课程的详情页面，系统需进行页面跳转至课程详情并记录用户访问的课程历史。\n\n",
+      "title": "收藏课程页面(CollectedCoursesPage)"
+    },
+    {
+      "components": "[个人身体数据页面] 用到了[标题文字]、[返回主页按钮]、[身体数据展示区]、[保存按钮]。",
+      "description": "在该页面中，用户可以查看和管理他们的身体数据，以跟踪身体发展和健康状况。",
+      "style": "[个人身体数据页面]采用垂直列布局，页面背景色为#F5F5F5。[标题区域]位于页面顶部，包含[标题文字]和[返回主页按钮]，背景色为#FFFFFF，居中对齐。[标题文字]显示‘个人身体数据’，字体为18px，颜色为#212121。[返回主页按钮]位于标题文字左侧，采用图片资源$r('app.media.return')$，尺寸为40px×40px，点击后跳转返回主页。[身体数据展示区]放置在页面中央，使用[列表组件]展示体重、身高、BMI、年龄和性别信息，间距为10px，背景色为#FFFFFF，边框为1px圆角边框色#E0E0E0，各项居中对齐。[箭头图标]在每个列表项右侧，尺寸为16px×16px，图片资源为$r('app.media.arrow')$。[保存按钮]底部居中，背景色蓝色，文字白色，尺寸为40px×150px，点击后保存数据，显示‘保存成功’提示信息。[提示弹窗]居中显示，背景色#FFFFFF，字体颜色#212121，尺寸为150px×300px。[UI组件][保存按钮]交互事件：用户点击触发保存功能，若成功显示居中弹窗提示‘保存成功’。点击提示或弹窗背景关闭提示。",
+      "title": "个人身体数据页面(PersonalBodyDataPage)"
+    },
+    {
+      "components": "[运动计划页面]包含[返回主页按钮]、[页面标题]、[运动项目选择菜单]、[计划详情展示区]、[保存按钮]。",
+      "description": "在该页面中，用户可以制定和查看个性化运动计划，并选择运动项目。系统会根据用户的选择提供详细的计划信息，并支持保存至用户档案。",
+      "style": "[运动计划页面]采用垂直列布局，页面顶部包括[返回主页按钮]和[页面标题]。 [返回主页按钮] 尺寸为40px x 40px，使用图标资源$r('app.media.return')$。 [页面标题] 显示为‘运动计划’，紧挨按钮右侧，字体大小为20px，采用加粗样式，以突出页面标题。 [运动项目选择菜单] 的背景色为#FFFFFF，内边距为10px，选项卡片风格，背景色为#F5F5F5，字体尺寸为14px，宽度为90%，菜单交互时显示下拉动画增强用户体验。 [计划详情展示区] 采用栅格布局，总背景颜色为白色，总布局高为300px，宽度100%，每个栅格的背景色为#ffdfdfe2，栅格布局为4个[栅格区]。每个[栅格区]的宽度和高度都是150px，行间隔为10px，圆角弧度为10，内容包括‘四分化1’、‘四分化2’、‘四分化3’、‘四分化4’，位于每个[栅格]的左上部，边框颜色为#B2EBF2。 [保存按钮] 为圆角矩形，宽度为100px，高度为40px，背景色为#4CAF50，位于页面的右下角，显示动效缓解点击，即按钮点击后颜色加深以反馈操作。 [组件交互事件] 用户在[运动项目选择菜单]中选择项目后，自动更新[计划详情展示区]。点击[保存按钮]后，将出现[模态框]提示‘保存成功’，[模态框]需有一个[关闭按钮]，关闭后返回运动计划页面，[提示框]需在页面的顶层显示，交互过程中强调视觉聚焦，以用户交互规范确保用户在保存数据时有清晰的反馈。点击[返回主页按钮]，用户会被重定向至主页，提供流畅的页面跳转体验，根据用户界面规范，确保在跳转时至少有微动画过渡效果用于提升用户体验。",
+      "title": "运动计划页面(ExercisePlanPage)"
+    },
+    {
+      "components": "[饮食计划页面] 用到了[返回主页按钮]、[页面标题]、[每日计划表]、[饮食计划评价]。",
+      "description": "用户在此页面可以查看个性化的饮食计划，通过查看每日计划表和饮食计划评价来管理营养指导。",
+      "style": "[饮食计划页面] 使用垂直列布局，页面顶部左侧为[返回主页按钮]，图标使用[返回图标]$r('app.media.return')$，按钮高度和宽度均为40px，右侧为[页面标题]，显示文字‘饮食计划’。[每日计划表]与[饮食计划评价]均为方形区域，背景颜色为灰色，页面中其他组件共用一个色彩方案确保视觉一致性。[每日计划表]中包含用户的每日饮食计划信息，信息区为只读，具有分隔线，表头加粗以区分数据，并通过点击[提示按钮]进入计划编辑页面修改计划。[饮食计划评价]在页面下半部分，允许用户通过星级评级进行反馈，星级图标资源点亮时为[星级填充图标]$r('app.media.star_filled')$，未点亮时为[星级空图标]$r('app.media.star_empty')$，系统自动保存用户给出的反馈。[返回主页按钮]用户点击返回主页。[每日计划表]中的[提示按钮]以小型图标形式展现，点击后弹出[编辑计划页面]小窗，提示用户将跳转到编辑计划页面，并进行计划数据的编辑和保存。页面体现统一的视觉风格以增强用户体验。",
+      "title": "饮食计划页面(DietPlanPage)"
+    },
+    {
+      "components": "[成就页面] 用到了[滑动组件]、[成就列表]、[成就图标]、[返回按钮]。",
+      "description": "在成就页面中，用户可以查看并管理他们的成就，以评估表现和收集激励。",
+      "style": "[成就页面] 通过垂直列布局，[返回按钮]位于页面左上角，图标使用$r('app.media.return')$，点击后返回上一页。[标题]‘成就’放置在[返回按钮]右侧，字号为20px，加粗显示。[成就列表]位于[标题]下方，宽度为100%。[滑动组件]用于滚动查看[成就列表]，支持手势左右滑动以切换不同成就类别。[成就列表项]可展开查看每一个成就的详细信息，高度为80px，背景色为淡灰色，[成就名称]显示在[成就图标]右侧，[成就描述]下方列出，右侧包含[展开图标]，资源为$r('app.media.ic_public_arrow_down')$和$r('app.media.ic_public_arrow_up')$用于表示展开和收起状态。[成就图标]使用$r('app.media.achieve')$表示。[成就项目互动]用户点击成就项目可查看详细信息或收起。",
+      "title": "成就页面(AchievementsPage)"
+    }
+  ],
+  "arkts_code": [
+    {
+      "title": "主页(Index)",
+      "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\n\n@Entry\n@Component\nstruct Index {\n  @State searchText: string = '';\n  @State currentIndex: number = 0;\n  private swiperController: SwiperController = new SwiperController();\n  private images: Resource[] = [$r('app.media.fig1'), $r('app.media.fig2')];\n  private icons: Resource[] =\n    [$r('app.media.target'), $r('app.media.record'), $r('app.media.circle'), $r('app.media.favorite')];\n  private gridImages: Resource[] =\n    [$r('app.media.band'), $r('app.media.found'), $r('app.media.new'), $r('app.media.top')];\n  private gridTitles: string[] = ['轻松燃脂', '增肌塑形', '无伤畅跑', '健康养生'];\n\n  build() {\n    Column() {\n      Scroll() {\n        Column() {\n          Text(\"运动健康\")\n            .fontSize(20)\n            .fontColor('#333333')\n            .height(30)\n            .width('100%')\n            .textAlign(TextAlign.Start)\n            .padding({ left: 10 })\n            .backgroundColor('#FFFFFF')\n\n          Search({ value: this.searchText, placeholder: '搜索' })\n            .width('95%')\n            .height(40)\n            .backgroundColor('#ffe0e0e0')\n            .margin({ top: 10 })\n            .onChange((value: string) => {\n              this.searchText = value;\n            })\n            .onSubmit((value: string) => {\n              console.info('Search submitted: ' + value);\n              // 弹出搜索结果模态框\n              AlertDialog.show({\n                title: '搜索结果',\n                message: '您搜索的内容是：' + value,\n                confirm: {\n                  value: '确定',\n                  action: () => {\n                    console.info('确认按钮被点击');\n                  }\n                },\n                cancel: () => {\n                  console.info('Closed callbacks');\n                }\n              });\n            })\n\n          Swiper(this.swiperController) {\n            ForEach(this.images, (image: string) => {\n              Image(image)\n                .width('100%')\n                .height(150)\n                .borderRadius(10)\n            })\n          }\n          .width('95%')\n          .height(150)\n          .margin({ top: 10 })\n\n          Row() {\n            ForEach(this.icons, (icon: string, index: number) => {\n              Column() {\n                Image(icon)\n                  .width(50)\n                  .height(50)\n                Text(['运动计划', '饮食计划', '圈子', '收藏'][index])\n                  .fontSize(14)\n                  .margin({ top: 5 })\n              }\n              .width(70)\n              .alignItems(HorizontalAlign.Center)\n              .onClick(() => {\n                switch (index) {\n                  case 0:\n                    router.pushUrl({ url: 'pages/ExercisePlanPage' });\n                    break;\n                  case 1:\n                    router.pushUrl({ url: 'pages/DietPlanPage' });\n                    break;\n                  case 2:\n                    router.pushUrl({ url: 'pages/CirclePage' });\n                    break;\n                  case 3:\n                    router.pushUrl({ url: 'pages/CollectedCoursesPage' });\n                    break;\n                }\n              })\n            })\n          }\n          .width('95%')\n          .height(100)\n          .backgroundColor('#fff6f2f2')\n          .borderRadius(10)\n          .justifyContent(FlexAlign.SpaceAround)\n          .margin({ top: 20 })\n\n          Text(\"列表\")\n            .fontSize(15)\n            .height(15)\n            .fontColor('#333333')\n            .width('100%')\n            .textAlign(TextAlign.Start)\n            .padding({ top:10,left: 20})\n            .backgroundColor('#FFFFFF')\n\n          Grid() {\n            ForEach(this.gridImages, (image: string, index: number) => {\n              GridItem() {\n                Column() {\n                  Image(image)\n                    .width('100%')\n                    .height(100)\n                    .borderRadius(10)\n                  Text(this.gridTitles[index])\n                    .fontSize(14)\n                    .fontColor(Color.Black)\n                    .margin({ top: 5 })\n                }\n              }\n            })\n          }\n          .backgroundColor('#fff6f2f2')\n          .borderRadius(10)\n          .columnsTemplate('1fr 1fr')\n          .rowsTemplate('1fr 1fr')\n          .columnsGap(10)\n          .rowsGap(10)\n          .width('95%')\n          .height(300)\n          .margin({ top: 20 })\n        }\n        .width('100%')\n      }\n      .scrollable(ScrollDirection.Vertical)\n      .scrollBar(BarState.Off)\n      .edgeEffect(EdgeEffect.Spring)\n\n      Row() {\n        Column() {\n          Image($r('app.media.home'))\n            .width(24)\n            .height(24)\n          Text('主页')\n            .fontSize(12)\n            .fontColor('#333333')\n        }\n        .onClick(() => this.currentIndex = 0)\n\n        Column() {\n          Image($r('app.media.diet'))\n            .width(24)\n            .height(24)\n          Text('饮食管理')\n            .fontSize(12)\n            .fontColor('#333333')\n        }\n        .onClick(() => {\n          router.pushUrl({ url: 'pages/DietManagementPage' });\n        })\n\n        Column() {\n          Image($r('app.media.device'))\n            .width(24)\n            .height(24)\n          Text('设备连接')\n            .fontSize(12)\n            .fontColor('#333333')\n        }\n        .onClick(() => {\n          router.pushUrl({ url: 'pages/DeviceManagementPage' });\n        })\n\n        Column() {\n          Image($r('app.media.user'))\n            .width(24)\n            .height(24)\n          Text('用户管理')\n            .fontSize(12)\n            .fontColor('#333333')\n        }\n        .onClick(() => {\n          router.pushUrl({ url: 'pages/UserManagementPage' });\n        })\n      }\n      .width('100%')\n      .height(60)\n      .justifyContent(FlexAlign.SpaceAround)\n      .backgroundColor('#F1F1F1')\n      .position({ y: '103%' })\n      .translate({ y: -50 })\n    }\n    .height('100%')\n    .width('100%')\n  }\n}"
+    },
+    {
+      "title": "饮食管理页(DietManagementPage)",
+      "code": "// DietManagementPage.ets\nimport router from '@ohos.router';\nimport base from '@ohos.base';\n\n@Entry\n@Component\nstruct DietManagementPage {\n  @State dietRecords: Array<DietRecord> = [];\n  @State expandedIndex: number = -1;\n  private scroller: Scroller = new Scroller();\n\n  aboutToAppear() {\n    // 模拟获取饮食记录数据\n    this.dietRecords = [\n      { date: '2023-05-01', totalCalories: 2000, details: '早餐: 鸡蛋, 牛奶\\n午餐: 米饭, 蔬菜\\n晚餐: 鱼, 水果' },\n      { date: '2023-05-02', totalCalories: 1800, details: '早餐: 面包, 果汁\\n午餐: 沙拉, 鸡肉\\n晚餐: 意大利面, 沙拉' },\n    ];\n  }\n\n  build() {\n    Column() {\n      // 页面标题\n      Text('饮食管理')\n        .fontSize(20)\n        .fontWeight(FontWeight.Bold)\n        .width('100%')\n        .height(50)\n        .backgroundColor('#FFFFFF')\n        .textAlign(TextAlign.Center)\n\n      // 滚动容器\n      Scroll(this.scroller) {\n        Column() {\n          // 饮食记录列表\n          ForEach(this.dietRecords, (item: DietRecord, index: number) => {\n            Column() {\n              Row() {\n                Text(item.date)\n                  .fontSize(14)\n                Text(`总卡路里: ${item.totalCalories}`)\n                  .fontSize(14)\n                Image(this.expandedIndex === index ? $r('app.media.ic_public_arrow_up') : $r('app.media.ic_public_arrow_down'))\n                  .width(24)\n                  .height(24)\n                  .onClick(() => {\n                    if (this.expandedIndex === index) {\n                      this.expandedIndex = -1;\n                    } else {\n                      this.expandedIndex = index;\n                    }\n                  })\n              }\n              .width('100%')\n              .height(50)\n              .padding(10)\n              .backgroundColor('#F0F0F0')\n              .borderRadius(8)\n              .margin({ bottom: 10 })\n\n              if (this.expandedIndex === index) {\n                Text(item.details)\n                  .fontSize(14)\n                  .padding(10)\n                  .backgroundColor('#FFFFFF')\n                  .width('100%')\n              }\n            }\n          })\n\n          // 饮食建议模块\n          Column() {\n            Text('饮食建议')\n              .fontSize(16)\n              .fontWeight(FontWeight.Bold)\n            Text('保持均衡饮食，多吃蔬菜水果，少吃高脂肪食物。')\n              .fontSize(14)\n          }\n          .width('100%')\n          .height(120)\n          .padding(10)\n          .backgroundColor('#FFFFFF')\n          .borderRadius(8)\n          .margin({ top: 20 })\n        }\n        .width('90%')\n      }\n      .scrollable(ScrollDirection.Vertical)\n      .scrollBar(BarState.On)\n      .scrollBarColor(Color.Gray)\n      .scrollBarWidth(10)\n\n      // 饮食记录添加按钮\n      Button('添加饮食记录')\n        .width('100%')\n        .height(40)\n        .backgroundColor('#FFC107')\n        .onClick(() => {\n          router.pushUrl({\n            url: 'pages/DietRecordAddPage'\n          }).catch((err: base.BusinessError) => {\n            console.error(`Failed to push to DietRecordAddPage. Code: ${err.code}, message: ${err.message}`);\n          });\n        })\n\n      // 返回按钮\n      Button() {\n        Image($r('app.media.return'))\n          .width(30)\n          .height(30)\n      }\n      .width(30)\n      .height(30)\n      .position({ x: '90%', y: 10 })\n      .backgroundColor('transparent')\n      .onClick(() => {\n        router.back();\n      })\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor('#FFFFFF')\n  }\n}\n\ninterface DietRecord {\n  date: string;\n  totalCalories: number;\n  details: string;\n}"
+    },
+    {
+      "title": "设备管理页(DeviceManagementPage)",
+      "code": "import router from '@ohos.router';\n\n@Entry\n@Component\nstruct DeviceManagementPage {\n  @State devices: DeviceInfo[] = [\n    { name: '智能手表', image: $r('app.media.machine_1'), isConnected: false },\n    { name: '智能手环', image: $r('app.media.machine_2'), isConnected: false }\n  ];\n\n  build() {\n    Column() {\n      Row() {\n        Text('设备管理')\n          .fontSize(24)\n          .fontColor(Color.Black)\n          .fontWeight(FontWeight.Bold)\n        \n        Image($r('app.media.return'))\n          .width(30)\n          .height(30)\n          .margin({ left: 'auto' })\n          .onClick(() => {\n            router.back();\n          })\n      }\n      .width('100%')\n      .padding(10)\n\n      Grid() {\n        ForEach(this.devices, (device: DeviceInfo, index: number) => {\n          GridItem() {\n            this.DeviceCard(device, index)\n          }\n        }, (device: DeviceInfo) => device.name)\n      }\n      .columnsTemplate('1fr 1fr')\n      .rowsGap(10)\n      .columnsGap(10)\n      .padding(10)\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor(0xDCDCDC)\n  }\n\n  @Builder\n  DeviceCard(device: DeviceInfo, index: number) {\n    Column() {\n      Image(device.image)\n        .width('100%')\n        .height(100)\n        .objectFit(ImageFit.Contain)\n\n      Text(device.name)\n        .fontSize(16)\n        .margin({ top: 5, bottom: 5 })\n\n      Text(device.isConnected ? '已连接' : '未连接')\n        .fontSize(14)\n        .fontColor(device.isConnected ? Color.Green : Color.Red)\n\n      Button(device.isConnected ? '配置' : '连接')\n        .width('80%')\n        .height(30)\n        .fontSize(14)\n        .backgroundColor(0x2196F3)\n        .onClick(() => {\n          if (!device.isConnected) {\n            this.connectDevice(index);\n          } else {\n            this.showDeviceConfig(device);\n          }\n        })\n    }\n    .width('100%')\n    .height(200)\n    .backgroundColor(0xF5F5F5)\n    .borderColor(0xBDBDBD)\n    .borderWidth(1)\n    .borderRadius(10)\n    .padding(10)\n    .alignItems(HorizontalAlign.Center)\n  }\n\n  connectDevice(index: number) {\n    // 模拟设备连接过程\n    setTimeout(() => {\n      this.devices[index].isConnected = true;\n      this.devices = [...this.devices];\n      this.showConnectSuccessDialog(this.devices[index]);\n    }, 1000);\n  }\n\n  showConnectSuccessDialog(device: DeviceInfo) {\n    AlertDialog.show({\n      title: '连接成功',\n      message: `${device.name}已成功连接`,\n      confirm: {\n        value: '确定',\n        action: () => {\n          console.info('设备连接成功对话框已关闭');\n        }\n      }\n    });\n  }\n\n  showDeviceConfig(device: DeviceInfo) {\n    AlertDialog.show({\n      title: '设备配置',\n      message: `配置${device.name}`,\n      confirm: {\n        value: '确定',\n        action: () => {\n          console.info('进入设备配置页面');\n          // 这里可以添加跳转到设备配置页面的逻辑\n        }\n      },\n      cancel: () => {\n        console.info('取消设备配置');\n      }\n    });\n  }\n}\n\ninterface DeviceInfo {\n  name: string;\n  image: Resource;\n  isConnected: boolean;\n}"
+    },
+    {
+      "title": "用户信息管理页(UserManagementPage)",
+      "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\nimport base from '@ohos.base';\n\n@Entry\n@Component\nstruct UserManagementPage {\n  @State userName: string = '';\n  @State userEmail: string = '';\n  @State showEditForm: boolean = false;\n  @State newUserName: string = '';\n  @State newUserEmail: string = '';\n\n  aboutToAppear() {\n    this.getUserInfo();\n  }\n\n  getUserInfo() {\n    let httpRequest = http.createHttp();\n    httpRequest.request(\n      \"http://localhost:8000/api/getUserInfo\",\n      {\n        method: http.RequestMethod.GET,\n        header: {\n          'Content-Type': 'application/json'\n        },\n        extraData: {\n          \"userId\": \"123\" // 假设用户ID为123\n        },\n      }\n    ).then((resp) => {\n      let result = JSON.parse(resp.result.toString());\n      this.userName = result.userName;\n      this.userEmail = result.userEmail;\n    }).catch((err: base.BusinessError) => {\n      console.error(`Failed to get user info. Code: ${err.code}, message: ${err.message}`);\n    });\n  }\n\n  build() {\n    Scroll() {\n      Column() {\n        // 用户信息展示区\n        Row() {\n          Image($r('app.media.account'))\n            .width(60)\n            .height(60)\n          Column() {\n            Text(this.userName)\n              .fontSize(18)\n              .fontColor('#333')\n            Text(this.userEmail)\n              .fontSize(14)\n              .fontColor('#333')\n          }.margin({ left: 20 })\n        }\n        .width('90%')\n        .height(100)\n        .backgroundColor('#E0E0E0')\n        .borderRadius(8)\n        .borderColor('#BDBDBD')\n        .borderWidth(1)\n        .padding(10)\n\n        // 设置区\n        List() {\n          ListItem() {\n            Row() {\n              Image($r('app.media.share'))\n                .width(24)\n                .height(24)\n              Text('分享')\n                .fontSize(16)\n                .margin({ left: 10 })\n              Blank()\n              Image($r('app.media.arrow'))\n                .width(24)\n                .height(24)\n            }.width('100%').height(50)\n          }\n          ListItem() {\n            Row() {\n              Image($r('app.media.setting'))\n                .width(24)\n                .height(24)\n              Text('设置')\n                .fontSize(16)\n                .margin({ left: 10 })\n              Blank()\n              Image($r('app.media.arrow'))\n                .width(24)\n                .height(24)\n            }.width('100%').height(50)\n          }\n          ListItem() {\n            Row() {\n              Image($r('app.media.clear'))\n                .width(24)\n                .height(24)\n              Text('清理加速')\n                .fontSize(16)\n                .margin({ left: 10 })\n              Blank()\n              Image($r('app.media.arrow'))\n                .width(24)\n                .height(24)\n            }.width('100%').height(50)\n          }\n          ListItem() {\n            Row() {\n              Image($r('app.media.feedback'))\n                .width(24)\n                .height(24)\n              Text('反馈中心')\n                .fontSize(16)\n                .margin({ left: 10 })\n              Blank()\n              Image($r('app.media.arrow'))\n                .width(24)\n                .height(24)\n            }.width('100%').height(50)\n          }\n          ListItem() {\n            Row() {\n              Image($r('app.media.data'))\n                .width(24)\n                .height(24)\n              Text('身体数据')\n                .fontSize(16)\n                .margin({ left: 10 })\n              Blank()\n              Image($r('app.media.arrow'))\n                .width(24)\n                .height(24)\n            }.width('100%').height(50)\n              .onClick(() => {\n                router.pushUrl({ url: 'pages/PersonalBodyDataPage' })\n              })\n          }\n        }.width('90%').margin({ top: 20 })\n\n        // 跳转按钮\n        Button('注册')\n          .width('90%')\n          .height(50)\n          .backgroundColor('#FFC107')\n          .fontColor(Color.White)\n          .margin({ top: 20 })\n          .onClick(() => {\n            router.pushUrl({ url: 'pages/RegisterPage' })\n          })\n\n        Button('登录')\n          .width('90%')\n          .height(50)\n          .backgroundColor('#FFC107')\n          .fontColor(Color.White)\n          .margin({ top: 20 })\n          .onClick(() => {\n            router.pushUrl({ url: 'pages/LoginPage' })\n          })\n\n        // 个人信息编辑表单\n        if (this.showEditForm) {\n          Column() {\n            TextInput({ placeholder: '新用户名' })\n              .width('90%')\n              .height(50)\n              .backgroundColor('#FFFFFF')\n              .margin({ top: 20 })\n              .onChange((value: string) => {\n                this.newUserName = value;\n              })\n\n            TextInput({ placeholder: '新邮箱' })\n              .width('90%')\n              .height(50)\n              .backgroundColor('#FFFFFF')\n              .margin({ top: 20 })\n              .onChange((value: string) => {\n                this.newUserEmail = value;\n              })\n\n            Button('提交')\n              .width('90%')\n              .height(50)\n              .backgroundColor('#4CAF50')\n              .fontColor(Color.White)\n              .margin({ top: 20 })\n              .onClick(() => {\n                // 这里应该调用后端API更新用户信息\n                AlertDialog.show({\n                  title: '提示',\n                  message: '用户信息已更新',\n                  confirm: {\n                    value: '确定',\n                    action: () => {\n                      this.showEditForm = false;\n                      this.userName = this.newUserName;\n                      this.userEmail = this.newUserEmail;\n                    }\n                  }\n                })\n              })\n\n            Button('收起')\n              .width('90%')\n              .height(50)\n              .backgroundColor('#CCCCCC')\n              .fontColor(Color.White)\n              .margin({ top: 20 })\n              .onClick(() => {\n                this.showEditForm = false;\n              })\n          }\n        } else {\n          Button('编辑个人信息')\n            .width('90%')\n            .height(50)\n            .backgroundColor('#CCCCCC')\n            .fontColor(Color.White)\n            .margin({ top: 20 })\n            .onClick(() => {\n              this.showEditForm = true;\n            })\n        }\n      }.width('100%')\n    }\n    .scrollable(ScrollDirection.Vertical)\n\n    // 返回主页按钮\n    Image($r('app.media.return'))\n      .width(20)\n      .height(20)\n      .position({ x: '90%', y: 20 })\n      .onClick(() => {\n        router.back()\n      })\n  }\n}"
+    },
+    {
+      "title": "运动记录添加页面(ExerciseRecordAddPage)",
+      "code": "import router from '@ohos.router';\nimport base from '@ohos.base';\n\nexport interface ExerciseDataInterface {\n  recordDate: Date;\n  duration: number;\n  calories: number;\n}\n\n@Entry\n@Component\nstruct ExerciseRecordAddPage {\n  @State exerciseData: ExerciseDataInterface = {\n    recordDate: new Date(),\n    duration: 0,\n    calories: 0\n  };\n  @State exerciseType: string = '';\n  @State intensity: string = '';\n  @State dailyGoal: number = 500; // 每日目标卡路里消耗\n  @State isSubmitted: boolean = false;\n  @State progress: number = 0;\n  private scroller: Scroller = new Scroller();\n\n  aboutToAppear() {\n    // 计算当前进度\n    this.progress = this.exerciseData.calories / this.dailyGoal;\n  }\n\n  build() {\n    Scroll(this.scroller) {\n      Column() {\n        // 顶部图片\n        Image($r('app.media.img'))\n          .width('100%')\n          .height(200)\n          .objectFit(ImageFit.Cover)\n\n        // 运动数据输入表单\n        Column() {\n          Text('添加运动记录')\n            .fontSize(24)\n            .fontWeight(FontWeight.Bold)\n            .margin({ top: 20, bottom: 20 })\n\n          // 运动项目输入\n          Column() {\n            Text('运动项目')\n              .fontSize(16)\n              .margin({ bottom: 8 })\n            TextInput({ placeholder: '请输入运动项目' })\n              .width('100%')\n              .height(48)\n              .backgroundColor(Color.White)\n              .borderRadius(8)\n              .borderWidth(1)\n              .borderColor(0xBDBDBD)\n              .onChange((value: string) => {\n                this.exerciseType = value;\n              })\n          }.width('100%').margin({ bottom: 16 })\n\n          // 运动时长输入\n          Column() {\n            Text('运动时长 (分钟)')\n              .fontSize(16)\n              .margin({ bottom: 8 })\n            TextInput({ placeholder: '请输入运动时长' })\n              .width('100%')\n              .height(48)\n              .backgroundColor(Color.White)\n              .borderRadius(8)\n              .borderWidth(1)\n              .borderColor(0xBDBDBD)\n              .type(InputType.Number)\n              .onChange((value: string) => {\n                this.exerciseData.duration = parseFloat(value);\n              })\n          }.width('100%').margin({ bottom: 16 })\n\n          // 运动强度选择\n          Column() {\n            Text('运动强度')\n              .fontSize(16)\n              .margin({ bottom: 8 })\n            Select([\n              { value: '低强度' },\n              { value: '中强度' },\n              { value: '高强度' }\n            ])\n              .width('100%')\n              .height(48)\n              .backgroundColor(Color.White)\n              .borderRadius(8)\n              .borderWidth(1)\n              .borderColor(0xBDBDBD)\n              .onSelect((index: number, value: string) => {\n                this.intensity = value;\n                // 根据强度估算卡路里消耗\n                if (value === '低强度') {\n                  this.exerciseData.calories = Math.round(this.exerciseData.duration * 3);\n                } else if (value === '中强度') {\n                  this.exerciseData.calories = Math.round(this.exerciseData.duration * 5);\n                } else {\n                  this.exerciseData.calories = Math.round(this.exerciseData.duration * 8);\n                }\n                // 更新进度\n                this.progress = this.exerciseData.calories / this.dailyGoal;\n              })\n          }.width('100%').margin({ bottom: 16 })\n\n          // 卡路里消耗输入\n          Column() {\n            Text('卡路里消耗')\n              .fontSize(16)\n              .margin({ bottom: 8 })\n            TextInput({ text: this.exerciseData.calories.toString(), placeholder: '请输入卡路里消耗' })\n              .width('100%')\n              .height(48)\n              .backgroundColor(Color.White)\n              .borderRadius(8)\n              .borderWidth(1)\n              .borderColor(0xBDBDBD)\n              .type(InputType.Number)\n              .onChange((value: string) => {\n                this.exerciseData.calories = parseInt(value);\n                // 更新进度\n                this.progress = this.exerciseData.calories / this.dailyGoal;\n              })\n          }.width('100%').margin({ bottom: 16 })\n        }\n        .width('90%')\n        .padding(16)\n        .backgroundColor(0xF5F5F5)\n        .borderRadius(12)\n        .margin({ top: 20 })\n\n        // 目标达成进度条\n        Column() {\n          Text('今日运动进度')\n            .fontSize(20)\n            .fontWeight(FontWeight.Bold)\n            .margin({ bottom: 16 })\n\n          Row() {\n            // 圆环进度条\n            Progress({ value: this.progress * 100, type: ProgressType.Ring })\n              .width(120)\n              .height(120)\n              .style({ strokeWidth: 10, scaleCount: 100, scaleWidth: 2 })\n\n            // 进度文本\n            Column() {\n              Text(`${this.exerciseData.calories} / ${this.dailyGoal}`)\n                .fontSize(20)\n                .fontWeight(FontWeight.Bold)\n                .margin({ bottom: 8 })\n              Text('千卡')\n                .fontSize(16)\n                .fontColor(0x666666)\n            }\n            .alignItems(HorizontalAlign.Start)\n            .margin({ left: 24 })\n          }\n          .width('100%')\n          .justifyContent(FlexAlign.Start)\n          .alignItems(VerticalAlign.Center)\n        }\n        .width('90%')\n        .padding(16)\n        .backgroundColor(0xF5F5F5)\n        .borderRadius(12)\n        .margin({ top: 20 })\n\n        // 提交按钮\n        Button('提交运动记录')\n          .width('90%')\n          .height(50)\n          .backgroundColor(0x4CAF50)\n          .borderRadius(25)\n          .margin({ top: 30, bottom: 30 })\n          .onClick(() => {\n            if (this.exerciseType === '' || this.exerciseData.duration <= 0 || this.intensity === '') {\n              AlertDialog.show({\n                title: '提示',\n                message: '请填写完整的运动信息',\n                confirm: {\n                  value: '确定',\n                  action: () => {\n                    console.info('用户确认填写完整信息');\n                  }\n                }\n              });\n              return;\n            }\n\n            // 保存运动数据\n            this.exerciseData.recordDate = new Date();\n            this.isSubmitted = true;\n\n            // 显示结果确认弹窗\n            AlertDialog.show({\n              title: '运动记录已保存',\n              message: `您已记录了${this.exerciseData.duration}分钟的${this.exerciseType}，消耗了${this.exerciseData.calories}卡路里`,\n              buttons: [\n                {\n                  value: '返回主页',\n                  action: () => {\n                    router.pushUrl({\n                      url: 'pages/Index'\n                    }).catch((err: base.BusinessError) => {\n                      console.error(`Failed to push to Index. Code: ${err.code}, message: ${err.message}`);\n                    });\n                  }\n                },\n                {\n                  value: '继续添加',\n                  action: () => {\n                    // 重置表单\n                    this.exerciseData = {\n                      recordDate: new Date(),\n                      duration: 0,\n                      calories: 0\n                    };\n                    this.exerciseType = '';\n                    this.intensity = '';\n                    this.progress = 0;\n                    this.isSubmitted = false;\n                  }\n                }\n              ]\n            });\n          })\n      }\n      .width('100%')\n      .height('100%')\n      .alignItems(HorizontalAlign.Center)\n    }\n    .scrollable(ScrollDirection.Vertical)\n    .scrollBar(BarState.Auto)\n    .edgeEffect(EdgeEffect.Spring)\n    .width('100%')\n    .height('100%')\n    .backgroundColor(0xEEEEEE)\n  }\n}"
+    },
+    {
+      "title": "饮食记录添加页面(DietRecordAddPage)",
+      "code": "import router from '@ohos.router';\nimport base from '@ohos.base';\n\nexport interface DietPlanInterface {\n  planName: string;\n  creationDate: Date;\n  nutritionInfo: string;\n}\n\nexport interface NutritionAnalysisInterface {\n  protein: number;\n  carbs: number;\n  fat: number;\n  water: number;\n  proteinPercentage: number;\n  carbsPercentage: number;\n  fatPercentage: number;\n  waterPercentage: number;\n}\n\n@Entry\n@Component\nstruct DietRecordAddPage {\n  @State dietInfo: string = '';\n  @State nutritionAnalysis: NutritionAnalysisInterface = {\n    protein: 0,\n    carbs: 0,\n    fat: 0,\n    water: 0,\n    proteinPercentage: 0,\n    carbsPercentage: 0,\n    fatPercentage: 0,\n    waterPercentage: 0\n  };\n\n  // 模拟分析饮食信息的函数\n  analyzeNutrition(dietInfo: string): NutritionAnalysisInterface {\n    // 实际应用中这里应该调用API进行真实分析\n    // 这里仅做模拟\n    return {\n      protein: Math.floor(Math.random() * 100),\n      carbs: Math.floor(Math.random() * 200),\n      fat: Math.floor(Math.random() * 80),\n      water: Math.floor(Math.random() * 2000),\n      proteinPercentage: Math.floor(Math.random() * 100),\n      carbsPercentage: Math.floor(Math.random() * 100),\n      fatPercentage: Math.floor(Math.random() * 100),\n      waterPercentage: Math.floor(Math.random() * 100)\n    };\n  }\n\n  build() {\n    Column() {\n      // 页面标题\n      Text('添加饮食记录')\n        .fontSize(24)\n        .fontWeight(FontWeight.Bold)\n        .width('100%')\n        .textAlign(TextAlign.Center)\n        .margin({ top: 20, bottom: 20 })\n\n      // 使用Scroll容器实现可滚动布局\n      Scroll() {\n        Column({ space: 5 }) {\n          // 饮食信息输入框\n          Text('今日饮食信息')\n            .fontSize(16)\n            .fontWeight(FontWeight.Medium)\n            .width('100%')\n            .margin({ bottom: 5 })\n\n          TextArea({\n            placeholder: '请输入您今日的饮食信息，如：早餐：牛奶、面包；午餐：米饭、青菜、鱼...',\n            text: this.dietInfo\n          })\n            .height(80)\n            .width('100%')\n            .backgroundColor(0xFFFFFF)\n            .border({\n              width: 1,\n              color: 0xBDBDBD,\n              radius: 5\n            })\n            .padding(10)\n            .onChange((value: string) => {\n              this.dietInfo = value;\n              // 实时分析饮食信息\n              this.nutritionAnalysis = this.analyzeNutrition(value);\n            })\n\n          // 分析结果展示区\n          Text('营养分析')\n            .fontSize(16)\n            .fontWeight(FontWeight.Medium)\n            .width('100%')\n            .margin({ top: 15, bottom: 5 })\n\n          Row({ space: 5 }) {\n            // 蛋白质卡片\n            Column() {\n              Text('蛋白质')\n                .fontSize(14)\n                .textAlign(TextAlign.Center)\n              Text(`${this.nutritionAnalysis.protein}g`)\n                .fontSize(18)\n                .fontWeight(FontWeight.Bold)\n                .textAlign(TextAlign.Center)\n              Text(`${this.nutritionAnalysis.proteinPercentage}%`)\n                .fontSize(12)\n                .textAlign(TextAlign.Center)\n            }\n            .width(80)\n            .height(80)\n            .backgroundColor(0xDCD9B2) // 灰黄色\n            .borderRadius(8)\n            .justifyContent(FlexAlign.Center)\n\n            // 碳水卡片\n            Column() {\n              Text('碳水')\n                .fontSize(14)\n                .textAlign(TextAlign.Center)\n              Text(`${this.nutritionAnalysis.carbs}g`)\n                .fontSize(18)\n                .fontWeight(FontWeight.Bold)\n                .textAlign(TextAlign.Center)\n              Text(`${this.nutritionAnalysis.carbsPercentage}%`)\n                .fontSize(12)\n                .textAlign(TextAlign.Center)\n            }\n            .width(80)\n            .height(80)\n            .backgroundColor(0xB2C2DC) // 灰蓝色\n            .borderRadius(8)\n            .justifyContent(FlexAlign.Center)\n\n            // 脂肪卡片\n            Column() {\n              Text('脂肪')\n                .fontSize(14)\n                .textAlign(TextAlign.Center)\n              Text(`${this.nutritionAnalysis.fat}g`)\n                .fontSize(18)\n                .fontWeight(FontWeight.Bold)\n                .textAlign(TextAlign.Center)\n              Text(`${this.nutritionAnalysis.fatPercentage}%`)\n                .fontSize(12)\n                .textAlign(TextAlign.Center)\n            }\n            .width(80)\n            .height(80)\n            .backgroundColor(0xDCB2B2) // 灰红色\n            .borderRadius(8)\n            .justifyContent(FlexAlign.Center)\n\n            // 饮水卡片\n            Column() {\n              Text('饮水')\n                .fontSize(14)\n                .textAlign(TextAlign.Center)\n              Text(`${this.nutritionAnalysis.water}ml`)\n                .fontSize(18)\n                .fontWeight(FontWeight.Bold)\n                .textAlign(TextAlign.Center)\n              Text(`${this.nutritionAnalysis.waterPercentage}%`)\n                .fontSize(12)\n                .textAlign(TextAlign.Center)\n            }\n            .width(80)\n            .height(80)\n            .backgroundColor(0xB2DCB9) // 灰绿色\n            .borderRadius(8)\n            .justifyContent(FlexAlign.Center)\n          }\n          .width('100%')\n          .justifyContent(FlexAlign.SpaceEvenly)\n          .margin({ top: 10, bottom: 20 })\n\n          // 饮食建议\n          Text('饮食建议')\n            .fontSize(16)\n            .fontWeight(FontWeight.Medium)\n            .width('100%')\n            .margin({ top: 15, bottom: 5 })\n\n          Text('根据您的饮食记录，我们建议您增加蛋白质摄入，减少碳水化合物摄入，多喝水。')\n            .fontSize(14)\n            .width('100%')\n            .backgroundColor(0xF5F5F5)\n            .padding(10)\n            .borderRadius(5)\n            .margin({ bottom: 100 }) // 为底部按钮留出空间\n        }\n        .width('90%')\n        .padding({ top: 10, bottom: 10 })\n      }\n      .scrollable(ScrollDirection.Vertical)\n      .scrollBar(BarState.Auto)\n      .edgeEffect(EdgeEffect.Spring)\n      .width('100%')\n      .height('85%')\n\n      // 提交按钮，固定在底部\n      Button('提交记录')\n        .width('90%')\n        .height(40)\n        .backgroundColor(0x009688)\n        .borderRadius(20)\n        .margin({ bottom: 20 })\n        .onClick(() => {\n          if (this.dietInfo.trim() === '') {\n            AlertDialog.show({\n              title: '提示',\n              message: '请输入饮食信息',\n              confirm: {\n                value: '确定',\n                action: () => {\n                  console.info('用户确认了空输入提示');\n                }\n              }\n            });\n            return;\n          }\n\n          // 提交饮食记录\n          // 实际应用中这里应该调用API提交数据\n          AlertDialog.show({\n            title: '成功',\n            message: '饮食记录提交成功',\n            confirm: {\n              value: '确定',\n              action: () => {\n                console.info('饮食记录提交成功');\n                // 可以选择返回上一页\n                router.back();\n              }\n            }\n          });\n        })\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor(0xF8F8F8)\n    .alignItems(HorizontalAlign.Center)\n  }\n}"
+    },
+    {
+      "title": "登录页面(LoginPage)",
+      "code": "import router from '@ohos.router';\nimport base from '@ohos.base';\n\n@Entry\n@Component\nstruct LoginPage {\n  @State username: string = '';\n  @State password: string = '';\n\n  build() {\n    Column() {\n      Text('登录')\n        .fontSize(24)\n        .fontWeight(FontWeight.Bold)\n        .margin({ top: 50, bottom: 50 })\n      \n      TextInput()\n        .placeholder('用户名')\n        .width('80%')\n        .height(40)\n        .backgroundColor(Color.White)\n        .borderColor(0xBDBDBD)\n        .borderWidth(1)\n        .onChange((value: string) => {\n          this.username = value;\n        })\n      \n      TextInput()\n        .placeholder('密码')\n        .width('80%')\n        .height(40)\n        .backgroundColor(Color.White)\n        .borderColor(0xBDBDBD)\n        .borderWidth(1)\n        .type(InputType.Password)\n        .margin({ top: 20 })\n        .onChange((value: string) => {\n          this.password = value;\n        })\n      \n      Button('登录')\n        .width('80%')\n        .height(40)\n        .backgroundColor(0x2196F3)\n        .margin({ top: 30 })\n        .onClick(() => {\n          if (this.username && this.password) {\n            router.pushUrl({ url: 'pages/Index' })\n              .catch((err: base.BusinessError) => {\n                console.error(`Failed to navigate to Index. Code: ${err.code}, message: ${err.message}`);\n              });\n          } else {\n            AlertDialog.show({\n              title: '提示',\n              message: '请输入用户名和密码',\n              confirm: {\n                value: '确定',\n                action: () => {\n                  console.info('确认按钮被点击');\n                }\n              }\n            });\n          }\n        })\n      \n      Button('注册')\n        .width('80%')\n        .height(40)\n        .backgroundColor(Color.Gray)\n        .margin({ top: 20 })\n        .onClick(() => {\n          router.pushUrl({ url: 'pages/RegisterPage' })\n            .catch((err: base.BusinessError) => {\n              console.error(`Failed to navigate to RegisterPage. Code: ${err.code}, message: ${err.message}`);\n            });\n        })\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor(0xDCDCDC)\n    .justifyContent(FlexAlign.Center)\n  }\n}\n\ninterface UserInterface {\n  username: string;\n  password: string;\n  registrationDate: Date;\n}\n\ninterface ExerciseDataInterface {\n  recordDate: Date;\n  duration: number;\n  calories: number;\n}\n\ninterface DietPlanInterface {\n  planName: string;\n  creationDate: Date;\n  nutritionInfo: string;\n}\n\ninterface ExercisePlanInterface {\n  planName: string;\n  planContent: string;\n}\n\ninterface DeviceInterface {\n  deviceName: string;\n  deviceImage: Resource;\n  connectionStatus: boolean;\n}"
+    },
+    {
+      "title": "注册页面(RegisterPage)",
+      "code": "import router from '@ohos.router';\nimport promptAction from '@ohos.promptAction';\nimport { BusinessError } from '@ohos.base';\n\n@Entry\n@Component\nstruct RegisterPage {\n  @State username: string = '';\n  @State password: string = '';\n\n  build() {\n    Column() {\n      Text('注册')\n        .fontSize(24)\n        .fontWeight(FontWeight.Bold)\n        .margin({ top: 50, bottom: 20 })\n\n      TextInput()\n        .placeholder('请输入用户名')\n        .text(this.username)\n        .height(40)\n        .width('80%')\n        .backgroundColor(Color.White)\n        .border({ width: 1, color: Color.Gray })\n        .onChange((value: string) => {\n          this.username = value;\n        })\n\n      TextInput()\n        .placeholder('请输入密码')\n        .text(this.password)\n        .type(InputType.Password)\n        .height(40)\n        .width('80%')\n        .backgroundColor(Color.White)\n        .border({ width: 1, color: Color.Gray })\n        .margin({ top: 20 })\n        .onChange((value: string) => {\n          this.password = value;\n        })\n\n      Button('注册')\n        .width('80%')\n        .height(40)\n        .margin({ top: 30 })\n        .backgroundColor(0x4CAF50)\n        .onClick(() => {\n          if (this.username.length > 0 && this.password.length > 0) {\n            // 这里应该添加实际的注册逻辑\n            this.registerUser();\n          } else {\n            promptAction.showToast({\n              message: '用户名和密码不能为空',\n              duration: 2000,\n            });\n          }\n        })\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor(0xF5F5F5)\n  }\n\n  registerUser() {\n    // 模拟注册过程\n    setTimeout(() => {\n      AlertDialog.show({\n        title: '注册成功',\n        message: '您已成功注册，即将跳转到登录页面',\n        confirm: {\n          value: '确定',\n          action: () => {\n            router.pushUrl({ url: 'pages/LoginPage' }).catch((err: BusinessError) => {\n              console.error(`Failed to push to LoginPage. Code: ${err.code}, message: ${err.message}`);\n            });\n          }\n        },\n        cancel: () => {\n          console.info('Closed callbacks');\n        }\n      });\n    }, 1000);\n  }\n}\n\n// 用户实体接口定义\nexport interface UserInterface {\n  username: string;\n  password: string;\n  registrationDate: Date;\n}"
+    },
+    {
+      "title": "圈子页面(CirclePage)",
+      "code": "import router from '@ohos.router';\nimport base from '@ohos.base';\nimport http from '@ohos.net.http';\n\n// 帖子实体接口定义\ninterface post {\n  id: number;\n  content: string;\n  author: string;\n  date: string;\n}\n\n@entry\n@component\nstruct circlepage {\n  @state postcontent: string = '';\n  @state posts: post[] = [\n    { id: 1, content: '今天跑了5公里，感觉很棒！', author: '跑步爱好者', date: '2023-05-15' },\n    { id: 2, content: '分享一个健身计划，每周三次力量训练效果显著。', author: '健身达人', date: '2023-05-14' },\n    { id: 3, content: '推荐一款运动手环，记录数据很准确。', author: '科技控', date: '2023-05-13' }\n  ];\n\n  build() {\n    column() {\n      // 页面顶部\n      row() {\n        image($r(\"app.media.return\"))\n          .width(40)\n          .height(40)\n          .onclick(() => {\n            router.back();\n          })\n\n        text(\"圈子\")\n          .fontsize(20)\n          .fontweight(fontweight.bold)\n          .margin({ left: 16 })\n\n        blank()\n\n        image($r(\"app.media.account\"))\n          .width(30)\n          .height(30)\n          .onclick(() => {\n            router.pushurl({\n              url: 'pages/usermanagementpage'\n            }).catch((err: base.businesserror) => {\n              console.error(`failed to push to usermanagementpage. code: ${err.code}, message: ${err.message}`);\n            });\n          })\n      }\n      .width('100%')\n      .height(50)\n      .padding({ left: 16, right: 16 })\n      .backgroundcolor(color.white)\n\n      // 帖子创建区域\n      column() {\n        textarea({ placeholder: '分享你的运动体验...' })\n          .height(60)\n          .width('100%')\n          .backgroundcolor(color.white)\n          .bordercolor(0xbdbdbd)\n          .borderwidth(1)\n          .onchange((value: string) => {\n            this.postcontent = value;\n          })\n\n        row() {\n          blank()\n          button('发布')\n            .backgroundcolor(color.blue)\n            .fontcolor(color.white)\n            .onclick(() => {\n              if (this.postcontent.trim() !== '') {\n                // 添加新帖子\n                const newpost: post = {\n                  id: this.posts.length + 1,\n                  content: this.postcontent,\n                  author: '我',\n                  date: new date().toisostring().split('t')[0]\n                };\n                this.posts.unshift(newpost);\n                this.postcontent = '';\n\n                // 显示发布成功提示\n                alertdialog.show({\n                  title: '提示',\n                  message: '帖子发布成功！',\n                  confirm: {\n                    value: '确定',\n                    action: () => {\n                      console.info('帖子发布成功');\n                    }\n                  }\n                });\n              } else {\n                // 显示内容为空提示\n                alertdialog.show({\n                  title: '提示',\n                  message: '帖子内容不能为空！',\n                  confirm: {\n                    value: '确定',\n                    action: () => {\n                      console.info('帖子内容为空');\n                    }\n                  }\n                });\n              }\n            })\n        }\n        .width('100%')\n        .margin({ top: 8 })\n      }\n      .width('100%')\n      .padding(16)\n      .backgroundcolor(color.white)\n\n      // 帖子列表\n      list() {\n        foreach(this.posts, (post: post) => {\n          listitem() {\n            column() {\n              row() {\n                text(post.author)\n                  .fontsize(16)\n                  .fontweight(fontweight.bold)\n\n                blank()\n\n                text(post.date)\n                  .fontsize(14)\n                  .fontcolor(color.gray)\n              }\n              .width('100%')\n\n              text(post.content)\n                .fontsize(16)\n                .margin({ top: 8, bottom: 8 })\n                .textalign(textalign.start)\n                .width('100%')\n            }\n            .width('100%')\n            .padding(10)\n            .backgroundcolor(0xf5f5f5)\n            .bordercolor(0xbdbdbd)\n            .borderwidth(1)\n            .borderradius(5)\n          }\n          .height(100)\n          .margin({ bottom: 10 })\n        }, (post: post) => post.id.tostring())\n      }\n      .width('100%')\n      .layoutweight(1)\n      .padding({ left: 16, right: 16, top: 16 })\n      .backgroundcolor(0xf6f6f6)\n    }\n    .width('100%')\n    .height('100%')\n  }\n}"
+    },
+    {
+      "title": "收藏课程页面(CollectedCoursesPage)",
+      "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\nimport base from '@ohos.base';\n\n// 课程实体接口\nexport interface courseinterface {\n  title: string;\n  imageresource: resource;\n}\n\n@entry\n@component\nstruct collectedcoursespage {\n  @state courses: courseinterface[] = [\n    { title: '跑步专项', imageresource: $r('app.media.exercise_tutorials_1') },\n    { title: '睡前轻松练', imageresource: $r('app.media.exercise_tutorials_2') },\n    { title: '养生必练', imageresource: $r('app.media.exercise_tutorials_3') }\n  ];\n\n  build() {\n    column() {\n      // 顶部导航栏\n      row() {\n        image($r('app.media.return'))\n          .width(40)\n          .height(40)\n          .margin(16)\n          .backgroundcolor(color.transparent)\n          .onclick(() => {\n            router.back();\n          })\n\n        text('收藏课程')\n          .fontsize(20)\n          .fontweight(fontweight.bold)\n          .fontcolor('#333333')\n          .backgroundcolor(color.transparent)\n      }\n      .width('100%')\n      .alignitems(verticalalign.center)\n\n      // 课程列表\n      column() {\n        foreach(this.courses, (course: courseinterface) => {\n          row() {\n            column() {\n              image(course.imageresource)\n                .width('100%')\n                .height(150)\n                .objectfit(imagefit.cover)\n\n              row() {\n                text(course.title)\n                  .fontsize(16)\n                  .fontweight(fontweight.medium)\n\n                blank()\n\n                image($r('app.media.arrow'))\n                  .width(14)\n                  .height(14)\n                  .onclick(() => {\n                  // 跳转到课程详情页面\n                  alertdialog.show({\n                    title: '提示',\n                    message: '即将进入课程详情页面',\n                    confirm: {\n                      value: '确定',\n                      action: () => {\n                        console.info('确认进入课程详情页面');\n                      }\n                    }\n                  })\n                })\n              }\n              .width('100%')\n              .padding(10)\n              .alignitems(verticalalign.center)\n            }\n            .borderradius(8)\n            .backgroundcolor('#ffffff')\n            .borderwidth(1)\n            .bordercolor('#bdbdbd')\n\n          }\n          .width('100%')\n          .justifycontent(flexalign.spacebetween)\n          .alignitems(verticalalign.center)\n          .padding(10)\n        }, (course: courseinterface) => course.title)\n      }\n      .width('100%')\n      .padding(10)\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundcolor('#f5f5f5')\n  }\n\n}"
+    },
+    {
+      "title": "个人身体数据页面(PersonalBodyDataPage)",
+      "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\nimport base from '@ohos.base';\n\nexport interface UserBodyDataInterface {\n  weight: number;\n  height: number;\n  BMI: number;\n  age: number;\n  gender: string;\n}\n\n@Entry\n@Component\nstruct PersonalBodyDataPage {\n  @State bodyData: UserBodyDataInterface = {\n    weight: 70.0,\n    height: 175.0,\n    BMI: 22.9,\n    age: 30,\n    gender: '男'\n  };\n\n  build() {\n    Column() {\n      // 标题区域\n      Row() {\n        Image($r('app.media.return'))\n          .width(40)\n          .height(40)\n          .onClick(() => {\n            router.back();\n          })\n        Text('个人身体数据')\n          .fontSize(18)\n          .fontColor('#212121')\n          .textAlign(TextAlign.Center)\n          .layoutWeight(1)\n      }\n      .width('100%')\n      .backgroundColor('#FFFFFF')\n      .height(56)\n      .padding({ left: 16, right: 16 })\n\n      // 身体数据展示区\n      Column() {\n        this.buildListItem('体重', this.bodyData.weight.toString() + ' kg')\n        this.buildListItem('身高', this.bodyData.height.toString() + ' cm')\n        this.buildListItem('BMI', this.bodyData.BMI.toString())\n        this.buildListItem('年龄', this.bodyData.age.toString() + ' 岁')\n        this.buildListItem('性别', this.bodyData.gender)\n      }\n      .width('100%')\n      .backgroundColor('#F5F5F5')\n      .padding({ top: 10, bottom: 10 })\n      .layoutWeight(1)\n\n      // 保存按钮\n      Button('保存')\n        .width(150)\n        .height(40)\n        .backgroundColor(Color.Blue)\n        .fontColor(Color.White)\n        .margin({ top: 20, bottom: 30 })\n        .onClick(() => {\n          AlertDialog.show({\n            title: '提示',\n            message: '保存成功',\n            confirm: {\n              value: '确定',\n              action: () => {\n                console.info('保存成功');\n              }\n            }\n          })\n        })\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor('#F5F5F5')\n  }\n\n  @Builder\n  buildListItem(title: string, value: string) {\n    Row() {\n      Text(title)\n        .fontSize(16)\n        .fontColor('#212121')\n        .layoutWeight(1)\n      Text(value)\n        .fontSize(16)\n        .fontColor('#212121')\n      Image($r('app.media.arrow'))\n        .width(16)\n        .height(16)\n        .margin({ left: 10 })\n    }\n    .width('100%')\n    .height(80)\n    .backgroundColor('#FFFFFF')\n    .borderRadius(1)\n    .padding({ left: 16, right: 16 })\n    .margin({ bottom: 10 })\n  }\n}"
+    },
+    {
+      "title": "运动计划页面(ExercisePlanPage)",
+      "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\nimport base from '@ohos.base';\n\n@Entry\n@Component\nstruct ExercisePlanPage {\n  @State selectedExercise: string = '请选择运动项目';\n  @State planDetails: string[] = ['四分化1', '四分化2', '四分化3', '四分化4'];\n\n  build() {\n    Column() {\n      Row() {\n        Image($r(\"app.media.return.jpg\"))\n          .width(24)\n          .height(24)\n          .onClick(() => {\n            router.back();\n          })\n        Text(\"运动计划\")\n          .fontSize(20)\n          .fontWeight(FontWeight.Bold)\n          .margin({ left: 16 })\n      }\n      .width('100%')\n      .height(56)\n      .padding({ left: 16, right: 16 })\n      .backgroundColor(Color.White)\n\n      Select([\n        { value: '跑步' },\n        { value: '游泳' },\n        { value: '骑行' },\n        { value: '健身' }\n      ])\n        .selected(0)\n        .value(this.selectedExercise)\n        .onSelect((index: number, value: string) => {\n          this.selectedExercise = value;\n        })\n        .width('90%')\n        .backgroundColor(Color.White)\n        .margin({ top: 16 })\n\n      Grid() {\n        ForEach(this.planDetails, (item: string) => {\n          GridItem() {\n            Text(item)\n              .fontSize(14)\n              .textAlign(TextAlign.Start)\n          }\n          .backgroundColor('#E0F7FA')\n          .borderColor('#B2EBF2')\n          .borderWidth(1)\n          .height(150)\n        })\n      }\n      .columnsTemplate('1fr 1fr')\n      .rowsTemplate('1fr 1fr')\n      .width('90%')\n      .height(300)\n      .margin({ top: 16 })\n\n      Button('保存')\n        .width(120)\n        .height(40)\n        .backgroundColor('#4CAF50')\n        .margin({ top: 16 })\n        .onClick(() => {\n          this.savePlan();\n        })\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor('#F5F5F5')\n  }\n\n  savePlan() {\n    AlertDialog.show({\n      title: '提示',\n      message: '保存成功',\n      confirm: {\n        value: '确定',\n        action: () => {\n          console.info('确认按钮被点击');\n        }\n      }\n    })\n  }\n}"
+    },
+    {
+      "title": "饮食计划页面(DietPlanPage)",
+      "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\nimport base from '@ohos.base';\n\n@Entry\n@Component\nstruct DietPlanPage {\n  @State dailyPlans: DietPlanInterface[] = [\n    { planName: '早餐计划', creationDate: new Date('2023-05-01'), nutritionInfo: '蛋白质30g, 碳水60g, 脂肪15g' },\n    { planName: '午餐计划', creationDate: new Date('2023-05-01'), nutritionInfo: '蛋白质45g, 碳水80g, 脂肪20g' },\n    { planName: '晚餐计划', creationDate: new Date('2023-05-01'), nutritionInfo: '蛋白质35g, 碳水50g, 脂肪10g' },\n    { planName: '加餐计划', creationDate: new Date('2023-05-01'), nutritionInfo: '蛋白质15g, 碳水30g, 脂肪5g' }\n  ]\n  @State rating: number = 0\n\n  build() {\n    Column() {\n      // 顶部导航栏\n      Row() {\n        Image($r('app.media.return'))\n          .width(24)\n          .height(24)\n          .onClick(() => {\n            router.back();\n          })\n        Text('饮食计划')\n          .fontSize(20)\n          .fontWeight(FontWeight.Bold)\n          .margin({ left: 16 })\n      }\n      .width('100%')\n      .height(50)\n      .padding({ left: 16, right: 16 })\n      .alignItems(VerticalAlign.Center)\n      .justifyContent(FlexAlign.Start)\n\n      // 每日计划表\n      Column() {\n        Text('每日计划表')\n          .fontSize(18)\n          .fontWeight(FontWeight.Bold)\n          .width('100%')\n          .padding({ left: 16, top: 16, bottom: 8 })\n\n        // 表头\n        Row() {\n          Text('计划名称')\n            .width('30%')\n            .textAlign(TextAlign.Center)\n            .fontWeight(FontWeight.Bold)\n          Text('创建日期')\n            .width('30%')\n            .textAlign(TextAlign.Center)\n            .fontWeight(FontWeight.Bold)\n          Text('营养信息')\n            .width('40%')\n            .textAlign(TextAlign.Center)\n            .fontWeight(FontWeight.Bold)\n        }\n        .width('100%')\n        .padding({ left: 16, right: 16, top: 8, bottom: 8 })\n        .backgroundColor(0xEEEEEE)\n\n        // 计划数据\n        Scroll() {\n          Column() {\n            ForEach(this.dailyPlans, (plan: DietPlanInterface) => {\n              Row() {\n                Text(plan.planName)\n                  .width('30%')\n                  .textAlign(TextAlign.Center)\n                Text(this.formatDate(plan.creationDate))\n                  .width('30%')\n                  .textAlign(TextAlign.Center)\n                Text(plan.nutritionInfo)\n                  .width('40%')\n                  .textAlign(TextAlign.Center)\n              }\n              .width('100%')\n              .padding({ left: 16, right: 16, top: 12, bottom: 12 })\n              .borderRadius(8)\n\n              // 分隔线\n              if (plan !== this.dailyPlans[this.dailyPlans.length - 1]) {\n                Divider()\n                  .width('90%')\n                  .color(0xDDDDDD)\n                  .margin({ top: 4, bottom: 4 })\n              }\n            })\n          }\n          .width('100%')\n        }\n        .width('100%')\n        .height(200)\n\n        // 修改计划按钮\n        Button('修改计划')\n          .width('90%')\n          .height(40)\n          .margin({ top: 16 })\n          .onClick(() => {\n            AlertDialog.show({\n              title: '提示',\n              message: '此功能需要跳转至计划编辑页面',\n              confirm: {\n                value: '确定',\n                action: () => {\n                  console.info('用户点击确认修改计划');\n                }\n              },\n              cancel: () => {\n                console.info('用户取消修改计划');\n              }\n            })\n          })\n      }\n      .width('90%')\n      .margin({ top: 20 })\n      .padding({ bottom: 16 })\n      .backgroundColor(0xEEEEEE)\n      .borderRadius(12)\n\n      // 饮食计划评价\n      Column() {\n        Text('饮食计划评价')\n          .fontSize(18)\n          .fontWeight(FontWeight.Bold)\n          .width('100%')\n          .padding({ left: 16, top: 16, bottom: 8 })\n\n        Text('您的饮食计划整体营养均衡，但蛋白质摄入略低于建议值。建议适当增加优质蛋白质的摄入，如鸡胸肉、鱼类、豆制品等。同时，可以减少晚餐的碳水化合物摄入，有助于控制体重。')\n          .fontSize(14)\n          .padding(16)\n          .lineHeight(22)\n\n        // 星级评价\n        Row() {\n          Text('请对计划进行评价：')\n            .fontSize(14)\n            .margin({ right: 10 })\n\n          Row() {\n            ForEach([1, 2, 3, 4, 5], (star: number) => {\n              Image(this.rating >= star ? $r('app.media.star_filled.png') : $r('app.media.star_empty.png'))\n                .width(24)\n                .height(24)\n                .margin({ right: 5 })\n                .onClick(() => {\n                  this.rating = star;\n                  this.saveFeedback(star);\n                })\n            })\n          }\n        }\n        .width('100%')\n        .padding({ left: 16, right: 16, top: 8, bottom: 16 })\n        .justifyContent(FlexAlign.Start)\n      }\n      .width('90%')\n      .margin({ top: 20 })\n      .backgroundColor(0xEEEEEE)\n      .borderRadius(12)\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor(0xFFFFFF)\n    .padding({ top: 10, bottom: 20 })\n  }\n\n  formatDate(date: Date): string {\n    return `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;\n  }\n\n  saveFeedback(rating: number) {\n    console.info(`用户评价已保存: ${rating}星`);\n    // 实际应用中可以调用接口保存评价\n    AlertDialog.show({\n      title: '提示',\n      message: '您的评价已保存，感谢您的反馈！',\n      confirm: {\n        value: '确定',\n        action: () => {\n          console.info('用户确认评价保存');\n        }\n      }\n    })\n  }\n}\n\n// 饮食计划接口定义\nexport interface DietPlanInterface {\n  planName: string;\n  creationDate: Date;\n  nutritionInfo: string;\n}"
+    },
+    {
+      "title": "成就页面(AchievementsPage)",
+      "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\nimport base from '@ohos.base';\n\n// Define the Achievement interface based on entity information\nexport interface Achievement {\n  achievementName: string;\n  achievementDescription: string;\n  achieveDate: Date;\n}\n\n@Entry\n@Component\nstruct AchievementsPage {\n  @State achievements: Achievement[] = [\n    {\n      achievementName: '连续训练一周',\n      achievementDescription: '连续七天完成每日训练计划',\n      achieveDate: new Date('2023-05-15')\n    },\n    {\n      achievementName: '减脂达人',\n      achievementDescription: '完成十次有氧运动训练',\n      achieveDate: new Date('2023-06-01')\n    },\n    {\n      achievementName: '运动新手',\n      achievementDescription: '首次完成运动记录',\n      achieveDate: new Date('2023-04-10')\n    },\n    {\n      achievementName: '饮食规划师',\n      achievementDescription: '连续记录饮食计划7天',\n      achieveDate: new Date('2023-07-20')\n    },\n    {\n      achievementName: '设备控',\n      achievementDescription: '成功连接3种不同的运动设备',\n      achieveDate: new Date('2023-08-05')\n    }\n  ];\n  \n  @State expandedIndexes: Set<number> = new Set<number>();\n\n  toggleExpand(index: number) {\n    if (this.expandedIndexes.has(index)) {\n      this.expandedIndexes.delete(index);\n    } else {\n      this.expandedIndexes.add(index);\n    }\n  }\n\n  build() {\n    Column() {\n      // Top bar with return button and title\n      Row() {\n        Image($r('app.media.return'))\n          .width(24)\n          .height(24)\n          .margin({ right: 16 })\n          .onClick(() => {\n            router.back();\n          })\n        \n        Text('成就')\n          .fontSize(20)\n          .fontWeight(FontWeight.Bold)\n      }\n      .width('100%')\n      .padding({ left: 16, right: 16, top: 8, bottom: 8 })\n      .height(56)\n      \n      // Achievements list with scroll component\n      Scroll() {\n        Column() {\n          ForEach(this.achievements, (achievement: Achievement, index: number) => {\n            Column() {\n              Row() {\n                Image($r('app.media.achieve'))\n                  .width(40)\n                  .height(40)\n                  .margin({ right: 12 })\n                \n                Column() {\n                  Text(achievement.achievementName)\n                    .fontSize(16)\n                    .fontWeight(FontWeight.Medium)\n                  \n                  Text(achievement.achievementDescription)\n                    .fontSize(14)\n                    .fontColor(Color.Gray)\n                    .margin({ top: 4 })\n                }\n                .alignItems(HorizontalAlign.Start)\n                .layoutWeight(1)\n                \n                Image(this.expandedIndexes.has(index) ? \n                  $r('app.media.ic_public_arrow_up') : \n                  $r('app.media.ic_public_arrow_down'))\n                  .width(24)\n                  .height(24)\n              }\n              .width('100%')\n              .height(80)\n              .backgroundColor('#F5F5F5')\n              .borderRadius(8)\n              .padding(16)\n              .onClick(() => {\n                this.toggleExpand(index);\n              })\n              \n              // Expanded details when clicked\n              if (this.expandedIndexes.has(index)) {\n                Column() {\n                  Text('获取日期：' + achievement.achieveDate.toLocaleDateString())\n                    .fontSize(14)\n                    .fontColor(Color.Gray)\n                    .margin({ top: 8, bottom: 8 })\n                  \n                  Text('详细信息：')\n                    .fontSize(14)\n                    .fontWeight(FontWeight.Medium)\n                    .margin({ top: 8 })\n                  \n                  Text('这个成就代表着您在健康之路上取得的进步。继续保持良好的习惯，更多成就等待您来解锁！')\n                    .fontSize(14)\n                    .fontColor(Color.Gray)\n                    .margin({ top: 8 })\n                }\n                .width('100%')\n                .padding(16)\n                .backgroundColor('#F0F0F0')\n                .borderRadius(8)\n                .margin({ top: 8 })\n              }\n            }\n            .margin({ bottom: 12 })\n          }, (item: Achievement, index: number) => index.toString())\n        }\n        .width('100%')\n        .padding({ left: 16, right: 16, bottom: 16 })\n      }\n      .scrollable(ScrollDirection.Vertical)\n      .scrollBar(BarState.Auto)\n      .scrollBarColor(Color.Gray)\n      .scrollBarWidth(4)\n      .edgeEffect(EdgeEffect.Spring)\n      .width('100%')\n      .layoutWeight(1)\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor('#FFFFFF')\n  }\n\n  // Method to fetch achievements data from backend\n  aboutToAppear() {\n    // In a real app, we might fetch data from the backend\n    // But since no specific achievements API is provided in the backend interface info,\n    // we're using mock data for this example\n    \n    // If an API was available, we would fetch it like this:\n    /*\n    let httpRequest = http.createHttp();\n    httpRequest.request(\n      \"http://localhost:8000/api/getUserAchievements\",\n      {\n        method: http.RequestMethod.GET,\n        header: {\n          'Content-Type': 'application/json'\n        },\n        connectTimeout: 60000,\n        readTimeout: 60000,\n      }\n    ).then((response) => {\n      const result = JSON.parse(response.result.toString());\n      if (result.success) {\n        this.achievements = result.data;\n      }\n    }).catch((err: base.BusinessError) => {\n      console.error(`Failed to get achievements. Code: ${err.code}, message: ${err.message}`);\n    });\n    */\n  }\n}"
+    }
+  ],
+  "backendapi": [
+    {
+      "result": "用户信息类",
+      "param": "用户ID",
+      "api": "/api/getUserInfo",
+      "title": "用户信息获取接口",
+      "type": "GET"
+    },
+    {
+      "result": "记录结果（布尔类）",
+      "param": "运动数据（运动数据类）",
+      "api": "/api/addSportRecord",
+      "title": "添加运动记录接口",
+      "type": "POST"
+    },
+    {
+      "result": "操作结果（布尔类）",
+      "param": "今日饮食信息类",
+      "api": "/api/addDietRecord",
+      "title": "饮食记录添加接口",
+      "type": "POST"
+    },
+    {
+      "result": "注册结果（布尔类）",
+      "param": "用户名、密码",
+      "api": "/api/register",
+      "title": "注册接口",
+      "type": "POST"
+    }
+  ]
+}

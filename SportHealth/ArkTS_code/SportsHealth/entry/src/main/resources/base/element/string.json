@@ -1,0 +1,324 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "运动健康"
+    },
+    {
+      "name": "login_page",
+      "value": "Login page"
+    },
+    {
+      "name": "login_more",
+      "value": "Log in to your account to use more services"
+    },
+    {
+      "name": "account",
+      "value": "Account"
+    },
+    {
+      "name": "password",
+      "value": "Password"
+    },
+    {
+      "name": "login",
+      "value": "Log in"
+    },
+    {
+      "name": "register_account",
+      "value": "Registering an Account"
+    },
+    {
+      "name": "forgot_password",
+      "value": "Forgot Password"
+    },
+    {
+      "name": "message_login",
+      "value": "SMS verification code login"
+    },
+    {
+      "name": "other_login_method",
+      "value": "Other login methods"
+    },
+    {
+      "name": "vertical_line",
+      "value": "  |  "
+    },
+    {
+      "name": "input_empty_tips",
+      "value": "The input cannot be empty."
+    },
+    {
+      "name": "login_success",
+      "value": "The login is successful."
+    },
+    {
+      "name": "my_love",
+      "value": "My favorite"
+    },
+    {
+      "name": "history_record",
+      "value": "History"
+    },
+    {
+      "name": "message",
+      "value": "Message"
+    },
+    {
+      "name": "shopping_cart",
+      "value": "Shopping cart"
+    },
+    {
+      "name": "my_goal",
+      "value": "运动计划"
+    },
+    {
+      "name": "group",
+      "value": "圈子"
+    },
+    {
+      "name": "favorites",
+      "value": "Favorites"
+    },
+    {
+      "name": "recycle_bin",
+      "value": "Recycle Bin"
+    },
+    {
+      "name": "rankings",
+      "value": "Rankings"
+    },
+    {
+      "name": "new_product_debut",
+      "value": "New product debut"
+    },
+    {
+      "name": "big_name_flash",
+      "value": "Big name flash"
+    },
+    {
+      "name": "find_good",
+      "value": "Find good things"
+    },
+    {
+      "name": "xiamen_station",
+      "value": "Xiamen Station, we'll see you."
+    },
+    {
+      "name": "more_big_names",
+      "value": "More Big Names"
+    },
+    {
+      "name": "push_notifications",
+      "value": "Push Notifications"
+    },
+    {
+      "name": "data_management",
+      "value": "Data Management"
+    },
+    {
+      "name": "menu_settings",
+      "value": "Menu Settings"
+    },
+    {
+      "name": "about",
+      "value": "About"
+    },
+    {
+      "name": "clear_cache",
+      "value": "Clear Cache"
+    },
+    {
+      "name": "mainPage_tabTitles_sport",
+      "value": "Sport"
+    },
+    {
+      "name": "mainPage_tabTitles_health",
+      "value": "Health"
+    },
+    {
+      "name": "mainPage_tabTitles_store",
+      "value": "Store"
+    },
+    {
+      "name": "mainPage_tabTitles_vip",
+      "value": "VIP"
+    },
+    {
+      "name": "mainPage_tabTitles_mine",
+      "value": "Mine"
+    },
+    {
+      "name": "mainPage_top",
+      "value": "Rankings"
+    },
+    {
+      "name": "mainPage_text_top",
+      "value": "Xiamen Station, we'll see you."
+    },
+    {
+      "name": "mainPage_new",
+      "value": "New product debut"
+    },
+    {
+      "name": "mainPage_text_new",
+      "value": "Xiamen Station, we'll see you."
+    },
+    {
+      "name": "mainPage_brand",
+      "value": "Big name flash"
+    },
+    {
+      "name": "mainPage_text_brand",
+      "value": "More Big Names"
+    },
+    {
+      "name": "mainPage_found",
+      "value": "Find good things"
+    },
+    {
+      "name": "mainPage_text_found",
+      "value": "Xiamen Station, we'll see you."
+    },
+    {
+      "name": "setting_account_name",
+      "value": "litiansuo"
+    },
+    {
+      "name": "setting_account_email",
+      "value": "2000000@shenhua.cc"
+    },
+    {
+      "name": "setting_list_news",
+      "value": "Push Notifications"
+    },
+    {
+      "name": "setting_list_data",
+      "value": "Data Management"
+    },
+    {
+      "name": "setting_list_menu",
+      "value": "Menu Settings"
+    },
+    {
+      "name": "setting_list_about",
+      "value": "Clear Cache"
+    },
+    {
+      "name": "setting_list_storage",
+      "value": "清除缓存"
+    },
+    {
+      "name": "setting_list_privacy",
+      "value": "Privacy Agreement"
+    },
+    {
+      "name": "setting_button",
+      "value": "Logout"
+    },
+    {
+      "name": "home_list",
+      "value": "List"
+    },
+    {
+      "name": "setting_toggle",
+      "value": "switch"
+    },
+    {
+      "name": "search_placeholder",
+      "value": "Type to search..."
+    },
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "entryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "entryAbility_label",
+      "value": "List_HDC"
+    },
+    {
+      "name": "task_morning",
+      "value": "早起"
+    },
+    {
+      "name": "task_water",
+      "value": "喝水"
+    },
+    {
+      "name": "task_apple",
+      "value": "吃苹果"
+    },
+    {
+      "name": "task_smile",
+      "value": "每日微笑"
+    },
+    {
+      "name": "task_brush",
+      "value": "每日刷牙"
+    },
+    {
+      "name": "task_night",
+      "value": "早睡"
+    },
+    {
+      "name": "already_open",
+      "value": "已开启"
+    },
+    {
+      "name": "complete",
+      "value": "完成"
+    },
+    {
+      "name": "frequency",
+      "value": "频率"
+    },
+    {
+      "name": "remind_time",
+      "value": "提醒时间"
+    },
+    {
+      "name": "open_reminder",
+      "value": "开启提醒"
+    },
+    {
+      "name": "target_setting",
+      "value": "目标设置"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "confirm",
+      "value": "确认"
+    },
+    {
+      "name": "set_your_frequency",
+      "value": "请设置您的频率"
+    },
+    {
+      "name": "running",
+      "value": "跑步"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "运动健康"
+    }
+  ]
+}

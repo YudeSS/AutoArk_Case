@@ -1,0 +1,18 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/DeviceManagementPage",
+    "pages/DietManagementPage",
+    "pages/DietRecordAddPage",
+    "pages/ExerciseRecordAddPage",
+    "pages/LoginPage",
+    "pages/RegisterPage",
+    "pages/UserManagementPage",
+    "pages/CirclePage",
+    "pages/DietPlanPage",
+    "pages/ExercisePlanPage",
+    "pages/CollectedCoursesPage",
+    "pages/PersonalBodyDataPage",
+    "pages/AchievementsPage"
+  ]
+}
