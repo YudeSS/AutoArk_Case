@@ -1,0 +1,14 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/UserProfilePage",
+    "pages/DeviceManagementPage",
+    "pages/SceneManagementPage",
+    "pages/AddExecutionTaskPage",
+    "pages/AddTriggerConditionPage",
+    "pages/SceneCreationPage",
+    "pages/HomeEnvironmentMonitorPage",
+    "pages/RecommendedScenePage",
+    "pages/DeviceDetailPage"
+  ]
+}

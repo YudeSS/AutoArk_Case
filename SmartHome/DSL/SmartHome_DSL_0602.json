@@ -1,0 +1,323 @@
+{
+  "system_description": "做一个智能家居app，主要功能是智能家居设备管理、智能场景管理和家庭环境监控",
+  "actors": [
+    {
+      "actor": "家庭成员",
+      "description": "日常使用智能家居app进行设备控制、环境监控和场景管理的用户。",
+      "user_stories": [
+        {
+          "user_story": "作为一个家庭成员，我想要通过智能家居app控制家中的设备，以便于提高生活的便利性和效率。前置条件：设备已连接到网络且已配置。后置条件：设备状态已成功更新。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[系统1]首先显示家中所有已连接的智能设备",
+            "[用户1]用户可以在应用上选择要控制的设备",
+            "[系统2]确认设备状态并显示可操控功能",
+            "[用户2]在系统上执行控制命令，如开关、调节设置等",
+            "[系统3]系统更新设备状态并反馈给用户",
+            "[用户3]用户可以通过应用查看设备的当前状态"
+          ]
+        },
+        {
+          "user_story": "作为一个家庭成员，我想要管理各种智能场景，以便于通过一键操作实现多设备的自动化控制。前置条件：设备支持场景设置并已联网。后置条件：场景设置成功并能被激活。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[系统1]首先显示所有可设置的智能场景列表",
+            "[用户1]可以在系统上选择一个或多个场景进行管理",
+            "[系统2]随后显示选定场景的详细信息和可配置选项",
+            "[用户2]在系统上修改场景设置，包括设备选择和触发条件",
+            "[系统3]保存用户所做的场景设置更改",
+            "[用户3]可以通过系统激活或停用场景"
+          ]
+        },
+        {
+          "user_story": "作为一个家庭成员，我想要实时监控家庭环境状况，以便于及时发现并解决可能的家庭安全或舒适问题。前置条件：相应的监控设备已安装并启用。后置条件：环境数据实时更新并被用户查看。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[系统1]首先运行家庭环境监控设备来获取实时数据",
+            "[系统2]实时处理并分析监控设备采集到的环境数据",
+            "[系统3]将环境状况数据更新并传输至用户设备",
+            "[用户1]查看设备上的实时环境状况数据",
+            "[用户2]根据查看的环境数据，及时识别出安全或舒适问题"
+          ]
+        },
+        {
+          "user_story": "作为一个家庭成员，我想要查看智能家居设备详情，以便于了解设备的详细信息。前置条件：设备已加入设备列表。后置条件：显示设备详情信息。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[系统1]首先显示已加入设备列表中的所有智能家居设备",
+            "[用户1]可以在系统上选择一个设备查看详情",
+            "[系统2]随后显示所选设备的详细信息，包括设备名称、型号、状态和连接信息",
+            "[用户2]可以浏览设备详情信息，以便了解设备的具体情况"
+          ]
+        },
+        {
+          "user_story": "作为一个家庭成员，我想要查看添加智能家居设备，以便于使用该设备。前置条件：该智能家居设备还未添加。后置条件：该智能家居设备加入设备列表。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[用户1]家庭成员打开智能家居app并选择设备管理功能",
+            "[系统1]展示当前已有设备列表和一个添加设备选项",
+            "[用户2]家庭成员选择添加设备选项",
+            "[系统2]系统提供设备添加的详细信息输入界面",
+            "[用户3]家庭成员输入待添加智能家居设备的信息",
+            "[系统3]系统验证输入信息并确认设备未加入列表",
+            "[系统4]将智能家居设备加入设备列表",
+            "[用户4]家庭成员可以查看新添加的设备在设备列表中"
+          ]
+        },
+        {
+          "user_story": "作为一个家庭成员，我想要创建一个新的智能场景，以便于可以一键控制多个设备。前置条件：该智能场景还未添加。后置条件：设置该智能场景具体内容。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[系统1]首先显示所有可配置的智能场景选项",
+            "[用户1]可以在系统上选择创建新的智能场景",
+            "[系统2]显示所有家庭设备及其可配置选项",
+            "[用户2]选择设备并为每个设备设定具体控制参数",
+            "[系统3]将设定的智能场景保存到场景列表中",
+            "[用户3]可以一键启动该智能场景以便控制多个设备"
+          ]
+        },
+        {
+          "user_story": "作为一个家庭成员，我想要查看推荐的智能场景，以便于可以直接使用智能场景模板。前置条件：打开了系统推荐功能。后置条件：查看推荐的智能场景内容。",
+          "pre_condition": null,
+          "post_condition": null,
+          "basic_flow": [
+            "[系统1]显示推荐的智能场景列表",
+            "[用户1]查看并选择一个智能场景模板",
+            "[系统2]展示选定智能场景的详细信息",
+            "[用户2]决定是否使用该场景模板",
+            "[系统3]一旦选择或修改，将保存新的智能场景设置",
+            "[用户3]可以再次查看已保存的场景"
+          ]
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "attributes": [
+        {
+          "type": "string",
+          "content": "设备名称"
+        },
+        {
+          "type": "string",
+          "content": "型号"
+        },
+        {
+          "type": "string",
+          "content": "状态"
+        },
+        {
+          "type": "string",
+          "content": "位置信息"
+        },
+        {
+          "type": "resource",
+          "content": "图片资源"
+        }
+      ],
+      "entity": "智能家居设备"
+    },
+    {
+      "attributes": [
+        {
+          "type": "string",
+          "content": "场景名称"
+        },
+        {
+          "type": "bool",
+          "content": "激活状态"
+        },
+        {
+          "type": "string",
+          "content": "触发事件"
+        },
+        {
+          "type": "string",
+          "content": "执行任务"
+        }
+      ],
+      "entity": "智能场景"
+    },
+    {
+      "entity": "家庭环境监控",
+      "attributes": [
+        {
+          "type": "float",
+          "content": "温度"
+        },
+        {
+          "type": "float",
+          "content": "湿度"
+        },
+        {
+          "type": "string",
+          "content": "空气质量状态"
+        }
+      ]
+    },
+    {
+      "attributes": [
+        {
+          "type": "string",
+          "content": "名称"
+        },
+        {
+          "type": "int",
+          "content": "设备数量"
+        },
+        {
+          "type": "float",
+          "content": "环境指数"
+        },
+        {
+          "type": "bool",
+          "content": "在线状态"
+        }
+      ],
+      "entity": "空间"
+    }
+  ],
+  "gui_requirements": [
+    {
+      "user_interaction": "[用户]选择要控制的设备；[系统]显示可操控功能。",
+      "user_interface": "[用户]通过设备列表的选择框选择要控制的设备；[系统]显示一个功能面板展示可操控功能。"
+    },
+    {
+      "user_interaction": "[用户]执行控制命令；[系统]更新设备状态并反馈。",
+      "user_interface": "[用户]通过功能面板上的按钮执行控制命令；[系统]通过状态指示图标更新设备状态并在屏幕上显示成功反馈信息。"
+    },
+    {
+      "user_interaction": "[用户]查看智能家居设备详情。",
+      "user_interface": "[用户]通过点击设备列表中的某个设备图标查看设备详情信息界面。"
+    },
+    {
+      "user_interaction": "[用户]选择创建新的智能场景；[系统]保存设定的智能场景。",
+      "user_interface": "[用户]通过场景选项菜单选择创建新的智能场景；[系统]在场景列表中更新并展示新的智能场景。"
+    },
+    {
+      "user_interaction": "[用户]查看推荐的智能场景；[系统]展示智能场景的详细信息。",
+      "user_interface": "[用户]通过推荐场景清单查看选择的推荐场景；[系统]在信息面板上展示选定智能场景的详细信息。"
+    },
+    {
+      "user_interaction": "[用户]查看家庭环境监控数据；[系统]实时更新环境数据。",
+      "user_interface": "[用户]通过监控面板查看家庭环境监控数据；[系统]在数据显示区域实时更新环境数据。"
+    },
+    {
+      "user_interaction": "[用户]添加新的智能家居设备；[系统]验证并确认设备加入。",
+      "user_interface": "[用户]在添加设备界面输入设备信息并提交；[系统]通过弹出通知确认设备成功加入。"
+    }
+  ],
+  "gui_design": [
+    {
+      "components": "[主页] 用到了[导航栏Tabs组件]、[Home Tab]、[场景 Tab]、[我的 Tab]。",
+      "description": "作为智能家居app的入口页，用户可以通过底部导航栏访问设备管理页、场景管理页和用户信息页。",
+      "style": "[主页] 采用[底部导航栏Tabs]布局，Tabs以[文字]和[图标]展示。[Tabs]背景色为#F1F3F5，高度为56px，每个子tab使用垂直布局。[Tabs][每个子tab]包括一个[图标]和[文字标题]，[左右填充]为12px，[字体大小]为10px。[Home Tab]图标选择为$r('app.media.home_selected')和$r('app.media.home_normal')，[点击后]通过动画效果跳转到[设备管理页]；[场景 Tab][图标选择]为$r('app.media.scene_select')和$r('app.media.scene_normal')，[点击后]通过动画效果跳转到[场景管理页]；[我的 Tab][图标选择]为$r('app.media.mine_selected')和$r('app.media.mine_normal')，[点击后]通过动画效果跳转到[用户信息页]。[选中时字体颜色]为#1698CE，[未选中时字体颜色]为#6B6B6B。",
+      "title": "主页(Index)"
+    },
+    {
+      "components": "[设备详情页] 包含导航组件、图片展示、状态显示区、自动场景展示。",
+      "description": "用户可以查看智能设备的详细信息，包括设备名称、型号、状态和连接信息，并进行状态切换和查看自动场景。",
+      "style": "[设备详情页]通过垂直列布局包括一个[导航组件]，不隐藏[返回按钮]，标题为传入参数的deviceName字段。接下来是一个[图片组件]，图片的资源是传入参数的image字段，尺寸为宽度100%，高度300。下方[状态显示区]采用横向布局，间距为20，高度为100，宽度为90%，包括两个[文本组件]，[左侧文本组件]内容为“在线”，字体加粗，大小为20，左侧填充为20；[右侧文本组件]内容为“舒适”，字体大小为14，颜色为#008000，右侧填充为20。再下方是另一个横向布局的[自动场景展示区]，间距为20，高度为100，宽度为90%，包括一个[文本组件]内容为“自动场景：0个”，字体大小为20，左侧填充为10；[右侧图片组件]的资源为$r(\"app.media.scene_smart\"),大小为30x30。用户可通过点击[设备状态]改变状态为在线或离线，并通过[设备详情信息区域]查看详细设备参数。",
+      "title": "设备详情页(DeviceDetailPage)"
+    },
+    {
+      "components": "[设备管理页] 用到了导航栏、设备列表、设备详情页。",
+      "description": "用户可以在此页面管理家中的智能设备，包括查看现有设备列表和增加新的智能设备。",
+      "style": "[设备管理页]通过垂直列布局，页面包括一个[导航栏]、[设备列表]。[导航栏]采用横向布局，包含两个[文字标题]'设备'和'我家'，字体为20px，距离边缘为12px，最右侧是一个[添加图标]，使用$r('app.media.scene_add')，大小为30*30px，点击跳转到[设备添加页]。[设备列表]采用栅格布局，总高度为260px，宽度为100%，下边缘距离为55px，包含四个[栅格]，间距为8px（列）和12px（行），每个栅格为垂直布局，背景色为#FFFFFF，圆角12px，内部包含[设备名称]、[在线状态]、[所在位置]和[图标]。[设备名称]文字大小16px，左对齐，[设备图片]大小30*30px，栅格点击跳转到[设备详情页]并将对象作为参数传入。各栅格信息为：1.[设备名称]'华为路由AX3'，[设备位置]'客厅'，[图片]$r('app.media.machine_connect')；2.[设备名称]'豪恩多功能网关'，[设备位置]'卧室'，[图片]$r('app.media.machine_net')；3.[设备名称]'豪恩湿温度传感器'，[设备位置]'卧室'，[图片]$r('app.media.machine_temp')；4.[设备名称]'华为音箱'，[设备位置]'卧室'，[图片]$r('app.media.machine_music')。",
+      "title": "设备管理页(DeviceManagementPage)"
+    },
+    {
+      "components": "[场景管理页] 用到了标题栏、场景列表、添加按钮。",
+      "description": "用户可以在此页面管理智能场景，包括查看现有场景列表和选择场景。用户还可以添加新的场景或在发现页浏览推荐的场景。",
+      "style": "[场景管理页]通过栅格布局，总高度为260px，总宽度为100%，列间距为8px，行间距为12px。包含四个栅格，按2*2布局。[标题栏]横向排布，包含[我的场景]和[发现]，字体大小为24px，边缘为12px，点击[发现]跳转到[发现页]。[场景列表]每个栅格中背景颜色为#FFFFFF，圆角为12px，内部垂直布局间距为5px，排列[场景标题]，场景标题下方是一个行布局间距为20px，左侧是[场景图标]，右侧是[Toggle组件]，字体为18px。场景的数据类型包含标题、图片资源、触发事件和执行任务，具体信息为，[场景卡片]中，标题“温度过高报警”、“自动打开加湿器”、“自动播放音乐”，资源为$r(\"app.media.scene_notify\"),$r(\"app.media.scene_smart\"),$r(\"app.media.scene_time\"),点击此[场景卡片]时触发事件跳转到[场景详情页]并作为参数传入，执行任务并反馈信息如“发送消息通知”、“控制加湿器”、“打开音箱”。最右侧是一个[添加按钮]，资源为$r(\"app.media.scene_add\"),大小为30*30，点击后跳转到[场景创建页]。用户可点击场景卡片进入[场景详细信息界面]进行查看和编辑。",
+      "title": "场景管理页(SceneManagementPage)"
+    },
+    {
+      "components": "[创建场景页面] 用到了导航组件、文字输入框、触发条件展示区、执行任务展示区。",
+      "description": "用户可以在此页面创建新的智能场景，通过给场景命名、设置触发条件和执行任务，生成新的场景用于一键控制多个设备。",
+      "style": "[创建场景页面]使用[导航组件]，高度宽度都是100%，背景颜色是#F1F3F5，标题是“创建场景”，不隐藏返回按钮，[创建场景页面]采用垂直布局，间距为5.页面首先展示一个[文字输入框]组件，默认内容是“给场景取个名字”.下方是一个间距为5的垂直布局，包括一个[触发条件展示区]和一个[执行任务展示区]. [触发条件展示区]由间距为20的横向布局组成，顶部填充20，左右和底部填充12，左边是文字组件，内容是“触发条件”，大小是20，右侧是一个[跳转图标]，图片资源是$r('app.media.scene_add')，大小是25*25，点击可跳转到添加触发条件页；下面是一个间距为20的横向布局，高度为100，宽度为100%，背景颜色为#FFFFFF，圆角半径为10，左侧是文本组件，内容是“当 点击此卡片背景 时”，大小是20，右侧是一个[图标]，资源是$r('app.media.scene_more')，大小是25*25. [执行任务展示区]由间距为20的横向布局组成，顶部填充20，左右和底部填充12，左边是文字组件，内容是“执行任务”，大小是20，右侧是一个[跳转图标]，图片资源是$r('app.media.scene_add')，大小是25*25，点击可跳转到添加执行任务页；下面是一个间距为20的横向布局，高度为100，宽度为100%，背景颜色为#FFFFFF，圆角半径为10，左侧是文本组件，内容是“当 发送消息通知 时”，大小是20，右侧是一个[图标]，资源是$r('app.media.scene_more')，大小是25*25.",
+      "title": "创建场景页面(SceneCreationPage)"
+    },
+    {
+      "components": "[发现页] 包含标题栏、搜索组件、推荐场景清单、信息面板、选择按钮、轮播组件、文本组件、生活场景网格组件。",
+      "description": "用户可以查看推荐的智能场景模板，决定是否使用该场景，选择后能够直接使用或修改模板进行个性化配置。",
+      "style": "[发现页]使用垂直滚动布局，允许用户上下滑动查看页面内容。页面最顶部是[标题栏]，横向排布，左侧边距12，包含[返回按钮]，图片资源为$r('app.media.img'), 大小为30x30，右侧是[标题文本]，左边距12，内容为'发现'，字体大小20。[搜索组件]在页面顶部展示，包括[搜索输入框]，默认内容'Type to search'，宽度350，高度40，字体大小14，字体粗细400，右侧有[搜索按钮]，内容为'Search'；下方是[轮播组件]，展示一组图片资源$r('app.media.fig1')，每张图片圆角半径16；[文本组件]展示标题'让生活更方便'，文字宽度100%，顶部边距12，字体大小16，字体粗细中等；[生活场景网格组件]宽度100%，列间距8，行间距12，包含4个网格项目，每个项目展示一个生活自动化场景，背景为[图片组件]，圆角半径为10，背景图包括[标题及描述文本]：('洗衣完成时播报', $r('app.media.new'), '洗衣完成时使用音响播报晾衣提醒'), ('洗碗机耗材提醒', $r('app.media.top'), '洗碗机耗材智能提醒，时刻保持最佳工作状态'), ('蒸箱缺水提醒', $r('app.media.brand'), '缺水及时提醒，防止机器干烧'), ('烹饪完成提醒', $r('app.media.found'), '不再守在厨房等待，与家人畅聊的同时安心等候美味')；[推荐场景清单]滚动展示，场景以[卡片]显示，卡片内包含[场景名称]，尺寸150x100px；[信息面板]显示选择场景的详细信息，显示区域高度300px。[组件交互事件]：用户通过[搜索输入框]输入查询内容并通过[搜索按钮]提交查询；轮播组件左右滑动查看图片；生活场景网格组件点击可查看详细信息；推荐场景清单卡片点击时[信息面板]展示场景详细信息；页面跳转逻辑：用户选择场景后跳转至场景详情页面进行进一步配置。",
+      "title": "发现页(RecommendedScenePage)"
+    },
+    {
+      "components": "[家庭环境监控页] 使用了 [标题栏]、[数据展示区]、[智慧生活指数网格项]、[家庭网络网格项]、[空气环境网格项]。",
+      "description": "用户可以在该页面实时查看家庭环境状况数据，通过监控面板及时识别潜在的安全或舒适问题。",
+      "style": "[家庭环境监控页] 通过垂直布局组织页面结构。[标题栏] 包含 [返回按钮] 和 [标题文本]，返回按钮使用 $r('app.media.img') 图标资源，左侧边距为12px，标题文本内容为 '我家'，字体大小为20px，左边距为12px。[数据展示区] 采用 Grid 网格排布，总高度为330px，宽度为100%，四个网格项平均排布，列间距为8px，行间距为12px。内部包括 [智慧生活指数网格项]、[家庭网络网格项]、[空气环境网格项]。每个网格项背景为 #F1F3F5，边距设置为顶部和左侧边距8px，圆角12px。内部采用列布局，间距为10px，内容中央对齐，左侧填充总宽度为20px。[智慧生活指数网格项] 包括 [标题文本] 内容为 '智慧生活指数'，字体大小16px，中等字体粗细，[日期范围] 通过一个行布局展示，内容为 '5月1日 - x月y日'，字体大小16px，并居中对齐，[使用次数] 通过列布局展示 '设备使用109次'，字体颜色为蓝色，大小为16px。[家庭网络网格项] 具有相同的背景色和边距设置，内部采用列布局，间距为10：[标题文本] 内容为 '家庭网络'，字体大小16px，中等字体粗细，[网络质量] 显示 '优' 等级，字体颜色为蓝色，大小为28px，配合 '网络环境' 描述，字体大小16px，[网络速度显示] 由图标与文本组成，展示下载速度为 '500 kbps' 和上传速度为 '200 kbps'，图标资源为 $r('app.media.machine_down') 和 $r('app.media.machine_up')，文本字体大小13px。[空气环境网格项] 包括 [标题文本] 内容为 '空气环境'，[位置信息] 显示 '卧室'，[温度信息] 展示温度为 '24 ℃'，字体颜色为绿色，大小为28px，配合 '温度' 描述，字体大小16px，[湿度信息] 展示 '湿度：81%'，'81%' 字体颜色为绿色，大小13px。[家庭环境监控页] 页面内的组件如标题栏等以栅格化方式组织，使页面布局协调统一。",
+      "title": "家庭环境监控页(HomeEnvironmentMonitorPage)",
+      "interactionEvents": "[返回按钮] 点击后返回至上一级家庭首页。[智慧生活指数网格项] 点击弹出详细指数分析数据的浮动窗口，窗口展示该时间段内的各项生活指数变化趋势。[家庭网络网格项] 点击后弹出网络分析报告窗口，窗口展示当前网络质量、流量使用情况及建议优化方案。[空气环境网格项] 点击后显示详细空气信息页面，页面包含空气质量、温湿度变化历史及相关建议的详细信息。"
+    },
+    {
+      "components": "[用户信息页] 用到了个人信息区、按钮列表区。",
+      "description": "在该页面中，用户可以查看个人信息和访问常用的功能选项。",
+      "style": "[用户信息页]通过垂直列布局，顶部居中有标题[我的]，下方排列[个人信息区]和[按钮列表区]；间距为12px. [个人信息区]背景颜色为#FFFFFF，高度为96px，宽度为100%，采用水平布局，间距为20px，左侧为一个图标[账号图标],图片资源$r('app.media.account'),大小为48x48px；右侧是[用户名文本],内容为“EAA”，字体大小为20px.[按钮列表区]为一个[列表组件],间距为10px，圆角为16px，每项高度为48px.列表项采用水平布局，左侧为[功能图标],大小为30x30px；右侧为[文本标题].[列表组件]包含以下项:[全屋定制项],图标资源$r('app.media.setting_home'),标题为“全屋定制”；[我的商城项],图标资源$r('app.media.setting_shop'),标题为“我的商城”；[共享管理项],图标资源$r('app.media.setting_share'),标题为“共享管理”；[我的二维码项],图标资源$r('app.media.setting_code'),标题为“我的二维码”；[设置项],图标资源$r('app.media.setting_set'),标题为“设置.”",
+      "title": "用户信息页(UserProfilePage)"
+    },
+    {
+      "components": "[添加执行任务页] 用到了[返回按钮]、[工具栏]、[任务选项列表]。",
+      "description": "在此页面中，用户可以为智能场景添加具体的执行任务。",
+      "style": "[添加执行任务页]采用导航布局，宽度和高度为100%，背景颜色为浅灰色#F1F3F5，页面标题为“添加任务”，标题模式设置为缩小状态(Mini)，并包含[返回按钮]和[工具栏]。通过垂直布局，包括一个[任务选项列表]。 [任务选项列表]采用滚动布局，每项任务包含一个选择框。列表项目之间的间距为10px，列表宽度为100%。 [列表组件]每个列表项高度为56px、背景颜色为白色#FFFFFF、左右填充为12px，圆角为10px。每个列表项采用行布局，间距为20px，行布局宽度为100%，采用SpaceBetween的对齐方式。 [第一个列表项]包含左侧展示一个图标，资源为$r('app.media.execute_system')，图标大小为30x30px。右侧为包含两个文本的列布局，“系统功能”字体大小为20，“如‘发送消息通知’”字体大小为15。 [第二个列表项]左侧展示图标，资源为$r('app.media.execute_scene')，大小同样为30x30px。右侧为一个文本组件的列布局，内容为“控制场景”，字体大小为20。 [第三个列表项]左侧展示图标，资源为$r('app.media.scene_smart')，大小为30x30px。右侧列布局内包含两个文本，“智能设备”字体大小为20，“如‘开灯时’‘检测到烟雾时’”字体大小为15。 [组件交互事件]在选择任务后，将通过弹出确认弹窗提示任务已成功添加至场景；点击[返回按钮]返回上一页。用户可以点击[返回按钮]返回到场景管理主页或者选择继续添加任务。",
+      "title": "添加执行任务页 (AddExecutionTaskPage)"
+    },
+    {
+      "components": "[添加触发条件页] 包含触发事件展示区、生效条件展示区、条件选项菜单。",
+      "description": "在此页面中，用户可以为智能场景设定触发条件。",
+      "style": "[添加触发条件页]通过导航布局呈现，界面的宽度和高度均为100%，背景颜色为浅灰色#F1F3F5，标题为'添加条件'，使用缩小模式(Mini)，保留返回按钮和工具栏。页面垂直布局，间距为15。[触发事件展示区]内含标题文本和描述文本。标题文本: '触发事件'，字体大小为25，加粗样式。描述文本: '满足所选触发条件时，场景将会执行'，字体大小为15，斜体样式。下方有[列表组件]，列表项之间的间距为2像素，列表宽度100%。每个列表项样式: 高度56像素、白色背景、左右填充12像素、圆角10像素。第一项: 横向排布间距为20，[图标] $r('app.media.scene_quickstart_select')，尺寸30x30像素，[文本]'手动点击'，字体20，加上描述'点击场景卡片时'，字体15。第二项: [图标] $r('app.media.scene_clock_select')，内容'指定时间'，示例如'每天8点时'，字体分别20和15。第三项: [图标] $r('app.media.scene_click_select')，内容'智能设备'，说明如'开灯时' '检测到烟雾时'，字体分别20和15。[生效条件展示区]内含标题文本和描述文本。标题文本: '生效条件'，字体大小25，加粗样式。描述文本: '满足所选生效条件时，场景才可被触发执行'，字体15，斜体样式。[列表组件]参数与触发事件的列表组件一致。第一项: [图标] $r('app.media.scene_clock_select')，内容'生效时间和次数'，示例如'处于早上8点-晚上6点时'，字体分别20和15。第二项: [图标] $r('app.media.scene_click_select')，内容'设备处于某种状态'，示例如'灯处于打开状态'，字体分别20和15。[条件选项菜单]用于选择可用的触发条件。<组件交互事件>[用户]可通过导航栏返回按钮返回到上一级界面。条件选项选择完成后，系统弹窗确认是否保存条件，并在页面底部显示反馈信息，成功时更新场景列表。",
+      "title": "添加触发条件页(AddTriggerConditionPage)"
+    }
+  ],
+  "arkts_code": [
+    {
+      "title": "设备管理页(DeviceManagementPage)",
+      "code": "import router from '@ohos.router';\nimport base from '@ohos.base';\n\n// 设备信息接口\nexport interface DeviceInfo {\n  deviceName: string;\n  model: string;\n  status: string;\n  location: string;\n  image: Resource;\n}\n\n@Entry\n@Component\nstruct DeviceManagementPage {\n  // 设备列表数据\n  private deviceList: DeviceInfo[] = [\n    {\n      deviceName: '华为路由AX3',\n      model: 'AX3',\n      status: '在线',\n      location: '客厅',\n      image: $r('app.media.machine_connect')\n    },\n    {\n      deviceName: '豪恩多功能网关',\n      model: 'HW-001',\n      status: '在线',\n      location: '卧室',\n      image: $r('app.media.machine_net')\n    },\n    {\n      deviceName: '豪恩湿温度传感器',\n      model: 'HW-002',\n      status: '在线',\n      location: '卧室',\n      image: $r('app.media.machine_temp')\n    },\n    {\n      deviceName: '华为音箱',\n      model: 'HUAWEI Sound',\n      status: '在线',\n      location: '卧室',\n      image: $r('app.media.machine_music')\n    }\n  ]\n\n  build() {\n    Column() {\n      // 导航栏\n      Row() {\n        Text('设备')\n          .fontSize(12)\n          .fontColor(Color.Black)\n          .fontWeight(FontWeight.Bold)\n          .margin({ left: 12 })\n          .onClick(() => {\n            // 当前就是设备页面，不需要跳转\n          })\n\n        Text('我家')\n          .fontSize(12)\n          .fontColor(Color.Gray)\n          .margin({ left: 12 })\n          .onClick(() => {\n            router.pushUrl({\n              url: 'pages/HomeEnvironmentMonitorPage'\n            }).catch((err: base.BusinessError) => {\n              console.error(`Failed to push to HomeEnvironmentMonitorPage. Code: ${err.code}, message: ${err.message}`);\n            });\n          })\n\n        Blank()\n\n        Image($r('app.media.scene_add'))\n          .width(30)\n          .height(30)\n          .margin({ right: 12 })\n          .onClick(() => {\n            router.pushUrl({\n              url: 'pages/DeviceAddPage'\n            }).catch((err: base.BusinessError) => {\n              console.error(`Failed to push to DeviceAddPage. Code: ${err.code}, message: ${err.message}`);\n            });\n          })\n      }\n      .width('100%')\n      .height(50)\n      .padding({ left: 12, right: 12 })\n\n      // 设备列表\n      Grid() {\n        ForEach(this.deviceList, (device: DeviceInfo) => {\n          GridItem() {\n            Column() {\n              Image(device.image)\n                .width(30)\n                .height(30)\n                .margin({ top: 10 })\n              \n              Text(device.deviceName)\n                .fontSize(16)\n                .margin({ top: 10 })\n                .fontWeight(FontWeight.Bold)\n              \n              Text('状态: ' + device.status)\n                .fontSize(14)\n                .margin({ top: 5 })\n              \n              Text('位置: ' + device.location)\n                .fontSize(14)\n                .margin({ top: 5 })\n            }\n            .width('100%')\n            .height('100%')\n            .alignItems(HorizontalAlign.Center)\n          }\n          .height(140)\n          .backgroundColor(Color.White)\n          .borderRadius(12)\n          .onClick(() => {\n            router.pushUrl({\n              url: 'pages/DeviceDetailPage',\n              params: {\n                device: device\n              }\n            }).catch((err: base.BusinessError) => {\n              console.error(`Failed to push to DeviceDetailPage. Code: ${err.code}, message: ${err.message}`);\n            });\n          })\n        }, (item: DeviceInfo) => item.deviceName)\n      }\n      .columnsTemplate('1fr 1fr')\n      .rowsTemplate('1fr 1fr')\n      .columnsGap(8)\n      .rowsGap(12)\n      .height(260)\n      .width('90%')\n      .margin({ top: 20, bottom: 55 })\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor('#F5F5F5')\n  }\n}"
+    },
+    {
+      "title": "设备详情页(DeviceDetailPage)",
+      "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\nimport base from '@ohos.base';\n\n@Entry\n@Component\nstruct DeviceDetailPage {\n  @State deviceName: string = '';\n  @State isOnline: boolean = true;\n  @State image: string = '';\n\n  aboutToAppear() {\n    let params = router.getParams() as Record<string, string>;\n    if (params) {\n      this.deviceName = params.deviceName;\n      this.image = params.image;\n    }\n  }\n\n  build() {\n    Column() {\n      Navigation() {\n        Column() {\n          Image(this.image)\n            .width('100%')\n            .height(300)\n\n          Row() {\n            Text(this.isOnline ? '在线' : '离线')\n              .fontSize(20)\n              .fontWeight(FontWeight.Bold)\n              .padding({ left: 20 })\n              .onClick(() => {\n                this.isOnline = !this.isOnline\n              })\n\n            Text('舒适')\n              .fontSize(14)\n              .fontColor('#008000')\n              .padding({ right: 20 })\n          }\n          .width('90%')\n          .height(100)\n          .justifyContent(FlexAlign.SpaceBetween)\n\n          Row() {\n            Text('自动场景：0个')\n              .fontSize(20)\n              .padding({ left: 10 })\n\n            Image($r('app.media.scene_smart'))\n              .width(30)\n              .height(30)\n          }\n          .width('90%')\n          .height(100)\n          .justifyContent(FlexAlign.SpaceBetween)\n        }\n        .width('100%')\n      }\n      .title(this.deviceName)\n      .hideBackButton(false)\n    }\n  }\n}"
+    },
+    {
+      "title": "场景管理页(SceneManagementPage)",
+      "code": "import router from '@ohos.router';\nimport base from '@ohos.base';\n\nexport interface SceneInterface {\n  sceneTitle: string;\n  imageResource: Resource;\n  triggerEvent: string;\n  executeTask: string;\n  status: boolean;\n}\n\n@Entry\n@Component\nstruct SceneManagementPage {\n  @State sceneList: SceneInterface[] = [\n    {\n      sceneTitle: '温度过高报警',\n      imageResource: $r(\"app.media.scene_notify\"),\n      triggerEvent: '温度过高',\n      executeTask: '发送消息通知',\n      status: true\n    },\n    {\n      sceneTitle: '自动打开加湿器',\n      imageResource: $r(\"app.media.scene_smart\"),\n      triggerEvent: '湿度低',\n      executeTask: '控制加湿器',\n      status: false\n    },\n    {\n      sceneTitle: '自动播放音乐',\n      imageResource: $r(\"app.media.scene_time\"),\n      triggerEvent: '定时',\n      executeTask: '打开音箱',\n      status: true\n    }\n  ]\n\n  build() {\n    Column() {\n      // 标题栏\n      Row() {\n        Text('我的场景')\n          .fontWeight(FontWeight.Bold)\n          .fontSize(24)\n          .textAlign(TextAlign.Start)\n          .width('50%')\n        Text('发现')\n          .fontWeight(FontWeight.Bold)\n          .fontSize(24)\n          .textAlign(TextAlign.End)\n          .width('50%')\n          .onClick(() => {\n            router.pushUrl({\n              url: 'pages/RecommendedScenePage'\n            }).catch((err: base.BusinessError) => {\n              console.error(`Failed to push to RecommendedScenePage. Code: ${err.code}, message: ${err.message}`);\n            });\n          })\n      }\n      .width('100%')\n      .height('8%')\n      .padding({ left: 12, right: 12 })\n\n      // 场景网格\n      Grid() {\n        // 场景列表\n        ForEach(this.sceneList, (item: SceneInterface) => {\n          GridItem() {\n            Column() {\n              Text(item.sceneTitle)\n                .fontSize(18)\n                .margin({ bottom: 5 })\n              Row() {\n                Image(item.imageResource)\n                  .width(30)\n                  .height(30)\n                Toggle({ type: ToggleType.Switch, isOn: item.status })\n                  .margin({ left: 20 })\n              }\n            }\n            .width('100%')\n            .height('100%')\n            .backgroundColor('#FFFFFF')\n            .borderRadius(12)\n            .padding(10)\n          }\n          .onClick(() => {\n            router.pushUrl({\n              url: 'pages/SceneDetailPage',\n              params: {\n                scene: JSON.stringify(item)\n              }\n            }).catch((err: base.BusinessError) => {\n              console.error(`Failed to push to SceneDetailPage. Code: ${err.code}, message: ${err.message}`);  \n            });\n          })\n        })\n\n        // 添加按钮\n        GridItem() {\n          Image($r('app.media.scene_add'))\n            .width(30)\n            .height(30)\n        }\n        .onClick(() => {\n          router.pushUrl({\n            url: 'pages/SceneCreationPage'\n          }).catch((err: base.BusinessError) => {\n            console.error(`Failed to push to SceneCreationPage. Code: ${err.code}, message: ${err.message}`);\n          });\n        })\n      }\n      .columnsTemplate('1fr 1fr')  \n      .rowsTemplate('1fr 1fr')\n      .width('100%')\n      .height(260)\n      .columnsGap(8)\n      .rowsGap(12)\n      .margin({ top: 10 })\n      .backgroundColor('#F5F5F5')\n      .padding(10)\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor('#F5F5F5')\n  }\n}"
+    },
+    {
+      "title": "家庭环境监控页(HomeEnvironmentMonitorPage)",
+      "code": "import router from '@ohos.router';\nimport base from '@ohos.base';\n\ninterface EnvironmentData {\n  temperature: number\n  humidity: number\n  airQuality: string\n}\n\n@Entry\n@Component\nstruct HomeEnvironmentMonitorPage {\n  @State environmentData: EnvironmentData = {\n    temperature: 24,\n    humidity: 81,\n    airQuality: '优'\n  }\n\n  build() {\n    Column() {\n      // 标题栏\n      Row() {\n        Image($r('app.media.img'))\n          .width(24)\n          .height(24)\n          .margin({ left: 12 })\n          .onClick(() => {\n            router.back();\n          })\n\n        Text('我家')\n          .fontSize(20)\n          .margin({ left: 12 })\n      }\n      .width('100%')\n      .height(50)\n      .backgroundColor(Color.White)\n\n      // 数据展示区\n      Grid() {\n        // 智慧生活指数网格项\n        GridItem() {\n          Column() {\n            Text('智慧生活指数')\n              .fontSize(16)\n              .fontWeight(FontWeight.Medium)\n              .margin({ top: 8 })\n            Row() {\n              Text('5月1日 - 5月7日')\n                .fontSize(16)\n                .textAlign(TextAlign.Center)\n            }\n            Text('设备使用109次')\n              .fontSize(16)\n              .fontColor(Color.Blue)\n          }\n          .padding({ left: 20 })\n          .alignItems(HorizontalAlign.Start)\n          .width('100%')\n        }\n        .backgroundColor('#F1F3F5')\n        .borderRadius(12)\n        .onClick(() => {\n          AlertDialog.show({\n            title: '智慧生活指数分析',\n            message: '过去一周设备使用频率分析:\\n- 照明设备: 56次\\n- 空调设备: 35次\\n- 安防设备: 18次',\n            confirm: {\n              value: '确定',\n              action: () => {\n                console.info('关闭智慧生活指数分析弹窗');\n              }\n            }\n          })\n        })\n\n        // 家庭网络网格项  \n        GridItem() {\n          Column() {\n            Text('家庭网络')\n              .fontSize(16)\n              .fontWeight(FontWeight.Medium)\n            Text('优')\n              .fontSize(28)\n              .fontColor(Color.Blue)\n            Text('网络环境')\n              .fontSize(16)\n            Row() {\n              Image($r('app.media.machine_down'))\n                .width(12)\n                .height(12)\n              Text('500 kbps')\n                .fontSize(13)\n            }\n            Row() {\n              Image($r('app.media.machine_up'))\n                .width(12)\n                .height(12)\n              Text('200 kbps')\n                .fontSize(13)\n            }\n          }\n          .padding({ left: 20 })\n          .alignItems(HorizontalAlign.Start)\n          .width('100%')\n        }  \n        .backgroundColor('#F1F3F5')\n        .borderRadius(12)\n        .onClick(() => {\n          AlertDialog.show({\n            title: '网络分析报告',\n            message: '当前网络状况良好\\n- 下载速度: 500kbps\\n- 上传速度: 200kbps\\n建议: 当前网络质量稳定,无需优化',\n            confirm: {\n              value: '确定',\n              action: () => {\n                console.info('关闭网络分析报告弹窗');\n              }\n            }\n          })\n        })\n\n        // 空气环境网格项\n        GridItem() {\n          Column() {\n            Text('空气环境')\n              .fontSize(16)\n              .fontWeight(FontWeight.Medium)\n            Text('卧室')\n              .fontSize(16)\n            Text(this.environmentData.temperature + ' ℃')\n              .fontSize(28)\n              .fontColor(Color.Green)\n            Text('温度')\n              .fontSize(16)\n            Text('湿度：' + this.environmentData.humidity + '%')\n              .fontSize(13)\n              .fontColor(Color.Green)\n          }\n          .padding({ left: 20 })\n          .alignItems(HorizontalAlign.Start)\n          .width('100%')\n        }\n        .backgroundColor('#F1F3F5')\n        .borderRadius(12)\n        .onClick(() => {\n          router.pushUrl({\n            url: 'pages/AirDetailPage',\n            params: this.environmentData\n          }).catch((err:base.BusinessError) => {\n            console.error(`Failed to push to AirDetailPage. Code: ${err.code}, message: ${err.message}`);\n          });\n        })\n      }\n      .width('100%')\n      .height(330)\n      .columnsTemplate('1fr 1fr')\n      .rowsTemplate('1fr 1fr')\n      .columnsGap(8)\n      .rowsGap(12)\n      .margin({ top: 12 })\n    }\n    .width('100%')\n    .height('100%')\n  }\n}"
+    },
+    {
+      "title": "发现页(RecommendedScenePage)",
+      "code": "import router from '@ohos.router';\nimport base from '@ohos.base';\n\n// Define interface for scene\n@Component\nexport interface SceneInterface {\n  name: string;\n  image: Resource;\n  description: string;\n}\n\n@Entry\n@Component\nstruct RecommendedScenePage {\n  @State searchQuery: string = '';\n  @State selectedSceneInfo: string = '';\n  \n  private sceneList: SceneInterface[] = [\n    {\n      name: '洗衣完成时播报',\n      image: $r('app.media.new'),\n      description: '洗衣完成时使用音响播报晾衣提醒'\n    },\n    {\n      name: '洗碗机耗材提醒',\n      image: $r('app.media.top'), \n      description: '洗碗机耗材智能提醒，时刻保持最佳工作状态'\n    },\n    {\n      name: '蒸箱缺水提醒',\n      image: $r('app.media.brand'),\n      description: '缺水及时提醒，防止机器干烧'\n    },\n    {\n      name: '烹饪完成提醒',\n      image: $r('app.media.found'),\n      description: '不再守在厨房等待，与家人畅聊的同时安心等候美味'\n    }\n  ]\n\n  build() {\n    Column() {\n      // Title bar\n      Row() {\n        Image($r('app.media.img'))\n          .width(30)\n          .height(30)\n          .onClick(() => {\n            router.back()\n          })\n        Text('发现')\n          .fontSize(20)\n          .margin({left: 12})\n      }\n      .width('100%')\n      .padding({left: 12})\n\n      // Search component  \n      Search({\n        value: this.searchQuery,\n        placeholder: 'Type to search'\n      })\n        .searchButton('Search')\n        .width(350)\n        .height(40)\n        .placeholderFont({size: 14, weight: 400})\n        .onChange((value: string) => {\n          this.searchQuery = value\n        })\n\n      // Image Swiper\n      Swiper() {\n        Image($r('app.media.fig1')).borderRadius(16)\n      }\n      .width('100%')\n\n      // Title Text\n      Text('让生活更方便')\n        .width('100%')\n        .margin({top: 12})\n        .fontSize(16)\n        .fontWeight(FontWeight.Medium)\n\n      // Grid of scenes\n      Grid() {\n        ForEach(this.sceneList, (scene: SceneInterface) => {\n          GridItem() {\n            Column() {\n              Image(scene.image)\n                .width('100%')\n                .height('60%')\n                .borderRadius(10)\n              Text(scene.name)\n                .fontSize(16)\n                .margin({top: 8})\n              Text(scene.description)\n                .fontSize(14)\n                .margin({top: 4})\n                .textAlign(TextAlign.Center)\n                .maxLines(2)\n                .textOverflow({ overflow: TextOverflow.Ellipsis })\n            }\n            .height('100%')\n            .width('100%')\n            .onClick(() => {\n              router.pushUrl({\n                url: 'pages/SceneDetailPage'\n              }).catch((err: base.BusinessError) => {\n                console.error(`Failed to push to SceneDetailPage. Code: ${err.code}, message: ${err.message}`);\n              });\n            })\n          }\n        })\n      }\n      .columnsTemplate('1fr 1fr')\n      .rowsTemplate('1fr 1fr')\n      .columnsGap(8)\n      .rowsGap(12)\n      .width('100%')\n      .height(420)\n\n      // Scene List\n      List({space: 12}) {\n        ForEach(this.sceneList, (scene: SceneInterface) => {\n          ListItem() {\n            Column() {\n              Text(scene.name)\n                .width('100%')\n                .height(40) \n                .fontSize(16)\n                .textAlign(TextAlign.Center)\n            }\n            .width(150)\n            .height(100)\n            .backgroundColor('#FFFFFF')\n            .onClick(() => {\n              this.selectedSceneInfo = scene.description;\n            })\n          }\n        })\n      }\n      .width('100%')\n      .height(300)\n\n      // Information Panel\n      Column() {\n        Text(this.selectedSceneInfo)\n          .fontSize(16)\n          .padding(12)\n      }\n      .width('100%')\n      .height(300)\n      .backgroundColor('#F5F5F5')\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor('#FFFFFF')\n  }\n}"
+    },
+    {
+      "title": "用户信息页(UserProfilePage)",
+      "code": "import router from '@ohos.router';\n@Entry\n@Component\nstruct UserProfilePage {\n  build() {\n    Column() {\n      Text('我的')\n        .fontSize(20)\n        .textAlign(TextAlign.Center)\n        .width('100%')\n        .margin({ top: 12 })\n\n      // 个人信息区\n      Row() {\n        Image($r('app.media.account'))\n          .width(48)\n          .height(48)\n        Text('EAA')\n          .fontSize(20)\n          .margin({ left: 20 })\n      }\n      .width('100%')\n      .height(96)\n      .backgroundColor('#FFFFFF')\n      .padding({ left: 20, right: 20 })\n\n      // 按钮列表区\n      List() {\n        ListItem() {\n          Row() {\n            Image($r('app.media.setting_home'))\n              .width(30)\n              .height(30)\n            Text('全屋定制')\n              .fontSize(16)\n              .margin({ left: 20 })\n            Blank()\n          }\n          .width('100%')\n          .height(48)\n        }\n        .margin({ bottom: 10 })\n        .borderRadius(16)\n        .backgroundColor('#FFFFFF')\n\n        ListItem() {\n          Row() {\n            Image($r('app.media.setting_shop'))\n              .width(30)\n              .height(30)\n            Text('我的商城')\n              .fontSize(16)\n              .margin({ left: 20 })\n            Blank()\n          }\n          .width('100%')\n          .height(48)\n        }\n        .margin({ bottom: 10 })\n        .borderRadius(16)\n        .backgroundColor('#FFFFFF')\n\n        ListItem() {\n          Row() {\n            Image($r('app.media.setting_share'))\n              .width(30)\n              .height(30)\n            Text('共享管理')\n              .fontSize(16)\n              .margin({ left: 20 })\n            Blank()\n          }\n          .width('100%')\n          .height(48)\n        }\n        .margin({ bottom: 10 })\n        .borderRadius(16)\n        .backgroundColor('#FFFFFF')\n\n        ListItem() {\n          Row() {\n            Image($r('app.media.setting_code'))\n              .width(30)\n              .height(30)\n            Text('我的二维码')\n              .fontSize(16)\n              .margin({ left: 20 })\n            Blank()\n          }\n          .width('100%')\n          .height(48)\n        }\n        .margin({ bottom: 10 })\n        .borderRadius(16)\n        .backgroundColor('#FFFFFF')\n\n        ListItem() {\n          Row() {\n            Image($r('app.media.setting_set'))\n              .width(30)\n              .height(30)\n            Text('设置')\n              .fontSize(16)\n              .margin({ left: 20 })\n            Blank()\n          }\n          .width('100%')\n          .height(48)\n        }\n        .borderRadius(16)\n        .backgroundColor('#FFFFFF')\n      }\n      .width('100%')\n      .padding({ left: 12, right: 12 })\n      .margin({ top: 12 })\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor('#F5F5F5')\n    .padding({ top: 12 })\n  }\n}"
+    },
+    {
+      "title": "主页(Index)",
+      "code": "import Home from \"./Home\"\nimport ScenePage from \"./ScenePage\"\nimport MinePage from \"./MinePage\"\n\n@Entry\n@Component\nstruct Index {\n  @State index: number = 0\n  private tabsController: TabsController = new TabsController()\n\n  @Builder baseTab(title: string, targetIndex: number, selectedImg: Resource, normalImg: Resource) {\n    Column({ space: 5 }) {\n      Image(this.index === targetIndex ? selectedImg : normalImg)\n        .width(25)\n        .height(25)\n      Text(title)\n        .margin({\n          top: 4,\n        })\n        .fontColor(this.index === targetIndex ? \"#1698CE\" : \"#6B6B6B\")\n        .fontSize(10)\n    }\n    .width(\"100%\")\n    .height(56)\n    .margin({\n      top: 8,\n    })\n    .justifyContent(FlexAlign.Center)\n    .alignItems(HorizontalAlign.Center)\n    .onClick(() => { this.changeTab(targetIndex) })\n  }\n\n  changeTab(targetIndex: number) {\n    this.index = targetIndex\n    this.tabsController.changeIndex(targetIndex)\n  }\n\n  build() {\n    Tabs({ controller: this.tabsController, barPosition: BarPosition.End }) {\n      TabContent() {\n        Home()\n      }\n      .backgroundColor(\"#F1F3F5\")\n      .padding({\n        right: 12,\n        left: 12,\n      })\n      .tabBar(this.baseTab(\"首页\", 0, $r('app.media.home_selected'), $r('app.media.home_normal')))\n\n      TabContent() {\n        ScenePage()\n      }\n      .backgroundColor(\"#F1F3F5\") \n      .padding({\n        right: 12,\n        left: 12,\n      })\n      .tabBar(this.baseTab('场景', 1, $r('app.media.scene_select'), $r('app.media.scene_normal')))\n\n      TabContent() {\n        MinePage()\n      }\n      .backgroundColor(\"#F1F3F5\")\n      .padding({\n        right: 12,\n        left: 12,\n      })\n      .tabBar(this.baseTab('我的', 2, $r('app.media.mine_selected'), $r('app.media.mine_normal')))\n    }\n    .width(\"100%\")\n    .backgroundColor(\"#FFFFFF\")\n    .barHeight(56)\n  }\n}"
+    },
+    {
+      "title": "添加触发条件页(AddTriggerConditionPage)",
+      "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\nimport base from '@ohos.base';\n\n@Entry\n@Component\nstruct AddTriggerConditionPage {\n  @State conditions: string[] = ['手动点击', '指定时间', '智能设备']\n  @State effectConditions: string[] = ['生效时间和次数', '设备处于某种状态'] \n\n  build() {\n    Navigation() {\n      Column() {\n        // 触发事件展示区\n        Column() {\n          Text('触发事件')\n            .fontSize(25)\n            .fontWeight(FontWeight.Bold)\n          Text('满足所选触发条件时,场景将会执行')\n            .fontSize(15)\n            .fontStyle(FontStyle.Italic)\n\n          List() {\n            ListItem() {\n              Row() {\n                Image($r('app.media.scene_quickstart_select'))\n                  .width(30)\n                  .height(30)\n                Row({space:20}) {\n                  Text('手动点击')\n                    .fontSize(20)  \n                  Text('点击场景卡片时')\n                    .fontSize(15)\n                }\n              }\n              .padding({left: 12, right: 12})\n              .height(56)\n              .width('100%')\n              .backgroundColor(Color.White)\n              .borderRadius(10)\n            }\n\n            ListItem() {\n              Row() {\n                Image($r('app.media.scene_clock_select'))\n                  .width(30)\n                  .height(30)\n                Row({space:20}) {\n                  Text('指定时间')\n                    .fontSize(20)\n                  Text('每天8点时')\n                    .fontSize(15)\n                }\n              }\n              .padding({left: 12, right: 12})\n              .height(56)\n              .width('100%')\n              .backgroundColor(Color.White)\n              .borderRadius(10)\n            }\n\n            ListItem() {\n              Row() {\n                Image($r('app.media.scene_click_select'))\n                  .width(30)\n                  .height(30)\n                Row({space:20}) {\n                  Text('智能设备') \n                    .fontSize(20)\n                  Text('开灯时 检测到烟雾时')\n                    .fontSize(15)\n                }\n              }\n              .padding({left: 12, right: 12})  \n              .height(56)\n              .width('100%')\n              .backgroundColor(Color.White)\n              .borderRadius(10)\n            }\n          }\n          .listItemAlign(ListItemAlign.Start)\n          .padding({top: 2, bottom: 2})\n          .width('100%')\n        }\n\n        // 生效条件展示区\n        Column() {\n          Text('生效条件')\n            .fontSize(25)\n            .fontWeight(FontWeight.Bold)\n          Text('满足所选生效条件时,场景才可被触发执行')\n            .fontSize(15)\n            .fontStyle(FontStyle.Italic)\n\n          List() {\n            ListItem() {\n              Row() {\n                Image($r('app.media.scene_clock_select'))\n                  .width(30)\n                  .height(30)\n                Row({space:20}) {\n                  Text('生效时间和次数')\n                    .fontSize(20)\n                  Text('处于早上8点-晚上6点时') \n                    .fontSize(15)\n                }\n              }\n              .padding({left: 12, right: 12})\n              .height(56)\n              .width('100%')\n              .backgroundColor(Color.White)\n              .borderRadius(10)\n            }\n\n            ListItem() {\n              Row() {\n                Image($r('app.media.scene_click_select'))\n                  .width(30)\n                  .height(30)\n                Row({space:20}) {\n                  Text('设备处于某种状态')\n                    .fontSize(20)\n                  Text('灯处于打开状态')\n                    .fontSize(15)\n                }\n              }\n              .padding({left: 12, right: 12})\n              .height(56)\n              .width('100%')\n              .backgroundColor(Color.White)\n              .borderRadius(10)\n            }\n          }\n          .listItemAlign(ListItemAlign.Start)\n          .padding({top: 2, bottom: 2})\n          .width('100%')\n        }\n      }\n      .width('100%')\n      .height('100%')\n      .padding(15)\n      .backgroundColor('#F1F3F5')\n    }\n    .title('添加条件')\n    .titleMode(NavigationTitleMode.Mini)\n    .mode(NavigationMode.Stack)\n    .onTitleModeChange((titleMode: NavigationTitleMode) => {\n      console.info('titleMode change:' + titleMode)\n    })\n  }\n}"
+    },
+    {
+      "title": "创建场景页面(SceneCreationPage)",
+      "code": "import router from '@ohos.router';\nimport image from '@ohos.multimedia.image';\nimport base from '@ohos.base';\n\n@Entry\n@Component\nstruct SceneCreationPage {\n  @State sceneName: string = '给场景取个名字';\n\n  build() {\n    Navigation() {\n      Column() {\n        // 输入框\n        TextInput({\n          placeholder: this.sceneName\n        })\n          .height(50)\n          .width('90%')\n\n        Column({ space: 5 }) {\n          // 触发条件\n          Column() {\n            Row() {\n              Text('触发条件')\n                .fontSize(20)\n              Blank()\n              Image($r('app.media.scene_add'))\n                .width(25)\n                .height(25)\n                .onClick(() => {\n                  router.pushUrl({\n                    url: 'pages/AddTriggerConditionPage'\n                  }).catch((err: base.BusinessError) => {\n                    console.error(`Failed to push page. Code: ${err.code}, message: ${err.message}`);\n                  });\n                })\n            }\n            .padding({ top: 20, left: 12, right: 12, bottom: 12 })\n            .width('100%')\n\n            Row() {\n              Text('当 点击此卡片背景 时')\n                .fontSize(20)\n              Blank()\n              Image($r('app.media.scene_more'))\n                .width(25)\n                .height(25)\n            }\n            .width('100%')\n            .height(100)\n            .borderRadius(10)\n            .backgroundColor('#FFFFFF')\n            .padding({\n              left: 12,\n              right: 12\n            })\n            .margin({ left: 12, right: 12 })\n          }\n\n          // 执行任务\n          Column() {\n            Row() {\n              Text('执行任务')\n                .fontSize(20)\n              Blank()\n              Image($r('app.media.scene_add'))\n                .width(25)\n                .height(25)\n                .onClick(() => {\n                  router.pushUrl({\n                    url: 'pages/AddExecutionTaskPage'\n                  }).catch((err: base.BusinessError) => {\n                    console.error(`Failed to push page. Code: ${err.code}, message: ${err.message}`);\n                  });\n                })\n            }\n            .padding({ top: 20, left: 12, right: 12, bottom: 12 })\n            .width('100%')\n\n            Row() {\n              Text('当 发送消息通知 时')\n                .fontSize(20)\n              Blank()\n              Image($r('app.media.scene_more'))\n                .width(25)\n                .height(25)\n            }\n            .width('100%')\n            .height(100)\n            .borderRadius(10)\n            .backgroundColor('#FFFFFF')\n            .padding({\n              left: 12,\n              right: 12\n            })\n            .margin({ left: 12, right: 12 })\n          }\n        }\n      }\n      .width('100%')\n      .height('100%')\n      .backgroundColor('#F1F3F5')\n    }\n    .title('创建场景')\n  }\n}"
+    },
+    {
+      "title": "添加执行任务页 (AddExecutionTaskPage)",
+      "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\nimport base from '@ohos.base';\n\n@Entry\n@Component\nstruct AddExecutionTaskPage {\n  @State isExecuteSystemChecked: boolean = false;\n  @State isExecuteSceneChecked: boolean = false; \n  @State isSmartDeviceChecked: boolean = false;\n\n  build() {\n    Column() {\n      Navigation() {\n        Column() {\n          List() {\n            ListItem() {\n              Row() {\n                Row() {\n                  Image($r('app.media.execute_system'))\n                    .width(30)\n                    .height(30)\n                }\n                Column() {\n                  Text('系统功能')\n                    .fontSize(20)\n                  Text('如\\'发送消息通知\\'')\n                    .fontSize(15)\n                }\n              }\n              .width('100%')\n              .height(56)\n              .backgroundColor(Color.White)\n              .borderRadius(10)\n              .padding({left:12, right:12})\n              .justifyContent(FlexAlign.SpaceBetween)\n              .onClick(() => {\n                this.isExecuteSystemChecked = true;\n                AlertDialog.show({\n                  title: '提示',\n                  message: '任务已成功添加至场景',\n                  confirm: {\n                    value: '确定',\n                    action: () => {\n                      router.back();\n                    }\n                  }\n                })\n              })\n            }\n            .margin({ bottom: 10 })\n            \n            ListItem() {\n              Row() {\n                Row() {\n                  Image($r('app.media.execute_scene'))\n                    .width(30)\n                    .height(30)\n                }\n                Column() {\n                  Text('控制场景')\n                    .fontSize(20)\n                }\n              }\n              .width('100%')\n              .height(56)\n              .backgroundColor(Color.White)\n              .borderRadius(10)\n              .padding({left:12, right:12})\n              .justifyContent(FlexAlign.SpaceBetween)\n              .onClick(() => {\n                this.isExecuteSceneChecked = true;\n                AlertDialog.show({\n                  title: '提示',\n                  message: '任务已成功添加至场景', \n                  confirm: {\n                    value: '确定',\n                    action: () => {\n                      router.back();\n                    }\n                  }\n                })\n              })\n            }\n            .margin({ bottom: 10 })\n            \n            ListItem() {\n              Row() {\n                Row() {\n                  Image($r('app.media.scene_smart'))\n                    .width(30)\n                    .height(30)\n                }\n                Column() {\n                  Text('智能设备')\n                    .fontSize(20)\n                  Text('如\\'开灯时\\'\\'检测到烟雾时\\'')\n                    .fontSize(15)\n                }\n              }\n              .width('100%')\n              .height(56)\n              .backgroundColor(Color.White)\n              .borderRadius(10)\n              .padding({left:12, right:12})\n              .justifyContent(FlexAlign.SpaceBetween)\n              .onClick(() => {\n                this.isSmartDeviceChecked = true;\n                AlertDialog.show({\n                  title: '提示',\n                  message: '任务已成功添加至场景',\n                  confirm: {\n                    value: '确定',\n                    action: () => {\n                      router.back();\n                    }\n                  }\n                })\n              })\n            }\n            .margin({ bottom: 10 })\n          }\n          .width('100%')\n        }\n      }\n      .width('100%')\n      .height('100%')\n      .backgroundColor('#F1F3F5')\n      .title('添加任务')\n      .titleMode(NavigationTitleMode.Mini)\n    }\n  }\n}"
+    }
+  ],
+  "backendapi": []
+}
