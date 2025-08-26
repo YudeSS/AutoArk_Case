@@ -1,0 +1,323 @@
+{
+    "system_description": "健康生活app",
+    "actors": [
+      {
+        "actor": "普通用户",
+        "description": "使用健康生活app设置个人健康目标并进行打卡的用户。",
+        "user_stories": [
+          {
+            "user_story": "作为一个普通用户，我想要设置健康生活打卡任务，以便于规划和督促自己的健康生活习惯。前置条件：用户已创建账号并登录。后置条件：健康生活打卡任务被成功保存。",
+            "pre_condition": null,
+            "post_condition": null,
+            "basic_flow": [
+              "[系统1]首先显示设置健康生活打卡任务的选项",
+              "[用户1]选择一个健康生活打卡任务类型",
+              "[系统2]给出选定任务的设定选项",
+              "[用户2]设定任务目标值和频率",
+              "[系统3]确认任务设置，并提示保存",
+              "[用户3]确认并保存任务设置"
+            ]
+          },
+          {
+            "user_story": "作为一个普通用户，我希望能够进行每日打卡，以便于追踪我的健康目标进度和保持习惯。前置条件：用户已设置至少一个健康生活打卡任务。后置条件：打卡记录被成功保存并更新进度。",
+            "pre_condition": null,
+            "post_condition": null,
+            "basic_flow": [
+              "[系统1]显示用户的健康生活打卡任务列表",
+              "[用户1]选择当天要打卡的任务",
+              "[系统2]检查选定任务的目标值和频率是否满足当天打卡要求",
+              "[用户2]确认打卡完成",
+              "[系统3]记录打卡并更新用户的健康目标进度",
+              "[用户3]查看更新后的进度和相关成就"
+            ]
+          },
+          {
+            "user_story": "作为一个普通用户，我想要查看我的健康成就，以便于激励自己继续保持健康生活习惯。前置条件：用户已完成多个打卡任务。后置条件：健康成就被展示并更新。",
+            "pre_condition": null,
+            "post_condition": null,
+            "basic_flow": [
+              "[用户1]普通用户在系统上登录",
+              "[系统1]验证用户信息是否正确及用户任务完成的情况",
+              "[系统2]从用户的记录中检索已完成的打卡任务",
+              "[系统3]计算用户的健康成就信息",
+              "[系统4]更新并展示用户的健康成就",
+              "[用户2]查看自己的健康成就，以便获得激励"
+            ]
+          },
+          {
+            "user_story": "作为一个普通用户，我想要查看我的任务列表，以便于监督自己的任务完成情况。前置条件：用户登录应用。后置条件：健康任务列表被展示。",
+            "pre_condition": null,
+            "post_condition": null,
+            "basic_flow": [
+              "[系统1]检查用户登录状态，并验证用户身份",
+              "[系统2]在用户通过验证后，显示健康任务列表",
+              "[用户1]可以查看当前健康任务列表以监督任务完成情况"
+            ]
+          },
+          {
+            "user_story": "作为一个普通用户，我想要查看我的个人信息，以便于检查自己的账号情况。前置条件：用户登录应用并进入个人信息页面。后置条件：展示个人信息情况。",
+            "pre_condition": null,
+            "post_condition": null,
+            "basic_flow": [
+              "[系统1]验证用户是否已登录并进入个人信息页面",
+              "[用户1]用户选择查看个人信息",
+              "[系统2]系统检索用户的个人信息，包括用户名、电子邮件和年龄",
+              "[系统3]在页面上展示用户的个人信息"
+            ]
+          }
+        ]
+      },
+      {
+        "actor": "健身教练",
+        "description": "帮助用户制定健身计划、跟踪用户进展并激励用户达成成就的专业人员。",
+        "user_stories": [
+          {
+            "user_story": "作为一个健身教练，我想要帮助用户制定个性化的健身计划，以便于满足用户个人健康目标。前置条件：用户提供其健康信息和健身目标。后置条件：生成适合用户的健身计划。",
+            "pre_condition": null,
+            "post_condition": null,
+            "basic_flow": [
+              "[系统1]首先请求用户输入其健康信息和健身目标",
+              "[用户1]健身教练根据用户输入的健康信息和健身目标进行评估",
+              "[系统2]提供可用的健身活动和指导建议",
+              "[用户2]健身教练选择合适的健身活动来制定健身计划",
+              "[系统3]生成个性化的健身计划，并展示给用户",
+              "[用户3]健身教练可以根据用户反馈修改和优化健身计划"
+            ]
+          },
+          {
+            "user_story": "作为一个健身教练，我想要能够添加打卡任务。前置条件：登录并进入任务添加页面。后置条件：任务添加至任务列表中。",
+            "pre_condition": null,
+            "post_condition": null,
+            "basic_flow": [
+              "[系统1]首先显示任务添加页面",
+              "[用户1]健身教练可以在页面上输入打卡任务的名称",
+              "[用户2]健身教练可以设定打卡任务的目标值",
+              "[用户3]健身教练可以设定打卡任务的频率",
+              "[系统2]验证用户输入的打卡任务信息是否完整且正确",
+              "[系统3]在任务列表中添加新的打卡任务",
+              "[系统4]确认任务添加成功并向健身教练显示任务列表的更新状态"
+            ]
+          }
+        ]
+      }
+    ],
+    "entities": [
+      {
+        "entity": "用户",
+        "attributes": [
+          {
+            "type": "string",
+            "content": "用户名"
+          },
+          {
+            "type": "string",
+            "content": "电子邮件"
+          },
+          {
+            "type": "int",
+            "content": "年龄"
+          }
+        ]
+      },
+      {
+        "attributes": [
+          {
+            "type": "string",
+            "content": "任务名称"
+          },
+          {
+            "type": "string",
+            "content": "目标时间"
+          },
+          {
+            "type": "string",
+            "content": "频率"
+          },
+          {
+            "type": "string",
+            "content": "提醒时间"
+          },
+          {
+            "type": "bool",
+            "content": "完成状态"
+          }
+        ],
+        "entity": "打卡任务"
+      },
+      {
+        "attributes": [
+          {
+            "type": "string",
+            "content": "成就名称"
+          },
+          {
+            "type": "bool",
+            "content": "是否完成"
+          },
+          {
+            "type": "date",
+            "content": "达成日期"
+          },
+          {
+            "type": "resource",
+            "content": "图片资源"
+          },
+          {
+            "type": "bool",
+            "content": "完成状态"
+          }
+        ],
+        "entity": "成就"
+      },
+      {
+        "attributes": [
+          {
+            "type": "int",
+            "content": "任务ID"
+          },
+          {
+            "type": "bool",
+            "content": "是否完成"
+          },
+          {
+            "type": "date",
+            "content": "完成日期"
+          }
+        ],
+        "entity": "任务完成状态"
+      }
+    ],
+    "gui_requirements": [
+      {
+        "user_interaction": "[用户]选择一个健康生活打卡任务类型；[系统]给出选定任务的设定选项。",
+        "user_interface": "[用户]通过下拉菜单选择健康生活打卡任务类型；[系统]在新页面或区域提供任务设定选项。"
+      },
+      {
+        "user_interaction": "[用户]设定任务目标值和频率；[系统]确认任务设置，并提示保存。",
+        "user_interface": "[用户]通过表单输入框设定任务目标值和频率；[系统]弹出保存确认提示框。"
+      },
+      {
+        "user_interaction": "[用户]确认并保存任务设置；[系统]记录并更新用户的健康目标进度。",
+        "user_interface": "[用户]点击保存按钮确认任务设置；[系统]显示保存成功的通知并更新进度条。"
+      },
+      {
+        "user_interaction": "[用户]选择当天要打卡的任务；[系统]检查选定任务的目标值和频率是否满足当天打卡要求。",
+        "user_interface": "[用户]通过任务列表选择当天打卡任务；[系统]在弹出窗口显示检查结果。"
+      },
+      {
+        "user_interaction": "[用户]确认打卡完成；[系统]更新用户的健康目标进度。",
+        "user_interface": "[用户]点击确认按钮完成打卡；[系统]在页面显示更新后的进度和相关成就。"
+      },
+      {
+        "user_interaction": "[用户]查看更新后的进度和相关成就；[系统]展示用户的健康成就。",
+        "user_interface": "[用户]通过仪表板查看进度和成就并获得激励；[系统]展示成就图片及描述。"
+      },
+      {
+        "user_interaction": "[用户]用户选择查看个人信息；[系统]检索并展示用户的个人信息。",
+        "user_interface": "[用户]通过导航菜单选择个人信息页面；[系统]在页面上显示个人信息字段。"
+      },
+      {
+        "user_interaction": "[用户]健身教练根据用户输入的健康信息和健身目标进行评估；[系统]生成个性化的健身计划。",
+        "user_interface": "[用户]通过表单输入健康信息和健身目标；[系统]在新页面生成并展示健身计划表。"
+      },
+      {
+        "user_interaction": "[用户]健身教练可以设定打卡任务的目标值和频率；[系统]在任务添加成功后显示更新状态。",
+        "user_interface": "[用户]通过输入框设定打卡任务目标值和频率；[系统]在界面顶部显示任务添加成功的状态更新。"
+      }
+    ],
+    "gui_design": [
+      {
+        "components": "[首页] 用到了[底部导航栏Tabs]组件，包括[主页Tab]、[成就Tab]、[我的Tab]。",
+        "components_interaction": "[底部导航栏Tabs]每个子Tab点击后，通过动画效果跳转：点击[主页Tab]后，跳转到[任务列表页]；点击[成就Tab]后，跳转到[健康成就页]；点击[我的Tab]后，跳转到[个人信息页]。",
+        "description": "作为健康app的入口页，用户可以通过底部导航栏访问任务列表页、健康成就页和个人信息页。",
+        "style": "[首页] 采用[Scroll容器]布局，页面内容可滚动显示，使用[底部导航栏Tabs]实现页面组件访问：布局采用垂直列布局。[底部导航栏Tabs]背景色为#F1F3F5，高度为56px，每个子Tab使用垂直布局。[Tabs][每个子Tab]包括一个[图标]和[文字标题]元素，[左右填充]为12px，[字体大小]为12px。 其中，[主页Tab]图标选择为$r('app.media.home_sel')和$r('app.media.home_normal')，[成就Tab]图标选择为$r('app.media.achievement_sel')和$r('app.media.achievement_normal')，[我的Tab]图标选择为$r('app.media.mine_sel')和$r('app.media.mine_normal')。[选中时字体颜色]为#1698CE，[未选中时字体颜色]为#6B6B6B，用户点击后通过动画效果切换至对应页面。",
+        "title": "首页(Index)"
+      },
+      {
+        "components": "[健康生活打卡任务设置页] 用到了标题栏、任务编辑区、主页图片展示区域、任务项目、完成按钮。",
+        "description": "在该页面中，用户可以选择并编辑健康生活打卡任务的类型、目标值和频率，最终确认并保存任务设置。",
+        "style": "[健康生活打卡任务设置页]采用垂直布局，高度宽度都是100%，背景颜色为#cccccc。[标题栏]横向排布，左侧边距12，包含[返回按钮]，图片资源为$r('app.media.img')，大小为30x30，[返回按钮交互事件]点击会返回上一页。[返回按钮]右侧是[标题文本]，左边距12，内容为'编辑任务'，字体大小20。[任务编辑区]是一个垂直布局区域，间隔为5，任务项以任务名、目标、图片资源为参数。[任务编辑区的每项]是一个横向排布，圆角值为12，背景颜色为白色，高度为60；[任务项名称文本组件]内容为任务项的名称，字体大小为16，最右侧是一个[开关按钮组件]。[第二项]内容是一个[文本组件]，内容为“目标设置”加上任务项的目标，字体大小为16，最右侧是一个[图片组件]，资源为$r('app.media.right_grey')。[第三项]是一个[文本组件]，内容为“开启提醒”，字体大小为16，最右侧是一个[开关按钮组件]。[第四项]内容是一个[文本组件]，内容为“提醒时间”加上具体时间如8:00，字体大小为16，最右侧是一个[图片组件]，资源为$r('app.media.right_grey')。[第五项]内容是一个[文本组件]，内容为“频率”，字体大小为16，最右侧是一个[图片组件]，资源为$r('app.media.right_grey')。[完成按钮]位于页面底部，内容为“完成”，字体颜色为白色，大小为10，背景颜色为#007DFF，[完成按钮交互事件]点击后保存当前设置并返回到任务列表页面。",
+        "title": "健康生活打卡任务设置页(TaskSetupPage)"
+      },
+      {
+        "components": "[健康成就页] 用到了[标题]、健康成就展示仪表板、成就图片、成就描述。",
+        "description": "展示用户的健康成就，用户可以在此查看自己的任务完成情况和获取激励。",
+        "style": "[健康成就页] 通过垂直栅格布局，上部区域包括[标题] '我的成就'，字体大小30，位于顶部左侧。[健康成就展示仪表板]栅格布局，宽度为总页面的90%，间距为8px（列）和12px（行），每行3个栅格，共两行，背景颜色为黑色。每一个栅格是一个成就项，为垂直布局，间隔为10px，上方是一个图片组件展示成就图片资源，大小为80pxx80px，下方是一个文本组件，展示成就名称，字体大小为16px，字体颜色为白色。成就项示例为：[成就名称] '连续3天打卡'，[图片资源] $r('app.media.badge_3_on')；[成就名称] '连续7天打卡'，[图片资源] $r('app.media.badge_7_on')；[成就名称] '连续30天打卡'，[图片资源] $r('app.media.badge_30_off')；[成就名称] '连续50天打卡'，[图片资源] $r('app.media.badge_50_off')；[成就名称] '连续73天打卡'，[图片资源] $r('app.media.badge_73_off')；[成就名称] '连续99天打卡'，[图片资源] $r('app.media.badge_99_off')。[组件交互事件]点击每个成就详细后跳转到[成就详情页]。",
+        "title": "健康成就页(HealthAchievementsPage)"
+      },
+      {
+        "components": "[任务列表页] 用到了标题组件、主页区域、添加按钮和打卡按钮。",
+        "description": "向用户展示当前的健康生活打卡任务列表，并提供任务完成进度和健康生活相关信息，以便用户可以监督和查看任务完成情况。",
+        "style": "[任务列表页] 使用[Stack布局]，宽度为100%，高度为100%，背景颜色为#F1F3F5。[标题]是一个[文本]组件，内容为“健康生活”，字体大小为30，位于顶部左侧。[主页区域]是一个可滚动的[Scroll组件]，高度宽度均为100%。[Scroll组件]里是一个垂直布局区域，间隔为5，内容居中。[主页图片展示区域]是一个垂直布局区域，间隔为5，高度为50%，背景图片为$r('app.media.home_bg')，背景图片尺寸为宽度90%，高度90%。[主页图片展示区域]里首先是一个[文本]组件，内容为“目标进度”，左侧填充为24，文本大小为16，颜色为#182431；下方是一个[横向排布区]，间隔为20，里面是一个[文本组件]，展示了打卡目标进度，内容形式为“已完成打卡天数/目标天数”，文本大小为72；再下方是一个[WeekCalendar组件]，展示了一个周日历。[主页图片展示区域]下方是一个[打卡按钮]，按钮颜色为#4694C2，宽度为80%，高度为50，内容为“打卡”，点击弹出一个[提示弹窗]，内容为“打卡成功”，且更新打卡进度；再下方是一个[文本组件]，内容为“任务列表”，字体大小为16，颜色为#18243。[任务列表区]是一个垂直布局区域，间隔为8，宽度为100%，填充为顶部1.5%，左右3.3%。[任务列表区]中每一项是一个任务项，每一个任务项是横向排列，间隔为20，高度为64，边缘为底部12。每一个任务项为横向排列，间隔为6，左侧是一个图片组件，大小为36*36，资源为任务项的taskImage值。图片组件右侧是任务名称，字体大小为16，颜色为#18243。最右侧是[目标展示区]，为一个[文本组件]，内容形式为“--/任务目标”，任务目标为任务项的targetValue值，字体大小为16。[任务项交互事件]是点击后跳转至[健康任务设置页]并传递当前任务项作为参数。[任务项列表示例如下：任务名“早起”，图片资源“$r('app.media.morning')”，任务目标“8:00”；任务名“喝水”，图片资源“$r('app.media.water')”，任务目标“0.25”；任务名“吃苹果”，图片资源“$r('app.media.apple')”，任务目标“1”；任务名“每日微笑”，图片资源“$r('app.media.smile')”，任务目标“1”；任务名“每日刷牙”，图片资源“$r('app.media.brush')”，任务目标“1”；任务名“早睡”，图片资源“$r('app.media.night')”，任务目标“20:00”。[添加按钮]是一个按钮，内容为“+”，按钮类型为[ButtonType.Circle]，大小为48*48，位置在(x: 83%, y: 88%)，颜色为#4CAF50。[添加按钮交互事件]是点击后跳转至[打卡任务添加页面]。",
+        "title": "任务列表页(TaskListPage)"
+      },
+      {
+        "components": "[个人信息页] 用到了标题、个人信息区、按钮列表区。",
+        "description": "用户可以查看个人信息，包括用户名、电子邮件和其他相关信息。",
+        "style": "[个人信息页]通过垂直列布局，顶部左侧是一个[标题]，内容是”我的“，字体大小为30。下方排列[个人信息区]和[按钮列表区]；间距为12px。[个人信息区]背景颜色为#FFFFFF，高度为96px，宽度为100%，采用水平布局，间距为20px，左侧为一个图标[账号图标], 图片资源$r('app.media.account'), 大小为48x48px；右侧是[用户名文本], 内容为“EAA”，字体大小为20px。[按钮列表区]为一个[列表组件], 间距为10px，圆角为16px，列表项高度为48px。列表项采用水平布局，左侧为[功能图标], 大小为30x30px；右侧为[文本标题]。每项交互时展示相关功能弹窗。组件交互事件：[我的商城项]展示“商城功能”弹窗；[共享管理项]展示“共享管理”弹窗；[我的二维码项]展示“二维码功能”弹窗；[设置项]展示“设置”弹窗。[列表组件]包含以下项: [我的商城项], 图标资源$r('app.media.setting_shop'), 标题为“我的商城”；[共享管理项], 图标资源$r('app.media.setting_share'), 标题为“共享管理”；[我的二维码项], 图标资源$r('app.media.setting_code'), 标题为“我的二维码”；[设置项], 图标资源$r('app.media.setting_set'), 标题为“设置”。",
+        "title": "个人信息页(UserProfilePage)"
+      },
+      {
+        "components": "[打卡任务添加页] 包含标题栏、任务列表区。用到了返回按钮、标题文本、任务项组件。",
+        "description": "健身教练可以在页面上输入新的打卡任务信息（名称），系统验证输入后添加至任务列表，并显示更新状态。",
+        "style": "[打卡任务添加页] 采用垂直布局，高度宽度都是100%，背景颜色为#cccccc。 [标题栏] 横向排布，左侧边距12，包含[返回按钮]，图片资源为$r('app.media.img')，大小为30x30，[返回按钮交互事件]点击会返回上一页。[返回按钮]右侧是[标题文本]，左边距12，内容为'添加任务'，字体大小20。 [任务列表区] 垂直排布间隔为5，每项是一个[任务项组件]，横向排布，圆角值为12，背景颜色为白色，高度为60，每项包含任务图标、任务名和跳转按钮。 [任务项组件] 最左侧是[任务图标]，展示任务图片资源，图标右侧是[任务名]，字体大小为16，最右侧是一个[跳转按钮]，图片资源为$r('app.media.right_grey')，点击后将该任务项作为参数传入，并跳转至该任务的任务设置页面。 [任务图标] 使用屏幕左侧间距，大小为40x40，展示任务图片。任务列表包括以下任务项：任务名“早起”，图片资源“$r('app.media.morning')”，任务目标“8:00”；任务名“喝水”，图片资源“$r('app.media.water')”，任务目标“0.25”；任务名“吃苹果”，图片资源“$r('app.media.apple')”，任务目标“1”；任务名“每日微笑”，图片资源“$r('app.media.smile')”，任务目标“1”；任务名“每日刷牙”，图片资源“$r('app.media.brush')”，任务目标“1”；任务名“早睡”，图片资源“$r('app.media.night')”，任务目标“20:00”。",
+        "title": "打卡任务添加页(CheckInTaskAddPage)"
+      }
+    ],
+    "arkts_code": [
+      {
+        "title": "健康生活打卡任务设置页(TaskSetupPage)",
+        "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\nimport base from '@ohos.base';\n\nexport interface TaskInterface {\n  taskName: string;\n  taskImage: Resource;\n  targetValue: string;\n}\n\n@Entry\n@Component\nstruct TaskSetupPage {\n  @State taskName: string = '跑步';\n  @State targetTime: string = '30分钟';\n  @State reminderEnabled: boolean = true;\n  @State reminderTime: string = '8:00';\n  @State frequency: string = '每天';\n  @State taskEnabled: boolean = true;\n\n  updateTaskStatus() {\n    let httpRequest = http.createHttp();\n    let responseRes = httpRequest.request(\n      \"http://localhost:8000/api/updateTaskStatus\",\n      {\n        method: http.RequestMethod.POST,\n        header: {\n          'Content-Type': 'application/json'\n        },\n        extraData: {\n          \"taskId\": 1,\n          \"completionStatus\": this.taskEnabled\n        },\n        connectTimeout: 60000,\n        readTimeout: 60000,\n      });\n    return responseRes.then((value) => {\n      //console.log(String(value.result))\n      //return JSON.parse(String(value.result))\n    })\n  }\n  aboutToAppear() {\n    let params = router.getParams() as TaskInterface;\n    if (params) {\n      this.taskName = params.taskName;\n      this.targetTime = params.targetValue\n    }\n  }\n  build() {\n    Column() {\n      // 标题栏\n      Row() {\n        Image($r('app.media.img'))\n          .width(30)\n          .height(30)\n          .margin({ left: 12 })\n          .onClick(() => {\n            router.back();\n          })\n        \n        Text('编辑任务')\n          .fontSize(20)\n          .margin({ left: 12 })\n      }\n      .width('100%')\n      .height(60)\n      .justifyContent(FlexAlign.Start)\n      .alignItems(VerticalAlign.Center)\n\n      // 任务编辑区\n      Column({ space: 5 }) {\n        // 第一项 - 任务名称\n        Row() {\n          Text(this.taskName)\n            .fontSize(16)\n            .layoutWeight(1)\n          \n          Toggle({ type: ToggleType.Switch, isOn: this.taskEnabled })\n            .onChange((isOn: boolean) => {\n              this.taskEnabled = isOn;\n            })\n        }\n        .width('100%')\n        .height(60)\n        .backgroundColor(Color.White)\n        .borderRadius(12)\n        .padding({ left: 16, right: 16 })\n        .justifyContent(FlexAlign.SpaceBetween)\n        .alignItems(VerticalAlign.Center)\n\n        // 第二项 - 目标设置\n        Row() {\n          Text('目标设置' + this.targetTime)\n            .fontSize(16)\n            .layoutWeight(1)\n          \n          Image($r('app.media.right_grey'))\n            .width(12)\n            .height(12)\n        }\n        .width('100%')\n        .height(60)\n        .backgroundColor(Color.White)\n        .borderRadius(12)\n        .padding({ left: 16, right: 16 })\n        .justifyContent(FlexAlign.SpaceBetween)\n        .alignItems(VerticalAlign.Center)\n\n        // 第三项 - 开启提醒\n        Row() {\n          Text('开启提醒')\n            .fontSize(16)\n            .layoutWeight(1)\n          \n          Toggle({ type: ToggleType.Switch, isOn: this.reminderEnabled })\n            .onChange((isOn: boolean) => {\n              this.reminderEnabled = isOn;\n            })\n        }\n        .width('100%')\n        .height(60)\n        .backgroundColor(Color.White)\n        .borderRadius(12)\n        .padding({ left: 16, right: 16 })\n        .justifyContent(FlexAlign.SpaceBetween)\n        .alignItems(VerticalAlign.Center)\n\n        // 第四项 - 提醒时间\n        Row() {\n          Text('提醒时间' + this.reminderTime)\n            .fontSize(16)\n            .layoutWeight(1)\n          \n          Image($r('app.media.right_grey'))\n            .width(12)\n            .height(12)\n        }\n        .width('100%')\n        .height(60)\n        .backgroundColor(Color.White)\n        .borderRadius(12)\n        .padding({ left: 16, right: 16 })\n        .justifyContent(FlexAlign.SpaceBetween)\n        .alignItems(VerticalAlign.Center)\n\n        // 第五项 - 频率\n        Row() {\n          Text('频率')\n            .fontSize(16)\n            .layoutWeight(1)\n          \n          Image($r('app.media.right_grey'))\n            .width(12)\n            .height(12)\n        }\n        .width('100%')\n        .height(60)\n        .backgroundColor(Color.White)\n        .borderRadius(12)\n        .padding({ left: 16, right: 16 })\n        .justifyContent(FlexAlign.SpaceBetween)\n        .alignItems(VerticalAlign.Center)\n      }\n      .width('100%')\n      .padding({ left: 16, right: 16, top: 20 })\n      .layoutWeight(1)\n\n      // 完成按钮\n      Button('完成')\n        .width('90%')\n        .height(50)\n        .fontSize(16)\n        .fontColor(Color.White)\n        .backgroundColor(0x007DFF)\n        .margin({ bottom: 30 })\n        .onClick(() => {\n          this.updateTaskStatus().then(() => {\n            router.pushUrl({\n              url: 'pages/TaskListPage'\n            }).catch((err: base.BusinessError) => {\n              console.error(`Failed to push to TaskListPage. Code: ${err.code}, message: ${err.message}`);\n            });\n          });\n        })\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor(0xcccccc)\n  }\n}\n"
+      },
+      {
+        "title": "健康成就页(HealthAchievementsPage)",
+        "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\nimport base from '@ohos.base';\n\nexport interface Achievement {\n  achievementName: string;\n  isCompleted: boolean;\n  achievementDate: Date;\n  imageResource: Resource;\n  completionStatus: boolean;\n}\n\n@Entry\n@Component\nexport default struct HealthAchievementsPage {\n  @State achievements: Achievement[] = [\n    {\n      achievementName: '连续3天打卡',\n      isCompleted: true,\n      achievementDate: new Date(),\n      imageResource: $r('app.media.badge_3_on'),\n      completionStatus: true\n    },\n    {\n      achievementName: '连续7天打卡',\n      isCompleted: true,\n      achievementDate: new Date(),\n      imageResource: $r('app.media.badge_7_on'),\n      completionStatus: true\n    },\n    {\n      achievementName: '连续30天打卡',\n      isCompleted: false,\n      achievementDate: new Date(),\n      imageResource: $r('app.media.badge_30_off'),\n      completionStatus: false\n    },\n    {\n      achievementName: '连续50天打卡',\n      isCompleted: false,\n      achievementDate: new Date(),\n      imageResource: $r('app.media.badge_50_off'),\n      completionStatus: false\n    },\n    {\n      achievementName: '连续73天打卡',\n      isCompleted: false,\n      achievementDate: new Date(),\n      imageResource: $r('app.media.badge_73_off'),\n      completionStatus: false\n    },\n    {\n      achievementName: '连续99天打卡',\n      isCompleted: false,\n      achievementDate: new Date(),\n      imageResource: $r('app.media.badge_99_off'),\n      completionStatus: false\n    }\n  ];\n\n  aboutToAppear() {\n    this.getAchievements();\n  }\n\n  getAchievements() {\n    let httpRequest = http.createHttp();\n    let responseRes = httpRequest.request(\n      \"http://localhost:8000/api/getAchievements\",\n      {\n        method: http.RequestMethod.GET,\n        header: {\n          'Content-Type': 'application/json'\n        },\n        extraData: {\n          \"userId\": \"user123\"\n        },\n        connectTimeout: 60000,\n        readTimeout: 60000,\n      });\n    responseRes.then((value) => {\n    }).catch((err: base.BusinessError) => {\n      console.error(`Failed to get achievements. Code: ${err.code}, message: ${err.message}`);\n    });\n  }\n\n  build() {\n    Column() {\n      Text('我的成就')\n        .fontSize(30)\n        .margin({ top: 20, left: 20, bottom: 20 })\n        .textAlign(TextAlign.Start)\n        .width('100%')\n\n      Column() {\n        ForEach(this.achievements, (item: Achievement, index: number) => {\n          if (index % 3 === 0) {\n            Row() {\n              ForEach(this.achievements.slice(index, Math.min(index + 3, this.achievements.length)), (achievement: Achievement) => {\n                Column({ space: 10 }) {\n                  Image(achievement.imageResource)\n                    .width(80)\n                    .height(80)\n\n                  Text(achievement.achievementName)\n                    .fontSize(14)\n                    .fontColor(Color.White)\n                    .textAlign(TextAlign.Center)\n                }\n                .onClick(() => {\n                  router.pushUrl({\n                    url: 'pages/AchievementDetailPage',\n                    params: {\n                      achievement: achievement\n                    }\n                  }).catch((err: base.BusinessError) => {\n                    console.error(`Failed to push to AchievementDetailPage. Code: ${err.code}, message: ${err.message}`);\n                  });\n                })\n                .layoutWeight(1)\n              }, (achievement: Achievement) => achievement.achievementName)\n            }\n            .width('100%')\n            .margin({ bottom: 12 })\n          }\n        }, (item: Achievement, index: number) => index.toString())\n      }\n      .width('90%')\n      .height('100%')\n      .backgroundColor(Color.Black)\n      .padding(20)\n      .margin({ left: '5%', right: '5%' })\n    }\n    .width('100%')\n    .height('100%')\n  }\n}\n"
+      },
+      {
+        "title": "任务列表页(TaskListPage)",
+        "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\nimport base from '@ohos.base';\n\n// 定义打卡任务接口\nexport interface TaskInterface {\n  taskName: string;\n  taskImage: Resource;\n  targetValue: string;\n}\n\n// 定义任务完成状态接口\nexport interface TaskCompletionInterface {\n  taskID: number;\n  completed: boolean;\n  completionDate: Date;\n}\n\n@Entry\n@Component\nexport default struct TaskListPage {\n  @State tasks: TaskInterface[] = [\n    { taskName: '早起', taskImage: $r('app.media.morning'), targetValue: '8:00' },\n    { taskName: '喝水', taskImage: $r('app.media.water'), targetValue: '0.25' },\n    { taskName: '吃苹果', taskImage: $r('app.media.apple'), targetValue: '1' },\n    { taskName: '每日微笑', taskImage: $r('app.media.smile'), targetValue: '1' },\n    { taskName: '每日刷牙', taskImage: $r('app.media.brush'), targetValue: '1' },\n    { taskName: '早睡', taskImage: $r('app.media.night'), targetValue: '20:00' },\n  ];\n  @State completedDays: number = 0;\n  @State targetDays: number = 30;\n  \n  aboutToAppear() {\n    this.getTaskCompletionStatus();\n  }\n  \n  // 获取任务完成状态\n  getTaskCompletionStatus() {\n    let httpRequest = http.createHttp();\n    httpRequest.request(\n      \"http://localhost:8000/api/getTaskCompletionStatus\",\n      {\n        method: http.RequestMethod.GET,\n        header: {\n          'Content-Type': 'application/json'\n        },\n        extraData: {\n          \"userId\": \"1\" // 假设用户ID为1\n        },\n        connectTimeout: 60000,\n        readTimeout: 60000,\n      }\n    ).then((response) => {\n      if (response.responseCode === 200) {\n        //let result = JSON.parse(String(response.result));\n        // 计算已完成的打卡天数\n        //this.completedDays = result.completedDays || 0;\n      }\n    }).catch((err: base.BusinessError) => {\n      console.error(`Failed to get task completion status. Code: ${err.code}, message: ${err.message}`);\n    });\n  }\n  \n  // 更新任务状态\n  updateTaskStatus(taskId: number, status: boolean) {\n    let httpRequest = http.createHttp();\n    httpRequest.request(\n      \"http://localhost:8000/api/updateTaskStatus\",\n      {\n        method: http.RequestMethod.POST,\n        header: {\n          'Content-Type': 'application/json'\n        },\n        extraData: {\n          \"taskID\": taskId,\n          \"completed\": status,\n          \"completionDate\": new Date()\n        },\n        connectTimeout: 60000,\n        readTimeout: 60000,\n      }\n    ).then((response) => {\n      if (response.responseCode === 200) {\n        // 更新成功\n        this.getTaskCompletionStatus();\n      }\n    }).catch((err: base.BusinessError) => {\n      console.error(`Failed to update task status. Code: ${err.code}, message: ${err.message}`);\n    });\n  }\n  @Builder\n  WeekCalendar() {\n    Row() {\n      ForEach(['日', '一', '二', '三', '四', '五', '六'], (day: string, index: number) => {\n        Column() {\n          Text(day)\n            .fontSize(12)\n            .fontColor(0x182431)\n          Text((index + 1).toString())\n            .fontSize(16)\n            .fontColor(index < 5 ? 0x4694C2 : 0x182431)\n            .margin({ top: 4 })\n        }\n        .width(40)\n        .height(60)\n        .justifyContent(FlexAlign.Center)\n      }, (day: string) => day)\n    }\n    .width('100%')\n    .justifyContent(FlexAlign.SpaceAround)\n  }\n  build() {\n    Stack() {\n      // 主页区域\n      Scroll() {\n        Column({ space: 5 }) {\n          Text(\"健康生活\")\n            .fontSize(30)\n            .padding({ left: 20, top: 12, bottom: 8 })\n            .alignSelf(ItemAlign.Start)\n          // 主页图片展示区域\n          Column() {\n            Text(\"目标进度\")\n              .fontSize(16)\n              .fontColor('#182431')\n              .padding({ top: 48 })\n              .alignSelf(ItemAlign.Center)\n            \n            Row() {\n              Text(`${this.completedDays}/${this.targetDays}`)\n                .fontSize(72)\n            }.margin({ top: 20 })\n            \n            // 周日历组件\n            Column() {\n              Text(\"WeekCalendar\")\n                .fontSize(16)\n                .padding(10)\n              this.WeekCalendar()\n            }\n            .width('100%')\n            .margin({ top: 100 })\n            .backgroundColor('#FFFFFF')\n            .borderRadius(8)\n          }\n          .width('90%')\n          .height('50%')\n          .backgroundImage($r('app.media.home_bg'))\n          .backgroundImageSize({\n            width: '90%',\n            height: '90%'\n          })\n          \n          // 打卡按钮\n          Button(\"打卡\")\n            .width('80%')\n            .height(50)\n            .backgroundColor('#4694C2')\n            .onClick(() => {\n              AlertDialog.show({\n                title: '提示',\n                message: '打卡成功',\n                confirm: {\n                  value: '确定',\n                  action: () => {\n                    this.completedDays++;\n                    this.updateTaskStatus(1, true);\n                  }\n                }\n              });\n            })\n          \n          // 任务列表标题\n          Text(\"任务列表\")\n            .fontSize(16)\n            .fontColor('#182431')\n            .alignSelf(ItemAlign.Start)\n            .margin({ left: '3.3%', top: 20 })\n          \n          // 任务列表区\n          Column() {\n            ForEach(this.tasks, (task: TaskInterface, index: number) => {\n              Row() {\n                Image(task.taskImage)\n                  .width(36)\n                  .height(36)\n                \n                Text(task.taskName)\n                  .fontSize(16)\n                  .fontColor('#182431')\n                  .margin({ left: 6 })\n                \n                Blank()\n                \n                Text(`--/${task.targetValue}`)\n                  .fontSize(16)\n              }\n              .width('100%')\n              .height(64)\n              .padding({ left: 10, right: 10 })\n              .margin({ bottom: 12 })\n              .backgroundColor(Color.White)\n              .borderRadius(8)\n              .onClick(() => {\n                router.pushUrl({\n                  url: 'pages/TaskSetupPage',\n                  params: {\n                    taskName: task.taskName,\n                    taskImage: task.taskImage,\n                    targetValue: task.targetValue\n                  }\n                }).catch((err: base.BusinessError) => {\n                  console.error(`Failed to navigate to TaskSetupPage. Code: ${err.code}, message: ${err.message}`);\n                });\n              })\n            }, (item: TaskInterface) => item.taskName)\n          }\n          .width('100%')\n          .padding({ top: '1.5%', left: '3.3%', right: '3.3%' })\n        }\n        .width('100%')\n        .alignItems(HorizontalAlign.Center)\n      }\n      .width('100%')\n      .height('100%')\n      \n      \n      // 添加按钮\n      Button({\n        type: ButtonType.Circle,\n      }) {\n        Text(\"+\")\n          .fontSize(24)\n          .fontColor(Color.White)\n      }\n      .width(48)\n      .height(48)\n      .position({ x: '83%', y: '88%' })\n      .backgroundColor('#4CAF50')\n      .onClick(() => {\n        router.pushUrl({\n          url: 'pages/CheckInTaskAddPage'\n        }).catch((err: base.BusinessError) => {\n          console.error(`Failed to navigate to CheckInTaskAddPage. Code: ${err.code}, message: ${err.message}`);\n        });\n      })\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor('#F1F3F5')\n  }\n}"
+      },
+      {
+        "title": "个人信息页(UserProfilePage)",
+        "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\nimport base from '@ohos.base';\n\nexport interface UserInterface {\n  username: string;\n  email: string;\n  age: number;\n}\n\n@Entry\n@Component\nexport default struct UserProfilePage {\n  @State user: UserInterface = {\n    username: \"EAA\",\n    email: \"eaa@example.com\",\n    age: 30\n  };\n\n  async getUserAuthInfo() {\n    let httpRequest = http.createHttp();\n    let responseRes = httpRequest.request(\n      \"http://localhost:8000/api/getUserAuthInfo\",\n      {\n        method: http.RequestMethod.GET,\n        header: {\n          'Content-Type': 'application/json'\n        },\n        extraData: {\n          \"userId\": \"123\" // 假设用户ID为123\n        },\n        connectTimeout: 60000,\n        readTimeout: 60000,\n      });\n    return responseRes.then((value) => {\n    }).catch((err: base.BusinessError) => {\n      console.error(`Failed to get user auth info. Code: ${err.code}, message: ${err.message}`);\n      return null;\n    });\n  }\n\n  build() {\n    Column() {\n      // 标题\n      Text(\"我的\")\n        .fontSize(30)\n        .width('100%')\n        .textAlign(TextAlign.Start)\n        .margin({ bottom: 12 })\n\n      // 个人信息区\n      Row() {\n        Image($r('app.media.account'))\n          .width(48)\n          .height(48)\n        Text(this.user.username)\n          .fontSize(20)\n      }\n      .width('100%')\n      .height(96)\n      .backgroundColor('#FFFFFF')\n      .padding({ left: 20, right: 20 })\n      .margin({ bottom: 12 })\n\n      // 按钮列表区\n      List() {\n        // 我的商城项\n        ListItem() {\n          Row() {\n            Image($r('app.media.setting_shop'))\n              .width(30)\n              .height(30)\n            Text(\"我的商城\")\n              .fontSize(16)\n              .margin({ left: 10 })\n            Blank()\n          }\n          .width('100%')\n          .height(48)\n        }\n        .onClick(() => {\n          AlertDialog.show({\n            title: '商城功能',\n            message: '这是商城功能弹窗',\n            confirm: {\n              value: '确定',\n              action: () => {\n                console.info('商城功能确认按钮被点击');\n              }\n            },\n            cancel: () => {\n              console.info('Closed callbacks')\n            }\n          });\n        })\n\n        // 共享管理项\n        ListItem() {\n          Row() {\n            Image($r('app.media.setting_share'))\n              .width(30)\n              .height(30)\n            Text(\"共享管理\")\n              .fontSize(16)\n              .margin({ left: 10 })\n            Blank()\n          }\n          .width('100%')\n          .height(48)\n        }\n        .onClick(() => {\n          AlertDialog.show({\n            title: '共享管理',\n            message: '这是共享管理弹窗',\n            confirm: {\n              value: '确定',\n              action: () => {\n                console.info('共享管理确认按钮被点击');\n              }\n            },\n            cancel: () => {\n              console.info('Closed callbacks')\n            }\n          });\n        })\n\n        // 我的二维码项\n        ListItem() {\n          Row() {\n            Image($r('app.media.setting_code'))\n              .width(30)\n              .height(30)\n            Text(\"我的二维码\")\n              .fontSize(16)\n              .margin({ left: 10 })\n            Blank()\n          }\n          .width('100%')\n          .height(48)\n        }\n        .onClick(() => {\n          AlertDialog.show({\n            title: '二维码功能',\n            message: '这是二维码功能弹窗',\n            confirm: {\n              value: '确定',\n              action: () => {\n                console.info('二维码功能确认按钮被点击');\n              }\n            },\n            cancel: () => {\n              console.info('Closed callbacks')\n            }\n          });\n        })\n\n        // 设置项\n        ListItem() {\n          Row() {\n            Image($r('app.media.setting_set'))\n              .width(30)\n              .height(30)\n            Text(\"设置\")\n              .fontSize(16)\n              .margin({ left: 10 })\n            Blank()\n          }\n          .width('100%')\n          .height(48)\n        }\n        .onClick(() => {\n          AlertDialog.show({\n            title: '设置',\n            message: '这是设置弹窗',\n            confirm: {\n              value: '确定',\n              action: () => {\n                console.info('设置确认按钮被点击');\n              }\n            },\n            cancel: () => {\n              console.info('Closed callbacks')\n            }\n          });\n        })\n      }\n      .borderRadius(16)\n      .backgroundColor('#FFFFFF')\n      .width('100%')\n      .padding(10)\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor('#F1F3F5')\n    .padding(16)\n  }\n\n  aboutToAppear() {\n    this.getUserAuthInfo().then((result) => {\n      if (result) {\n        // 更新用户信息\n      }\n    });\n  }\n}"
+      },
+      {
+        "title": "打卡任务添加页(CheckInTaskAddPage)",
+        "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\nimport base from '@ohos.base';\n\nexport interface CheckInTaskInterface {\n  taskName: string;\n  targetTime: string;\n  frequency: string;\n  reminderTime: string;\n  isCompleted: boolean;\n}\n\n@Entry\n@Component\nstruct CheckInTaskAddPage {\n  @State taskList: CheckInTaskInterface[] = [\n    {\n      taskName: \"早起\",\n      targetTime: \"8:00\",\n      frequency: \"每日\",\n      reminderTime: \"7:30\",\n      isCompleted: false\n    },\n    {\n      taskName: \"喝水\",\n      targetTime: \"0.25\",\n      frequency: \"每日\",\n      reminderTime: \"9:00\",\n      isCompleted: false\n    },\n    {\n      taskName: \"吃苹果\",\n      targetTime: \"1\",\n      frequency: \"每日\",\n      reminderTime: \"14:00\",\n      isCompleted: false\n    },\n    {\n      taskName: \"每日微笑\",\n      targetTime: \"1\",\n      frequency: \"每日\",\n      reminderTime: \"10:00\",\n      isCompleted: false\n    },\n    {\n      taskName: \"每日刷牙\",\n      targetTime: \"1\",\n      frequency: \"每日\",\n      reminderTime: \"22:00\",\n      isCompleted: false\n    },\n    {\n      taskName: \"早睡\",\n      targetTime: \"20:00\",\n      frequency: \"每日\",\n      reminderTime: \"19:30\",\n      isCompleted: false\n    }\n  ];\n\n  getTaskIcon(taskName: string): Resource {\n    switch (taskName) {\n      case \"早起\":\n        return $r('app.media.morning');\n      case \"喝水\":\n        return $r('app.media.water');\n      case \"吃苹果\":\n        return $r('app.media.apple');\n      case \"每日微笑\":\n        return $r('app.media.smile');\n      case \"每日刷牙\":\n        return $r('app.media.brush');\n      case \"早睡\":\n        return $r('app.media.night');\n      default:\n        return $r('app.media.img');\n    }\n  }\n\n  navigateToTaskSetup(task: CheckInTaskInterface) {\n    router.pushUrl({\n      url: 'pages/TaskSetupPage',\n      params: {\n        taskName: task.taskName,\n        taskImage: this.getTaskIcon(task.taskName),\n        targetValue: task.targetTime\n      }\n    }).catch((err: base.BusinessError) => {\n      console.error(`Failed to push to TaskSetupPage. Code: ${err.code}, message: ${err.message}`);\n    });\n  }\n\n  build() {\n    Column() {\n      // 标题栏\n      Row() {\n        Image($r('app.media.img'))\n          .width(30)\n          .height(30)\n          .margin({ left: 12 })\n          .onClick(() => {\n            router.back();\n          })\n        \n        Text('添加任务')\n          .fontSize(20)\n          .margin({ left: 12 })\n      }\n      .width('100%')\n      .justifyContent(FlexAlign.Start)\n      .alignItems(VerticalAlign.Center)\n\n      // 任务列表区\n      Column({ space: 5 }) {\n        ForEach(this.taskList, (task: CheckInTaskInterface) => {\n          Row() {\n            Image(this.getTaskIcon(task.taskName))\n              .width(40)\n              .height(40)\n              .margin({ left: 12 })\n            \n            Text(task.taskName)\n              .fontSize(16)\n              .margin({ left: 12 })\n              .layoutWeight(1)\n            \n            Image($r('app.media.right_grey'))\n              .width(12)\n              .height(12)\n              .margin({ right: 12 })\n              .onClick(() => {\n                this.navigateToTaskSetup(task);\n              })\n          }\n          .width('100%')\n          .height(60)\n          .backgroundColor(Color.White)\n          .borderRadius(12)\n          .justifyContent(FlexAlign.SpaceBetween)\n          .alignItems(VerticalAlign.Center)\n        }, (task: CheckInTaskInterface) => task.taskName)\n      }\n      .width('100%')\n      .padding({ left: 12, right: 12, top: 20 })\n    }\n    .width('100%')\n    .height('100%')\n    .backgroundColor(0xcccccc)\n  }\n}\n"
+      },
+      {
+        "title": "首页(Index)",
+        "code": "import router from '@ohos.router';\nimport http from '@ohos.net.http';\nimport base from '@ohos.base';\nimport TaskListPage from './TaskListPage';\nimport HealthAchievementsPage from './HealthAchievementsPage';\nimport UserProfilePage from './UserProfilePage';\n\n@Entry\n@Component\nstruct Index {\n  @State index: number = 0\n  private tabsController: TabsController = new TabsController()\n\n  @Builder baseTab(title: string, targetIndex: number, selectedImg: Resource, normalImg: Resource) {\n    Column({ space: 5 }) {\n      Image(this.index === targetIndex ? selectedImg : normalImg)\n        .width(25)\n        .height(25)\n      Text(title)\n        .margin({\n          top: 4,\n        })\n        .fontColor(this.index === targetIndex ? \"#1698CE\" : \"#6B6B6B\")\n        .fontSize(12)\n    }\n    .width(\"100%\")\n    .height(56)\n    .margin({\n      top: 8,\n    })\n    .justifyContent(FlexAlign.Center)\n    .alignItems(HorizontalAlign.Center)\n    .onClick(() => { this.changeTab(targetIndex) })\n  }\n\n  changeTab(targetIndex: number) {\n    this.index = targetIndex;\n    this.tabsController.changeIndex(targetIndex)\n  }\n\n  build() {\n    Scroll() {\n      Tabs({ controller: this.tabsController, barPosition: BarPosition.End }) {\n        TabContent() {\n          TaskListPage()\n        }\n        .backgroundColor(\"#F1F3F5\")\n        .padding({\n          right: 12,\n          left: 12,\n        })\n        .tabBar(this.baseTab(\"主页\", 0, $r('app.media.home_sel'), $r('app.media.home_normal')))\n\n        TabContent() {\n          HealthAchievementsPage()\n        }\n        .backgroundColor(\"#F1F3F5\")\n        .padding({\n          right: 12,\n          left: 12,\n        })\n        .tabBar(this.baseTab(\"成就\", 1, $r('app.media.achievement_sel'), $r('app.media.achievement_normal')))\n\n        TabContent() {\n          UserProfilePage()\n        }\n        .backgroundColor(\"#F1F3F5\")\n        .padding({\n          right: 12,\n          left: 12,\n        })\n        .tabBar(this.baseTab(\"我的\", 2, $r('app.media.mine_sel'), $r('app.media.mine_normal')))\n      }\n      .width(\"100%\")\n      .backgroundColor(\"#F1F3F5\")\n      .barHeight(56)\n    }\n  }\n}"
+      }
+    ],
+    "backendapi": [
+      {
+        "result": "用户鉴权信息类",
+        "param": "用户ID",
+        "api": "/api/getUserAuthInfo",
+        "title": "用户鉴权信息获取接口",
+        "type": "GET"
+      },
+      {
+        "result": "任务完成状态信息类",
+        "param": "用户ID",
+        "api": "/api/getTaskCompletionStatus",
+        "title": "任务完成状态获取接口",
+        "type": "GET"
+      },
+      {
+        "result": "更新结果（布尔类）",
+        "param": "任务ID和新状态（任务完成状态修改类）",
+        "api": "/api/updateTaskStatus",
+        "title": "任务完成状态修改接口",
+        "type": "POST"
+      },
+      {
+        "result": "成就信息类",
+        "param": "用户ID",
+        "api": "/api/getAchievements",
+        "title": "已获得成就获取接口",
+        "type": "GET"
+      }
+    ]
+  }

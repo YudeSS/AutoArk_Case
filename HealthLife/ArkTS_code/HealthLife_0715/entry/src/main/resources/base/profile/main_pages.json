@@ -1,0 +1,10 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/UserProfilePage",
+    "pages/CheckInTaskAddPage",
+    "pages/HealthAchievementsPage",
+    "pages/TaskListPage",
+    "pages/TaskSetupPage"
+  ]
+}
